@@ -1,0 +1,185 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'fsm:TOFSM|en_Subtractor'
+Slack : -12.348
+TNS   : -1508.375
+
+Type  : Slow 1200mV 85C Model Setup 'modeCos'
+Slack : -10.788
+TNS   : -325.455
+
+Type  : Slow 1200mV 85C Model Setup 'fsm:TOFSM|currentState.s3'
+Slack : -7.151
+TNS   : -166.743
+
+Type  : Slow 1200mV 85C Model Setup 'fsm:TOFSM|currentState.s0'
+Slack : -6.765
+TNS   : -22.289
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -3.117
+TNS   : -612.340
+
+Type  : Slow 1200mV 85C Model Hold 'fsm:TOFSM|currentState.s0'
+Slack : -3.034
+TNS   : -4.193
+
+Type  : Slow 1200mV 85C Model Hold 'modeCos'
+Slack : 0.055
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fsm:TOFSM|en_Subtractor'
+Slack : 0.276
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fsm:TOFSM|currentState.s3'
+Slack : 1.965
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -671.512
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'modeCos'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s3'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s0'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fsm:TOFSM|en_Subtractor'
+Slack : 0.343
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'fsm:TOFSM|en_Subtractor'
+Slack : -11.454
+TNS   : -1387.496
+
+Type  : Slow 1200mV 0C Model Setup 'modeCos'
+Slack : -9.781
+TNS   : -293.995
+
+Type  : Slow 1200mV 0C Model Setup 'fsm:TOFSM|currentState.s3'
+Slack : -6.629
+TNS   : -152.987
+
+Type  : Slow 1200mV 0C Model Setup 'fsm:TOFSM|currentState.s0'
+Slack : -6.150
+TNS   : -20.466
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -2.804
+TNS   : -546.649
+
+Type  : Slow 1200mV 0C Model Hold 'fsm:TOFSM|currentState.s0'
+Slack : -2.727
+TNS   : -3.823
+
+Type  : Slow 1200mV 0C Model Hold 'modeCos'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fsm:TOFSM|en_Subtractor'
+Slack : 0.239
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fsm:TOFSM|currentState.s3'
+Slack : 1.752
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -670.180
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'modeCos'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s3'
+Slack : -0.046
+TNS   : -0.494
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s0'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|en_Subtractor'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'fsm:TOFSM|en_Subtractor'
+Slack : -5.169
+TNS   : -552.937
+
+Type  : Fast 1200mV 0C Model Setup 'modeCos'
+Slack : -4.063
+TNS   : -107.348
+
+Type  : Fast 1200mV 0C Model Setup 'fsm:TOFSM|currentState.s0'
+Slack : -2.726
+TNS   : -7.298
+
+Type  : Fast 1200mV 0C Model Setup 'fsm:TOFSM|currentState.s3'
+Slack : -2.565
+TNS   : -54.473
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.262
+TNS   : -233.335
+
+Type  : Fast 1200mV 0C Model Hold 'fsm:TOFSM|currentState.s0'
+Slack : -1.481
+TNS   : -2.062
+
+Type  : Fast 1200mV 0C Model Hold 'modeCos'
+Slack : -0.003
+TNS   : -0.005
+
+Type  : Fast 1200mV 0C Model Hold 'fsm:TOFSM|en_Subtractor'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.107
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fsm:TOFSM|currentState.s3'
+Slack : 0.778
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -250.090
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'modeCos'
+Slack : -3.000
+TNS   : -13.570
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s3'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|en_Subtractor'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fsm:TOFSM|currentState.s0'
+Slack : 0.366
+TNS   : 0.000
+
+------------------------------------------------------------
