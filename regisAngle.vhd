@@ -9,7 +9,7 @@ entity regisAngle is								-- hannya angle
 			Enable_Reg : in std_logic;
 			inputRegister : in std_logic_vector(31 downto 0);
 			reset_Reg : in std_logic;
-			outputRegister : buffer std_logic_vector(31 downto 0)  -- GK YAKIN SAMA BUFFER
+			outputRegister : out std_logic_vector(31 downto 0)  -- GK YAKIN SAMA BUFFER
 	);
 end regisAngle;
 
@@ -19,10 +19,10 @@ begin
 	begin
 		if (reset_Reg = '1') then
 			outputRegister <= (others => '0');
-		elsif (Enable_Reg = '0' and reset_Reg = '0') then
-			if (clk'EVENT and clk = '1') then
-				outputRegister <= outputRegister;
-			end if;
+		--elsif (Enable_Reg = '0' and reset_Reg = '0') then
+		--	if (clk'EVENT and clk = '1') then
+		--		outputRegister <= outputRegister;
+		--	end if;
 		elsif (Enable_Reg = '1' and reset_Reg = '0') then
 			if (clk'EVENT and clk = '1') then
 				outputRegister <= inputRegister;

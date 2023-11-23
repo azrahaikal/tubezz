@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.978 ns
+From           : Sudut[0]
+To             : subtractor:blokSubtractor|y_outTemp[32]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.825 ns
+From           : angka[19]$latch
+To             : angka[19]
+From Clock     : modeSin
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.154 ns
+From           : Sudut[21]
+To             : fsm:TOFSM|nextState.s2_183
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 67.63 MHz ( period = 14.786 ns )
+From           : fsm:TOFSM|outFinal
+To             : regis:blokOutSin|outputRegister[31]~_Duplicate_1
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'modeSin'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 405.02 MHz ( period = 2.469 ns )
+From           : angkaTemp[49]
+To             : angka[19]$latch
+From Clock     : modeSin
+To Clock       : modeSin
+Failed Paths   : 0
+
+Type           : Clock Setup: 'modeCos'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 405.02 MHz ( period = 2.469 ns )
+From           : angkaTemp[49]
+To             : angka[19]$latch
+From Clock     : modeCos
+To Clock       : modeCos
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : fsm:TOFSM|currentState.s3
+To             : fsm:TOFSM|nextState.s5_147
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 30
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 30
+
+--------------------------------------------------------------------------------------
+

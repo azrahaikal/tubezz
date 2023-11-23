@@ -1,0 +1,6 @@
+
+State Machine - |tubes1|fsm:blokFSM|currentState
+Name currentState.s2 currentState.s1 currentState.s0 
+currentState.s0 0 0 0 
+currentState.s1 0 1 1 
+currentState.s2 1 0 1 

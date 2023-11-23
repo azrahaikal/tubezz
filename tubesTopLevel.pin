@@ -23,17 +23,13 @@
  ---------------------------------------------------------------------------------
  -- NC            : No Connect. This pin has no internal connection to the device.
  -- DNU           : Do Not Use. This pin MUST NOT be connected.
- -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.0V).
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --					Bank 1:		2.5V
- --					Bank 2:		2.5V
- --					Bank 3:		2.5V
- --					Bank 4:		2.5V
- --					Bank 5:		2.5V
- --					Bank 6:		2.5V
- --					Bank 7:		2.5V
- --					Bank 8:		2.5V
+ --					Bank 1:		3.3V
+ --					Bank 2:		3.3V
+ --					Bank 3:		3.3V
+ --					Bank 4:		3.3V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --					It can also be used to report unused dedicated pins. The connection
  --					on the board for unused dedicated pins depends on whether this will
@@ -67,152 +63,215 @@
  ---------------------------------------------------------------------------------
 
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-CHIP  "tubesTopLevel"  ASSIGNED TO AN: EP4CE6E22C8
+CHIP  "tubesTopLevel"  ASSIGNED TO AN: EP2C8Q208C7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-RESERVED_INPUT_WITH_WEAK_PULLUP : 1         :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 2         :        :                   :         : 1         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 3         :        :                   :         : 1         :                
-GND                          : 4         : gnd    :                   :         :           :                
-VCCINT                       : 5         : power  :                   : 1.2V    :           :                
-~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 6         : input  : 2.5 V             :         : 1         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 7         :        :                   :         : 1         :                
-~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 8         : input  : 2.5 V             :         : 1         : N              
-nSTATUS                      : 9         :        :                   :         : 1         :                
-angka[6]                     : 10        : output : 2.5 V             :         : 1         : N              
-Sudut[23]                    : 11        : input  : 2.5 V             :         : 1         : N              
-~ALTERA_DCLK~                : 12        : output : 2.5 V             :         : 1         : N              
-~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 13        : input  : 2.5 V             :         : 1         : N              
-nCONFIG                      : 14        :        :                   :         : 1         :                
-TDI                          : 15        : input  :                   :         : 1         :                
-TCK                          : 16        : input  :                   :         : 1         :                
-VCCIO1                       : 17        : power  :                   : 2.5V    : 1         :                
-TMS                          : 18        : input  :                   :         : 1         :                
-GND                          : 19        : gnd    :                   :         :           :                
-TDO                          : 20        : output :                   :         : 1         :                
-nCE                          : 21        :        :                   :         : 1         :                
-GND                          : 22        : gnd    :                   :         :           :                
-clk                          : 23        : input  : 2.5 V             :         : 1         : N              
-rst                          : 24        : input  : 2.5 V             :         : 2         : N              
-GND+                         : 25        :        :                   :         : 2         :                
-VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
-GND                          : 27        : gnd    :                   :         :           :                
-angka[29]                    : 28        : output : 2.5 V             :         : 2         : N              
-VCCINT                       : 29        : power  :                   : 1.2V    :           :                
-Sudut[31]                    : 30        : input  : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 31        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 32        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 34        :        :                   :         : 2         :                
-VCCA1                        : 35        : power  :                   : 2.5V    :           :                
-GNDA1                        : 36        : gnd    :                   :         :           :                
-VCCD_PLL1                    : 37        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
-Sudut[5]                     : 39        : input  : 2.5 V             :         : 3         : N              
-VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
-GND                          : 41        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 42        :        :                   :         : 3         :                
-modeTan                      : 43        : input  : 2.5 V             :         : 3         : N              
-angka[17]                    : 44        : output : 2.5 V             :         : 3         : N              
-VCCINT                       : 45        : power  :                   : 1.2V    :           :                
-angka[18]                    : 46        : output : 2.5 V             :         : 3         : N              
-VCCIO3                       : 47        : power  :                   : 2.5V    : 3         :                
-GND                          : 48        : gnd    :                   :         :           :                
-angka[20]                    : 49        : output : 2.5 V             :         : 3         : N              
-Sudut[20]                    : 50        : input  : 2.5 V             :         : 3         : N              
-Sudut[2]                     : 51        : input  : 2.5 V             :         : 3         : N              
-Sudut[13]                    : 52        : input  : 2.5 V             :         : 3         : N              
-Sudut[27]                    : 53        : input  : 2.5 V             :         : 3         : N              
-modeSin                      : 54        : input  : 2.5 V             :         : 4         : N              
-angka[23]                    : 55        : output : 2.5 V             :         : 4         : N              
-VCCIO4                       : 56        : power  :                   : 2.5V    : 4         :                
-GND                          : 57        : gnd    :                   :         :           :                
-Sudut[24]                    : 58        : input  : 2.5 V             :         : 4         : N              
-angka[9]                     : 59        : output : 2.5 V             :         : 4         : N              
-modeCos                      : 60        : input  : 2.5 V             :         : 4         : N              
-VCCINT                       : 61        : power  :                   : 1.2V    :           :                
-VCCIO4                       : 62        : power  :                   : 2.5V    : 4         :                
-GND                          : 63        : gnd    :                   :         :           :                
-angka[26]                    : 64        : output : 2.5 V             :         : 4         : N              
-angka[8]                     : 65        : output : 2.5 V             :         : 4         : N              
-angka[13]                    : 66        : output : 2.5 V             :         : 4         : N              
-angka[14]                    : 67        : output : 2.5 V             :         : 4         : N              
-angka[2]                     : 68        : output : 2.5 V             :         : 4         : N              
-angka[28]                    : 69        : output : 2.5 V             :         : 4         : N              
-Sudut[16]                    : 70        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 71        :        :                   :         : 4         :                
-Sudut[22]                    : 72        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 73        :        :                   :         : 5         :                
-Sudut[28]                    : 74        : input  : 2.5 V             :         : 5         : N              
-angka[27]                    : 75        : output : 2.5 V             :         : 5         : N              
-Sudut[18]                    : 76        : input  : 2.5 V             :         : 5         : N              
-Sudut[17]                    : 77        : input  : 2.5 V             :         : 5         : N              
-VCCINT                       : 78        : power  :                   : 1.2V    :           :                
-GND                          : 79        : gnd    :                   :         :           :                
-angka[24]                    : 80        : output : 2.5 V             :         : 5         : N              
-VCCIO5                       : 81        : power  :                   : 2.5V    : 5         :                
-GND                          : 82        : gnd    :                   :         :           :                
-Sudut[30]                    : 83        : input  : 2.5 V             :         : 5         : N              
-angka[4]                     : 84        : output : 2.5 V             :         : 5         : N              
-Sudut[26]                    : 85        : input  : 2.5 V             :         : 5         : N              
-Sudut[7]                     : 86        : input  : 2.5 V             :         : 5         : N              
-Sudut[8]                     : 87        : input  : 2.5 V             :         : 5         : N              
-Sudut[10]                    : 88        : input  : 2.5 V             :         : 5         : N              
-Sudut[9]                     : 89        : input  : 2.5 V             :         : 5         : N              
-GND+                         : 90        :        :                   :         : 6         :                
-GND+                         : 91        :        :                   :         : 6         :                
-CONF_DONE                    : 92        :        :                   :         : 6         :                
-VCCIO6                       : 93        : power  :                   : 2.5V    : 6         :                
-MSEL0                        : 94        :        :                   :         : 6         :                
-GND                          : 95        : gnd    :                   :         :           :                
-MSEL1                        : 96        :        :                   :         : 6         :                
-MSEL2                        : 97        :        :                   :         : 6         :                
-angka[11]                    : 98        : output : 2.5 V             :         : 6         : N              
-Sudut[0]                     : 99        : input  : 2.5 V             :         : 6         : N              
-Sudut[4]                     : 100       : input  : 2.5 V             :         : 6         : N              
-~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : 101       : output : 2.5 V             :         : 6         : N              
-VCCINT                       : 102       : power  :                   : 1.2V    :           :                
-angka[12]                    : 103       : output : 2.5 V             :         : 6         : N              
-angka[25]                    : 104       : output : 2.5 V             :         : 6         : N              
-angka[31]                    : 105       : output : 2.5 V             :         : 6         : N              
-angka[16]                    : 106       : output : 2.5 V             :         : 6         : N              
-VCCA2                        : 107       : power  :                   : 2.5V    :           :                
-GNDA2                        : 108       : gnd    :                   :         :           :                
-VCCD_PLL2                    : 109       : power  :                   : 1.2V    :           :                
-angka[3]                     : 110       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 111       :        :                   :         : 7         :                
-angka[5]                     : 112       : output : 2.5 V             :         : 7         : N              
-Sudut[19]                    : 113       : input  : 2.5 V             :         : 7         : N              
-angka[15]                    : 114       : output : 2.5 V             :         : 7         : N              
-angka[1]                     : 115       : output : 2.5 V             :         : 7         : N              
-VCCINT                       : 116       : power  :                   : 1.2V    :           :                
-VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
-GND                          : 118       : gnd    :                   :         :           :                
-angka[7]                     : 119       : output : 2.5 V             :         : 7         : N              
-angka[0]                     : 120       : output : 2.5 V             :         : 7         : N              
-angka[10]                    : 121       : output : 2.5 V             :         : 7         : N              
-VCCIO7                       : 122       : power  :                   : 2.5V    : 7         :                
-GND                          : 123       : gnd    :                   :         :           :                
-Sudut[25]                    : 124       : input  : 2.5 V             :         : 7         : N              
-Sudut[3]                     : 125       : input  : 2.5 V             :         : 7         : N              
-Sudut[12]                    : 126       : input  : 2.5 V             :         : 7         : N              
-Sudut[1]                     : 127       : input  : 2.5 V             :         : 7         : N              
-angka[21]                    : 128       : output : 2.5 V             :         : 8         : N              
-Sudut[15]                    : 129       : input  : 2.5 V             :         : 8         : N              
-VCCIO8                       : 130       : power  :                   : 2.5V    : 8         :                
-GND                          : 131       : gnd    :                   :         :           :                
-Sudut[6]                     : 132       : input  : 2.5 V             :         : 8         : N              
-Sudut[11]                    : 133       : input  : 2.5 V             :         : 8         : N              
-VCCINT                       : 134       : power  :                   : 1.2V    :           :                
-Sudut[14]                    : 135       : input  : 2.5 V             :         : 8         : N              
-angka[19]                    : 136       : output : 2.5 V             :         : 8         : N              
-Sudut[21]                    : 137       : input  : 2.5 V             :         : 8         : N              
-angka[30]                    : 138       : output : 2.5 V             :         : 8         : N              
-VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 1         : input  : 3.3-V LVTTL       :         : 1         : N              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 2         : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 3         :        :                   :         : 1         :                
+GND*                         : 4         :        :                   :         : 1         :                
+GND*                         : 5         :        :                   :         : 1         :                
+GND*                         : 6         :        :                   :         : 1         :                
+VCCIO1                       : 7         : power  :                   : 3.3V    : 1         :                
+GND*                         : 8         :        :                   :         : 1         :                
+GND                          : 9         : gnd    :                   :         :           :                
+GND*                         : 10        :        :                   :         : 1         :                
+GND*                         : 11        :        :                   :         : 1         :                
+GND*                         : 12        :        :                   :         : 1         :                
+GND*                         : 13        :        :                   :         : 1         :                
+angka[9]                     : 14        : output : 3.3-V LVTTL       :         : 1         : N              
+angka[22]                    : 15        : output : 3.3-V LVTTL       :         : 1         : N              
+TDO                          : 16        : output :                   :         : 1         :                
+TMS                          : 17        : input  :                   :         : 1         :                
+TCK                          : 18        : input  :                   :         : 1         :                
+TDI                          : 19        : input  :                   :         : 1         :                
+DATA0                        : 20        : input  :                   :         : 1         :                
+DCLK                         : 21        :        :                   :         : 1         :                
+nCE                          : 22        :        :                   :         : 1         :                
+clk                          : 23        : input  : 3.3-V LVTTL       :         : 1         : N              
+rst                          : 24        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND                          : 25        : gnd    :                   :         :           :                
+nCONFIG                      : 26        :        :                   :         : 1         :                
+GND+                         : 27        :        :                   :         : 1         :                
+GND+                         : 28        :        :                   :         : 1         :                
+VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
+angka[6]                     : 30        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 31        :        :                   :         : 1         :                
+VCCINT                       : 32        : power  :                   : 1.2V    :           :                
+Sudut[18]                    : 33        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 34        :        :                   :         : 1         :                
+GND*                         : 35        :        :                   :         : 1         :                
+GND                          : 36        : gnd    :                   :         :           :                
+GND*                         : 37        :        :                   :         : 1         :                
+GND                          : 38        : gnd    :                   :         :           :                
+GND*                         : 39        :        :                   :         : 1         :                
+GND*                         : 40        :        :                   :         : 1         :                
+GND*                         : 41        :        :                   :         : 1         :                
+VCCIO1                       : 42        : power  :                   : 3.3V    : 1         :                
+GND*                         : 43        :        :                   :         : 1         :                
+GND*                         : 44        :        :                   :         : 1         :                
+GND*                         : 45        :        :                   :         : 1         :                
+GND*                         : 46        :        :                   :         : 1         :                
+GND*                         : 47        :        :                   :         : 1         :                
+GND*                         : 48        :        :                   :         : 1         :                
+GND                          : 49        : gnd    :                   :         :           :                
+GND_PLL1                     : 50        : gnd    :                   :         :           :                
+VCCD_PLL1                    : 51        : power  :                   : 1.2V    :           :                
+GND_PLL1                     : 52        : gnd    :                   :         :           :                
+VCCA_PLL1                    : 53        : power  :                   : 1.2V    :           :                
+GNDA_PLL1                    : 54        : gnd    :                   :         :           :                
+GND                          : 55        : gnd    :                   :         :           :                
+GND*                         : 56        :        :                   :         : 4         :                
+GND*                         : 57        :        :                   :         : 4         :                
+GND*                         : 58        :        :                   :         : 4         :                
+GND*                         : 59        :        :                   :         : 4         :                
+GND*                         : 60        :        :                   :         : 4         :                
+GND*                         : 61        :        :                   :         : 4         :                
+VCCIO4                       : 62        : power  :                   : 3.3V    : 4         :                
+GND*                         : 63        :        :                   :         : 4         :                
+angka[28]                    : 64        : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 65        : gnd    :                   :         :           :                
+VCCINT                       : 66        : power  :                   : 1.2V    :           :                
+angka[27]                    : 67        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[23]                    : 68        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[19]                    : 69        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[30]                    : 70        : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 71        : power  :                   : 3.3V    : 4         :                
+angka[20]                    : 72        : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 73        : gnd    :                   :         :           :                
+angka[17]                    : 74        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[26]                    : 75        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[8]                     : 76        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[7]                     : 77        : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 78        : gnd    :                   :         :           :                
+VCCINT                       : 79        : power  :                   : 1.2V    :           :                
+angka[12]                    : 80        : output : 3.3-V LVTTL       :         : 4         : N              
+Sudut[2]                     : 81        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[12]                    : 82        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 83        : power  :                   : 3.3V    : 4         :                
+Sudut[26]                    : 84        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 85        : gnd    :                   :         :           :                
+Sudut[16]                    : 86        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[27]                    : 87        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[24]                    : 88        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[30]                    : 89        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 90        :        :                   :         : 4         :                
+VCCIO4                       : 91        : power  :                   : 3.3V    : 4         :                
+GND*                         : 92        :        :                   :         : 4         :                
+GND                          : 93        : gnd    :                   :         :           :                
+GND*                         : 94        :        :                   :         : 4         :                
+GND*                         : 95        :        :                   :         : 4         :                
+GND*                         : 96        :        :                   :         : 4         :                
+GND*                         : 97        :        :                   :         : 4         :                
+VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
+GND*                         : 99        :        :                   :         : 4         :                
+GND                          : 100       : gnd    :                   :         :           :                
+GND*                         : 101       :        :                   :         : 4         :                
+GND*                         : 102       :        :                   :         : 4         :                
+GND*                         : 103       :        :                   :         : 4         :                
+GND*                         : 104       :        :                   :         : 4         :                
+GND*                         : 105       :        :                   :         : 3         :                
+GND*                         : 106       :        :                   :         : 3         :                
+GND*                         : 107       :        :                   :         : 3         :                
+~LVDS54p/nCEO~               : 108       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : 109       : power  :                   : 3.3V    : 3         :                
+GND*                         : 110       :        :                   :         : 3         :                
+GND                          : 111       : gnd    :                   :         :           :                
+GND*                         : 112       :        :                   :         : 3         :                
+GND*                         : 113       :        :                   :         : 3         :                
+GND*                         : 114       :        :                   :         : 3         :                
+GND*                         : 115       :        :                   :         : 3         :                
+angka[4]                     : 116       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 117       :        :                   :         : 3         :                
+angka[3]                     : 118       : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : 119       : gnd    :                   :         :           :                
+VCCINT                       : 120       : power  :                   : 1.2V    :           :                
+nSTATUS                      : 121       :        :                   :         : 3         :                
+VCCIO3                       : 122       : power  :                   : 3.3V    : 3         :                
+CONF_DONE                    : 123       :        :                   :         : 3         :                
+GND                          : 124       : gnd    :                   :         :           :                
+MSEL1                        : 125       :        :                   :         : 3         :                
+MSEL0                        : 126       :        :                   :         : 3         :                
+Sudut[3]                     : 127       : input  : 3.3-V LVTTL       :         : 3         : N              
+angka[10]                    : 128       : output : 3.3-V LVTTL       :         : 3         : N              
+Sudut[22]                    : 129       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[21]                    : 130       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[20]                    : 131       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[19]                    : 132       : input  : 3.3-V LVTTL       :         : 3         : N              
+modeTan                      : 133       : input  : 3.3-V LVTTL       :         : 3         : N              
+modeCos                      : 134       : input  : 3.3-V LVTTL       :         : 3         : N              
+modeSin                      : 135       : input  : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : 136       : power  :                   : 3.3V    : 3         :                
+angka[1]                     : 137       : output : 3.3-V LVTTL       :         : 3         : N              
+Sudut[13]                    : 138       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[25]                    : 139       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 140       : gnd    :                   :         :           :                
-angka[22]                    : 141       : output : 2.5 V             :         : 8         : N              
-Sudut[29]                    : 142       : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 143       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 144       :        :                   :         : 8         :                
-GND                          : EPAD      :        :                   :         :           :                
+Sudut[17]                    : 141       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[31]                    : 142       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[9]                     : 143       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[15]                    : 144       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[10]                    : 145       : input  : 3.3-V LVTTL       :         : 3         : N              
+Sudut[11]                    : 146       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 147       :        :                   :         : 3         :                
+VCCIO3                       : 148       : power  :                   : 3.3V    : 3         :                
+GND*                         : 149       :        :                   :         : 3         :                
+GND*                         : 150       :        :                   :         : 3         :                
+GND*                         : 151       :        :                   :         : 3         :                
+GND*                         : 152       :        :                   :         : 3         :                
+GND                          : 153       : gnd    :                   :         :           :                
+GND_PLL2                     : 154       : gnd    :                   :         :           :                
+VCCD_PLL2                    : 155       : power  :                   : 1.2V    :           :                
+GND_PLL2                     : 156       : gnd    :                   :         :           :                
+VCCA_PLL2                    : 157       : power  :                   : 1.2V    :           :                
+GNDA_PLL2                    : 158       : gnd    :                   :         :           :                
+GND                          : 159       : gnd    :                   :         :           :                
+angka[2]                     : 160       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[0]                     : 161       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 162       :        :                   :         : 2         :                
+Sudut[28]                    : 163       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[0]                     : 164       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[6]                     : 165       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 166       : power  :                   : 3.3V    : 2         :                
+GND                          : 167       : gnd    :                   :         :           :                
+Sudut[7]                     : 168       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[4]                     : 169       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[5]                     : 170       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[14]                    : 171       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 172       : power  :                   : 3.3V    : 2         :                
+Sudut[1]                     : 173       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 174       : gnd    :                   :         :           :                
+Sudut[23]                    : 175       : input  : 3.3-V LVTTL       :         : 2         : N              
+Sudut[8]                     : 176       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 177       : gnd    :                   :         :           :                
+VCCINT                       : 178       : power  :                   : 1.2V    :           :                
+angka[14]                    : 179       : output : 3.3-V LVTTL       :         : 2         : N              
+Sudut[29]                    : 180       : input  : 3.3-V LVTTL       :         : 2         : N              
+angka[13]                    : 181       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[15]                    : 182       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 183       : power  :                   : 3.3V    : 2         :                
+GND                          : 184       : gnd    :                   :         :           :                
+angka[5]                     : 185       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 186       : gnd    :                   :         :           :                
+angka[24]                    : 187       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[21]                    : 188       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[18]                    : 189       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCINT                       : 190       : power  :                   : 1.2V    :           :                
+angka[31]                    : 191       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[11]                    : 192       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[25]                    : 193       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 194       : power  :                   : 3.3V    : 2         :                
+angka[29]                    : 195       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 196       : gnd    :                   :         :           :                
+GND*                         : 197       :        :                   :         : 2         :                
+angka[16]                    : 198       : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 199       :        :                   :         : 2         :                
+GND*                         : 200       :        :                   :         : 2         :                
+GND*                         : 201       :        :                   :         : 2         :                
+VCCIO2                       : 202       : power  :                   : 3.3V    : 2         :                
+GND*                         : 203       :        :                   :         : 2         :                
+GND                          : 204       : gnd    :                   :         :           :                
+GND*                         : 205       :        :                   :         : 2         :                
+GND*                         : 206       :        :                   :         : 2         :                
+GND*                         : 207       :        :                   :         : 2         :                
+GND*                         : 208       :        :                   :         : 2         :                
