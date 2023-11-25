@@ -14,6 +14,7 @@ entity fsm is
 			en_Register: out std_logic;
 			reset_Register: out std_logic;
 			modeSin, modeCos, modeTan : in std_logic;
+			enFSM : in std_logic;
 			outFinal: out std_logic
 	);
 end fsm;
@@ -21,24 +22,29 @@ end fsm;
 architecture fsm_arc of fsm is
 	type state is (s0, s1, s2, s3, s4, s5); -- s0: inisialisasi, s1: angle < inputSudut, s2: angle >= inputSudut, s3: save di register. s4 buat compare.
 									   -- setelah di s1 atau s2, akan ada penyetaraan bit. s5 buat outFinal.
-	signal currentState : state;-- := s0;
-	signal nextState : state;-- := s0;
+	signal currentState : state;
+	signal nextState : state;
 	
-	--signal modeSin, modeCos, modeTan : std_logic;
-	signal statusCount : std_logic;-- := '1';
-	signal statusResetCounter : std_logic;-- := '0';
+	signal statusCount : std_logic;
+	signal statusResetCounter : std_logic;
+	signal enFSM_internal : std_logic := enFSM;
 	
 begin
-	process(rst, clk, currentState, nextState, statusCount, statusResetCounter)
-	begin
+
+	process(rst, clk, currentState, nextState, statusCount, statusResetCounter, enFSM, enFSM_internal)
+	begin	
+	
 	if (rst = '1') then
 		currentState <= s0;
 		resetCounter <= '1';
 		inputCount <= '0';
-	elsif (clk'EVENT and clk = '1') then
-		currentState <= nextState;
-		inputCount <= statusCount;
-		resetCounter <= statusResetCounter;
+	elsif (rising_edge(clk)) then
+		--enFSM_internal <= enFSM;
+		--if enFSM_internal = '1' then
+			currentState <= nextState;
+			inputCount <= statusCount;
+			resetCounter <= statusResetCounter;
+		--end if;
 	end if;
 	end process;
 	
@@ -48,22 +54,24 @@ begin
 	case currentState is
 	
 		when s0 =>
-			--if (modeSin = '0' and modeCos = '0' and modeTan = '0') then  -- pas disimulasiin, pencet reset dulu sekali
-			--	reset_Register <= '1';		-- x diset ke 1, y ke 0, angle ke 0
-			--	statusResetCounter <= '1';
-			--	statusCount <= '0';
-			--	en_Subtractor <= '0';
-			--	en_Register <= '0';
-			--	outFinal <= '0';
-			--	nextState <= s0;
-			if (modeSin = '1' or modeCos = '1' or modeTan = '1') then
+			if (modeSin = '1' or modeCos = '1' or modeTan = '1') then  -- inisialisasi
 				reset_Register <= '1';
 				statusResetCounter <= '0';
-				statusCount <= '0';
+				statusCount <= '1';
 				en_Subtractor <= '0';
 				en_Register <= '0';
 				outFinal <= '0';
+				enFSM_internal <= '1';
 				nextState <= s4;
+			else
+				reset_Register <= '1';
+				statusResetCounter <= '0';
+				statusCount <= '1';
+				en_Subtractor <= '0';
+				en_Register <= '0';
+				outFinal <= '0';
+				enFSM_internal <= '1';
+				nextState <= s0;
 			end if;
 			
 		when s4 =>							-- buat compare
@@ -71,8 +79,9 @@ begin
 			statusCount <= '0';
 			statusResetCounter <= '0';
 			en_Subtractor <= '0';
-			en_Register <= '0';
+			en_Register <= '1';
 			outFinal <= '0';
+			enFSM_internal <= '1';
 			if (comparison = '0') then		-- angle < Sudut
 				nextState <= s1;
 			elsif (comparison = '1') then	-- angle >= Sudut
@@ -84,8 +93,9 @@ begin
 			en_Subtractor <= '1';
 			statusCount <= '0';
 			statusResetCounter <= '0';
-			en_Register <= '0';
+			en_Register <= '1';
 			outFinal <= '0';
+			enFSM_internal <= '0';
 			nextState <= s3;		-- save di register
 
 		when s2 =>							-- x = x + ... . y = y - ... . angle = angle - ...
@@ -93,8 +103,9 @@ begin
 			en_Subtractor <= '1';
 			statusCount <= '0';
 			statusResetCounter <= '0';
-			en_Register <= '0';
+			en_Register <= '1';
 			outFinal <= '0';
+			enFSM_internal <= '0';
 			nextState <= s3;		-- save di register
 
 		when s3 =>		-- save di register
@@ -102,6 +113,7 @@ begin
 			reset_Register <= '0';
 			outFinal <= '0';
 			en_Register <= '1';
+			enFSM_internal <= '1';
 			
 			if (counter >= "1101") then
 				statusCount <= '0';
@@ -116,14 +128,15 @@ begin
 		when s5 =>			-- outFinal
 			en_Subtractor <= '0';
 			reset_Register <= '0';
-			en_Register <= '0';
+			en_Register <= '1';
 			statusCount <= '0';
 			statusResetCounter <= '1';
+			enFSM_internal <= '1';
 			outFinal <= '1';			-- register OUT_REG aktif			
 			nextState <= s0;			-- if modeSin = '1' ... --> tulis di top level	
 			
 		when others =>
-			nextState <= s0;
+			nextState <= s4;
 	
 	end case;
 	

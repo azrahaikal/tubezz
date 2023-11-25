@@ -19,14 +19,8 @@ begin
 	begin
 		if (reset_Reg = '1') then
 			outputRegister <= "00000000000000000000000000000000";
-		--elsif ( Enable_Reg = '0' and reset_Reg = '0') then
-		--	if (clk'EVENT and clk = '1') then
-		--		outputRegister <= outputRegister;
-		--	end if;
 		elsif (Enable_Reg = '1' and reset_Reg = '0') then
-			if (clk'EVENT and clk = '1') then
 				outputRegister <= inputRegister;
-			end if;
 		end if;
 	end process;
 

@@ -1,5 +1,5 @@
 Flow report for tubesTopLevel
-Wed Nov 22 16:57:03 2023
+Sat Nov 25 16:02:27 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 22 16:57:03 2023        ;
+; Flow Status                        ; Successful - Sat Nov 25 16:02:27 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; tubesTopLevel                                ;
 ; Top-level Entity Name              ; tubesTopLevel                                ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C8Q208C7                                  ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; 1,094                                        ;
-;     Total combinational functions  ; 840                                          ;
-;     Dedicated logic registers      ; 457                                          ;
-; Total registers                    ; 457                                          ;
+; Total logic elements               ; 1,513                                        ;
+;     Total combinational functions  ; 1,513                                        ;
+;     Dedicated logic registers      ; 107                                          ;
+; Total registers                    ; 107                                          ;
 ; Total pins                         ; 69                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/22/2023 16:56:59 ;
+; Start date & time ; 11/25/2023 16:02:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tubesTopLevel       ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 242035516409305.170064701901852 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 242035516409309.170090294405148 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
@@ -88,8 +88,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 257 MB              ; 00:00:03                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 257 MB              ; 00:00:02                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

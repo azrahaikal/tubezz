@@ -23,9 +23,9 @@ VTUj1QLLDoDifC=[Ri`RJ?1
 !s100 ;dd@BSf3P4eoHTA]eo=1>3
 Z8 OV;C;10.6d;65
 32
-Z9 !s110 1700646076
+Z9 !s110 1700902975
 !i10b 1
-Z10 !s108 1700646076.000000
+Z10 !s108 1700902975.000000
 Z11 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/comparator.vhd|
 Z12 !s107 D:/SisDigGemink/tubesTopLevel/comparator.vhd|
 !i113 1
@@ -52,7 +52,7 @@ R12
 R13
 R14
 Ecounter
-Z15 w1700646999
+Z15 w1700900987
 Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z17 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R3
@@ -67,11 +67,11 @@ VmL<O3W>o8N>B=5i3d:oba3
 !s100 FU5`aJz45;f68IiUYP31a1
 R8
 32
-Z20 !s110 1700647068
+R9
 !i10b 1
-Z21 !s108 1700647068.000000
-Z22 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/counter.vhd|
-Z23 !s107 D:/SisDigGemink/tubesTopLevel/counter.vhd|
+R10
+Z20 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/counter.vhd|
+Z21 !s107 D:/SisDigGemink/tubesTopLevel/counter.vhd|
 !i113 1
 R13
 R14
@@ -84,38 +84,38 @@ R5
 DEx4 work 7 counter 0 22 mL<O3W>o8N>B=5i3d:oba3
 l15
 L14
-VDHhoNZ@QEV9OF;3^8[XkM3
-!s100 TR3dMDk]C8[c_Kz6?QAGQ2
+VA^3R3ePa:a6od6RNg8N:W2
+!s100 UAPCGcf9QF=X0`Z4D1CBE2
 R8
 32
-R20
+R9
 !i10b 1
+R10
+R20
 R21
-R22
-R23
 !i113 1
 R13
 R14
 Efsm
-Z24 w1700646701
+Z22 w1700901273
 R17
 R3
 R4
 R5
 R0
-Z25 8D:/SisDigGemink/tubesTopLevel/fsm.vhd
-Z26 FD:/SisDigGemink/tubesTopLevel/fsm.vhd
+Z23 8D:/SisDigGemink/tubesTopLevel/fsm.vhd
+Z24 FD:/SisDigGemink/tubesTopLevel/fsm.vhd
 l0
 L7
-V`hS^oQd2SYPJ6zKP8Q]bh1
-!s100 E9@N?oV2_i6CC4OCCdW=^2
+VNag3i@I]CbADF1jOmC]Nz2
+!s100 5S;:G8VgAZQ?cz>l1E>XS0
 R8
 32
-Z27 !s110 1700647081
+R9
 !i10b 1
-Z28 !s108 1700647081.000000
-Z29 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/fsm.vhd|
-Z30 !s107 D:/SisDigGemink/tubesTopLevel/fsm.vhd|
+R10
+Z25 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/fsm.vhd|
+Z26 !s107 D:/SisDigGemink/tubesTopLevel/fsm.vhd|
 !i113 1
 R13
 R14
@@ -124,18 +124,18 @@ R17
 R3
 R4
 R5
-Z31 DEx4 work 3 fsm 0 22 `hS^oQd2SYPJ6zKP8Q]bh1
-l31
-L21
-Z32 VR2ha_=eSPeOl:gffYV]:61
-Z33 !s100 iK:<0De@I2;g10X4=:F?C1
+DEx4 work 3 fsm 0 22 Nag3i@I]CbADF1jOmC]Nz2
+l32
+L22
+VROhCFLlYVPSOQ:i;zMKoX2
+!s100 BZ_S>8EEVz;9dKG<O2m[Q0
 R8
 32
-R27
+R9
 !i10b 1
-R28
-R29
-R30
+R10
+R25
+R26
 !i113 1
 R13
 R14
@@ -153,35 +153,35 @@ VkAPS;_FdLU1JdLbnUW8600
 R8
 32
 b1
-!s110 1700646086
+R9
 !i10b 1
-!s108 1700646086.000000
+R10
 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/numeric_std.vhd|
 !s107 D:/SisDigGemink/tubesTopLevel/numeric_std.vhd|
 !i113 1
 R13
 R14
 Eregis
-Z34 w1700631096
+Z27 w1700902403
 R2
 R17
 R3
 R4
 R5
 R0
-Z35 8D:/SisDigGemink/tubesTopLevel/regis.vhd
-Z36 FD:/SisDigGemink/tubesTopLevel/regis.vhd
+Z28 8D:/SisDigGemink/tubesTopLevel/regis.vhd
+Z29 FD:/SisDigGemink/tubesTopLevel/regis.vhd
 l0
 L7
 VY]m:?:I5;@kl:<U<dm5e93
 !s100 iTM>^0lXnF@8i=cKIP6l>1
 R8
 32
-Z37 !s110 1700646089
+R9
 !i10b 1
-Z38 !s108 1700646089.000000
-Z39 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regis.vhd|
-Z40 !s107 D:/SisDigGemink/tubesTopLevel/regis.vhd|
+R10
+Z30 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/regis.vhd|
+Z31 !s107 D:/SisDigGemink/tubesTopLevel/regis.vhd|
 !i113 1
 R13
 R14
@@ -191,18 +191,18 @@ R17
 R3
 R4
 R5
-Z41 DEx4 work 5 regis 0 22 Y]m:?:I5;@kl:<U<dm5e93
+Z32 DEx4 work 5 regis 0 22 Y]m:?:I5;@kl:<U<dm5e93
 l17
 L16
-VWnkY@J@6DdV8MWi7oVoOJ0
-!s100 F:fnmzN5:SBY1fM_=G9g23
+VW^h8CFWAlModh1nHLeNVG3
+!s100 gK_UWPj5?jI6TXD[7kkgM0
 R8
 32
-R37
+R9
 !i10b 1
-R38
-R39
-R40
+R10
+R30
+R31
 !i113 1
 R13
 R14
@@ -212,9 +212,9 @@ R17
 R3
 R4
 R5
-R41
-Z42 8D:/SisDigGemink/tubesTopLevel/regisY.vhd
-Z43 FD:/SisDigGemink/tubesTopLevel/regisY.vhd
+R32
+Z33 8D:/SisDigGemink/tubesTopLevel/regisY.vhd
+Z34 FD:/SisDigGemink/tubesTopLevel/regisY.vhd
 l17
 L16
 V^AGOL@d?_=h;gi5gN?WB_3
@@ -224,20 +224,21 @@ R8
 !s110 1700631177
 !i10b 1
 !s108 1700631177.000000
-Z44 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regisY.vhd|
-Z45 !s107 D:/SisDigGemink/tubesTopLevel/regisY.vhd|
+!s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regisY.vhd|
+Z35 !s107 D:/SisDigGemink/tubesTopLevel/regisY.vhd|
 !i113 1
 R13
 R14
+Z36 w1700631096
 Aregisx_arc
 R2
 R17
 R3
 R4
 R5
-R41
-Z46 8D:/SisDigGemink/tubesTopLevel/regisX.vhd
-Z47 FD:/SisDigGemink/tubesTopLevel/regisX.vhd
+R32
+Z37 8D:/SisDigGemink/tubesTopLevel/regisX.vhd
+Z38 FD:/SisDigGemink/tubesTopLevel/regisX.vhd
 l17
 L16
 VFz@[]2@D@fjK??4zl>::M1
@@ -247,32 +248,33 @@ R8
 !s110 1700631174
 !i10b 1
 !s108 1700631174.000000
-Z48 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regisX.vhd|
-Z49 !s107 D:/SisDigGemink/tubesTopLevel/regisX.vhd|
+!s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regisX.vhd|
+Z39 !s107 D:/SisDigGemink/tubesTopLevel/regisX.vhd|
 !i113 1
 R13
 R14
+R36
 Eregisangle
-Z50 w1700618988
+Z40 w1700618988
 R2
 R17
 R3
 R4
 R5
 R0
-Z51 8D:/SisDigGemink/tubesTopLevel/regisAngle.vhd
-Z52 FD:/SisDigGemink/tubesTopLevel/regisAngle.vhd
+Z41 8D:/SisDigGemink/tubesTopLevel/regisAngle.vhd
+Z42 FD:/SisDigGemink/tubesTopLevel/regisAngle.vhd
 l0
 L7
 Va4f;H4=_^icc[g3oF318^0
 !s100 O7GSm]OPjCn:GgkalYQ]f2
 R8
 32
-Z53 !s110 1700646092
+R9
 !i10b 1
-Z54 !s108 1700646092.000000
-Z55 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/regisAngle.vhd|
-Z56 !s107 D:/SisDigGemink/tubesTopLevel/regisAngle.vhd|
+R10
+Z43 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/regisAngle.vhd|
+Z44 !s107 D:/SisDigGemink/tubesTopLevel/regisAngle.vhd|
 !i113 1
 R13
 R14
@@ -289,35 +291,35 @@ VomHefB9[R1MFDJ`GUgIk`3
 !s100 ?kBX>DOZL@4;X`n0T]Hk`2
 R8
 32
-R53
+R9
 !i10b 1
-R54
-R55
-R56
+R10
+R43
+R44
 !i113 1
 R13
 R14
 Eregisx
-Z57 w1700639175
+Z45 w1700639175
 R2
 R17
 R3
 R4
 R5
 R0
-R46
-R47
+R37
+R38
 l0
 L7
 VUXC^[dUNmjl=8a51g9E7k1
 !s100 c8MF9S5eXOSA=h9GQ8I0f0
 R8
 32
-Z58 !s110 1700646095
+R9
 !i10b 1
-Z59 !s108 1700646095.000000
-R48
-R49
+R10
+Z46 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/regisX.vhd|
+R39
 !i113 1
 R13
 R14
@@ -334,35 +336,35 @@ VojO>0D`LG?j5gkQ8k8fP60
 !s100 J3b@z@JaT;TZnNN5G>Efk2
 R8
 32
-R58
+R9
 !i10b 1
-R59
-R48
-R49
+R10
+R46
+R39
 !i113 1
 R13
 R14
 Eregisy
-Z60 w1700639170
+Z47 w1700639170
 R2
 R17
 R3
 R4
 R5
 R0
-R42
-R43
+R33
+R34
 l0
 L7
 VlQcQmi9[bbX8N4VA>Z7]43
 !s100 1;:?GD_3Y7cgB:5oN[LH43
 R8
 32
-Z61 !s110 1700646098
+R9
 !i10b 1
-Z62 !s108 1700646098.000000
-R44
-R45
+R10
+Z48 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/regisY.vhd|
+R35
 !i113 1
 R13
 R14
@@ -379,35 +381,35 @@ V?JIDWGT>XBzhoV1VN_^fB3
 !s100 j=0SKAlj39FSo;V;MfJfa0
 R8
 32
-R61
+R9
 !i10b 1
-R62
-R44
-R45
+R10
+R48
+R35
 !i113 1
 R13
 R14
 Esubtractor
-Z63 w1700645425
+Z49 w1700901808
 R16
 R3
 R2
 R4
 R5
 R0
-Z64 8D:/SisDigGemink/tubesTopLevel/subtractor.vhd
-Z65 FD:/SisDigGemink/tubesTopLevel/subtractor.vhd
+Z50 8D:/SisDigGemink/tubesTopLevel/subtractor.vhd
+Z51 FD:/SisDigGemink/tubesTopLevel/subtractor.vhd
 l0
 L8
-VnSY3@?g9OVST6XcQ@__B21
-!s100 7@5^Nm0h=ZgV7T>l<kdiP1
+VoNoLYbkZR9FDm>5HzBQJL1
+!s100 6^e18HEWGQFCQ0m`MXQ6L3
 R8
 32
-Z66 !s110 1700646100
+R9
 !i10b 1
-Z67 !s108 1700646100.000000
-Z68 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/subtractor.vhd|
-Z69 !s107 D:/SisDigGemink/tubesTopLevel/subtractor.vhd|
+R10
+Z52 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/subtractor.vhd|
+Z53 !s107 D:/SisDigGemink/tubesTopLevel/subtractor.vhd|
 !i113 1
 R13
 R14
@@ -417,41 +419,41 @@ R3
 R2
 R4
 R5
-DEx4 work 10 subtractor 0 22 nSY3@?g9OVST6XcQ@__B21
-l31
-L20
-VOE<aST>WgQ[k?Id2[OVSc1
-!s100 I`_dfEz@]LmIZjM8c7:gS2
+DEx4 work 10 subtractor 0 22 oNoLYbkZR9FDm>5HzBQJL1
+l36
+L23
+VWM;NRkeQ^>QbobfcICIk32
+!s100 dVAMdjzRAf_W3X_57JQBR3
 R8
 32
-R66
+R9
 !i10b 1
-R67
-R68
-R69
+R10
+R52
+R53
 !i113 1
 R13
 R14
 Etubestoplevel
-Z70 w1700646036
+Z54 w1700902931
 R2
 R3
 R4
 R5
 R0
-Z71 8D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd
-Z72 FD:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd
+Z55 8D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd
+Z56 FD:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd
 l0
 L8
 V^AXhGGhQ5A>0Vhf1BBBQN2
 !s100 SX`G[n`1I_gDRTgS=QjdW1
 R8
 32
-Z73 !s110 1700647071
+Z57 !s110 1700902976
 !i10b 1
-Z74 !s108 1700647071.000000
-Z75 !s90 -reportprogress|300|-work|work|D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd|
-Z76 !s107 D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd|
+Z58 !s108 1700902976.000000
+Z59 !s90 -reportprogress|30|-work|work|D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd|
+Z60 !s107 D:/SisDigGemink/tubesTopLevel/tubesTopLevel.vhd|
 !i113 1
 R13
 R14
@@ -460,18 +462,18 @@ R2
 R3
 R4
 R5
-DEx4 work 13 tubestoplevel 0 22 ^AXhGGhQ5A>0Vhf1BBBQN2
-l115
+Z61 DEx4 work 13 tubestoplevel 0 22 ^AXhGGhQ5A>0Vhf1BBBQN2
+l123
 L16
-Vo2V:5iL:FUOVF<FU;]_Q51
-!s100 =_^JRlI@V1D^;I4J`GDRg1
+VKAfH:4g2h^D<nK^?_=hT;2
+!s100 STjEc`8LA[jUb=I607@0n0
 R8
 32
-R73
+R57
 !i10b 1
-R74
-R75
-R76
+R58
+R59
+R60
 !i113 1
 R13
 R14

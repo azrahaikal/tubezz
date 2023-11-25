@@ -13,6 +13,9 @@ entity subtractor is
 			x_out, y_out : out std_logic_vector(31 downto 0);
 			angle_out : out std_logic_vector(31 downto 0);
 			clk : in std_logic;
+			tesShifter : out std_logic;
+			tesComparison : out std_logic;
+			enFSM : out std_logic;
 			En_Subtractor : in std_logic
 	);
 end subtractor;
@@ -26,14 +29,16 @@ architecture subtractor_arc of subtractor is
 	signal angle_outTemp: std_logic_vector(32 downto 0);
 	signal kCount : integer := to_integer(unsigned(counter));
 	signal tanInv: std_logic_vector(31 downto 0) ; --:= tan_inv(counter);
+	signal x0, y0, angle0: std_logic_vector(31 downto 0);
+	signal sekali : std_logic := '1';
 	
 	
 	begin
-	process(a, b, x, y, comparison, x_outTemp, y_outTemp, angle_outTemp, kCount, tanInv)
-
+	process(kCount, clk)
 	begin
-	
-	if (En_Subtractor = '1' and rising_edge(clk) ) then
+	if (En_Subtractor = '1') then
+	kCount <= to_integer(unsigned(counter));
+	tesShifter <= '1';
 
 		if kCount = 1 then
 			a(31) <= y(31);
@@ -42,9 +47,13 @@ architecture subtractor_arc of subtractor is
 			a(29 downto 0) <= y(30 downto 1);
 			b(30) <= '0';
 			b(29 downto 0) <= x(30 downto 1);
-		elsif kCount = 0 then
-			a <= y;
-			b <= x;
+		elsif kCount = 0 and sekali = '1' then
+			a <= "00000000000000000000000000000000";
+			b <= "01000000000000000000000000000000";
+			x0 <= "01000000000000000000000000000000";
+			y0 <= "00000000000000000000000000000000";
+			angle0 <= "00000000000000000000000000000000";
+			sekali <= '0';
 		elsif kCount = 2 then
 			a(31) <= y(31);
 			b(31) <= x(31);
@@ -128,34 +137,24 @@ architecture subtractor_arc of subtractor is
 			a(30 downto 18) <= "0000000000000";
 			b(30 downto 18) <= "0000000000000";
 			a(17 downto 0) <= y(30 downto 13);
-			b(17 downto 0) <= x(30 downto 13);
-			
-			
-			
-		else
-			a <= (others => '0');
-			b <= (others => '0');
-			
-			
-			for i in 30 downto (31 - kCount) loop
-				a(i) <= '0';
-				b(i) <= '0';
-			end loop;
-			       -- FALSE JGN IKUTIN a(30 downto ((31 - kCount))) <= (others => '0');
-			a((30 - kCount) downto 0) <= y(30 downto kCount);
-			       -- FALSE JGN IKUTIN b(30 downto (31 - kCount)) <= (others => '0');
-			b((30 - kCount) downto 0) <= x(30 downto kCount);	
-			
+			b(17 downto 0) <= x(30 downto 13);			
 				
 		end if;
+		else
+			tesShifter <= '0';
+		end if;
+		end process;
 		
+		process(kCount, En_Subtractor)
+		begin
+		if (En_Subtractor = '1') then
 		
 		if (kCount = 0) then
 			tanInv <= "00101101000000000000000000000000";
 		elsif (kCount = 1) then
 			tanInv <= "00011010100100001010001111010111";
 		elsif (kCount = 2) then
-			tanInv <= "00001110010111000010100011110101";
+			tanInv <= "00001110000010010011011101001011";
 		elsif (kCount = 3) then
 			tanInv <= "00000111001000000000000000000000";
 		elsif (kCount = 4) then
@@ -179,38 +178,60 @@ architecture subtractor_arc of subtractor is
 		elsif (kCount = 13) then
 			tanInv <= "00000000000000011100101011000000";
 		else
-			tanInv <= "00000001000000000000000000000000";
+			tanInv <= "00000000000000000000000000000000";
 		end if;		
+		end if;
+		end process;
 		
-		
+		process(a, b, x, y, comparison, x_outTemp, y_outTemp, angle_outTemp, kCount, En_Subtractor)
+		begin
+		if En_Subtractor = '1' then
 		-- a dan b sudah dibuat. Berati tinggal x = x +- a, y = y +- b, dan angle = angle +- tan_inv
 			if comparison = '0' then	-- angel < Sudut
-				x_outTemp <= ((x(31)& x) - (a(31)& a));
-				y_outTemp <= ((y(31)& y) + (b(31)& b));
-				angle_outTemp <= ((angle(31)& angle) + (tanInv(31)& tanInv));
-				
-			elsif comparison = '1' then	-- angle >= Sudut
-				x_outTemp <= ((x(31)& x) + (a(31)& a));
-				y_outTemp <= ((y(31)& y) - (b(31)& b));
-				angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
-				
+					tesComparison <= '1';
+					if kCount = 0 then
+						x_outTemp <= ((x0(31)& x0) - (a(31)& a));
+						y_outTemp <= ((y0(31)& y0) + (b(31)& b));
+						angle_outTemp <= ((angle0(31)& angle0) + (tanInv(31)& tanInv));
+						
+					else
+						x_outTemp <= ((x(31)& x) - (a(31)& a));
+						y_outTemp <= ((y(31)& y) + (b(31)& b));
+						angle_outTemp <= ((angle(31)& angle) + (tanInv(31)& tanInv));
+					end if;
+			elsif comparison = '1' then -- angle >= Sudut				
+					tesComparison <= '1';
+					if kCount = 0 then
+						x_outTemp <= ((x0(31)& x0) + (a(31)& a));
+						y_outTemp <= ((y0(31)& y0) - (b(31)& b));
+						angle_outTemp <= ((angle0(31)& angle0) - (tanInv(31)& tanInv));
+						
+					else
+						x_outTemp <= ((x(31)& x) + (a(31)& a));
+						y_outTemp <= ((y(31)& y) - (b(31)& b));
+						angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
+					end if;
 			end if;
-			
 		
 			
 		-- PENYETARAAN BIT
 		x_out(31) <= x_outTemp(32);
-		x_out(30) <= x_outTemp(31);
-		x_out(29 downto 0) <= x_outTemp(30 downto 1);  -- x dan y : 1 1 30
+		x_out(30) <= x_outTemp(30);
+		x_out(29 downto 0) <= x_outTemp(29 downto 0);  -- x dan y : 1 1 30
 		
 		y_out(31) <= y_outTemp(32);
-		y_out(30) <= y_outTemp(31);
-		y_out(29 downto 0) <= y_outTemp(30 downto 1); 	-- angle : 1 7 24
+		y_out(30) <= y_outTemp(30);
+		y_out(29 downto 0) <= y_outTemp(29 downto 0); 	-- angle : 1 7 24
 		
 		angle_out(31) <= angle_outTemp(32);
-		angle_out(30 downto 24) <= angle_outTemp(31 downto 25);  -- bit ke 24 diskip (integer part)
+		angle_out(30 downto 24) <= angle_outTemp(30 downto 24);
 		angle_out(23 downto 0) <= angle_outTemp(23 downto 0);
 		
+		enFSM <= '1';
+		
+	else
+		tesComparison <= '0';
+	 
 	end if;
 	end process;
 	

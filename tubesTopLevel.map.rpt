@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tubesTopLevel
-Wed Nov 22 16:57:03 2023
+Sat Nov 25 16:02:27 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -16,13 +16,13 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |tubesTopLevel|fsm:TOFSM|currentState
  10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Inverted Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
- 16. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 17. lpm_mult Parameter Settings by Entity Instance
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult1
+ 15. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 16. lpm_mult Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "subtractor:blokSubtractor"
  18. Port Connectivity Checks: "fsm:TOFSM"
  19. Analysis & Synthesis Messages
 
@@ -50,15 +50,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 22 16:57:03 2023        ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 25 16:02:27 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; tubesTopLevel                                ;
 ; Top-level Entity Name              ; tubesTopLevel                                ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 1,094                                        ;
-;     Total combinational functions  ; 840                                          ;
-;     Dedicated logic registers      ; 457                                          ;
-; Total registers                    ; 457                                          ;
+; Total logic elements               ; 1,513                                        ;
+;     Total combinational functions  ; 1,513                                        ;
+;     Dedicated logic registers      ; 107                                          ;
+; Total registers                    ; 107                                          ;
 ; Total pins                         ; 69                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -177,34 +177,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,094 ;
-;                                             ;       ;
-; Total combinational functions               ; 840   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 167   ;
-;     -- 3 input functions                    ; 520   ;
-;     -- <=2 input functions                  ; 153   ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 503   ;
-;     -- arithmetic mode                      ; 337   ;
-;                                             ;       ;
-; Total registers                             ; 457   ;
-;     -- Dedicated logic registers            ; 457   ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 69    ;
-; Embedded Multiplier 9-bit elements          ; 16    ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 457   ;
-; Total fan-out                               ; 4350  ;
-; Average fan-out                             ; 3.15  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimated Total logic elements              ; 1,513                   ;
+;                                             ;                         ;
+; Total combinational functions               ; 1513                    ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 463                     ;
+;     -- 3 input functions                    ; 871                     ;
+;     -- <=2 input functions                  ; 179                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 1020                    ;
+;     -- arithmetic mode                      ; 493                     ;
+;                                             ;                         ;
+; Total registers                             ; 107                     ;
+;     -- Dedicated logic registers            ; 107                     ;
+;     -- I/O registers                        ; 0                       ;
+;                                             ;                         ;
+; I/O pins                                    ; 69                      ;
+; Embedded Multiplier 9-bit elements          ; 16                      ;
+; Maximum fan-out node                        ; fsm:TOFSM|en_Subtractor ;
+; Maximum fan-out                             ; 227                     ;
+; Total fan-out                               ; 5305                    ;
+; Average fan-out                             ; 3.11                    ;
++---------------------------------------------+-------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -212,20 +212,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
-; |tubesTopLevel                  ; 840 (98)          ; 457 (0)      ; 0           ; 16           ; 0       ; 8         ; 69   ; 0            ; |tubesTopLevel                                        ; work         ;
+; |tubesTopLevel                  ; 1513 (98)         ; 107 (0)      ; 0           ; 16           ; 0       ; 8         ; 69   ; 0            ; |tubesTopLevel                                        ; work         ;
 ;    |comparator:blokKomparator|  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|comparator:blokKomparator              ; work         ;
-;    |counter:blokCounter|        ; 75 (75)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|counter:blokCounter                    ; work         ;
-;    |fsm:TOFSM|                  ; 19 (19)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|fsm:TOFSM                              ;              ;
+;    |counter:blokCounter|        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|counter:blokCounter                    ; work         ;
+;    |fsm:TOFSM|                  ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|fsm:TOFSM                              ;              ;
 ;    |lpm_mult:Mult0|             ; 90 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |tubesTopLevel|lpm_mult:Mult0                         ;              ;
 ;       |mult_45t:auto_generated| ; 90 (90)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |tubesTopLevel|lpm_mult:Mult0|mult_45t:auto_generated ;              ;
 ;    |lpm_mult:Mult1|             ; 90 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |tubesTopLevel|lpm_mult:Mult1                         ;              ;
 ;       |mult_45t:auto_generated| ; 90 (90)           ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |tubesTopLevel|lpm_mult:Mult1|mult_45t:auto_generated ;              ;
-;    |regis:blokOutCos|           ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regis:blokOutCos                       ; work         ;
-;    |regis:blokOutSin|           ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regis:blokOutSin                       ; work         ;
-;    |regisAngle:blokRegisAngle|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regisAngle:blokRegisAngle              ; work         ;
+;    |regis:blokOutCos|           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regis:blokOutCos                       ; work         ;
+;    |regis:blokOutSin|           ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regis:blokOutSin                       ; work         ;
+;    |regisAngle:blokRegisAngle|  ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regisAngle:blokRegisAngle              ; work         ;
 ;    |regisX:blokRegisX|          ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regisX:blokRegisX                      ; work         ;
 ;    |regisY:blokRegisY|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|regisY:blokRegisY                      ; work         ;
-;    |subtractor:blokSubtractor|  ; 432 (432)         ; 286 (286)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|subtractor:blokSubtractor              ; work         ;
+;    |subtractor:blokSubtractor|  ; 1125 (1125)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|subtractor:blokSubtractor              ; work         ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -263,99 +263,114 @@ Encoding Type:  One-Hot
 +-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; angka[0]$latch                                      ; angka[31]           ; yes                    ;
-; angka[1]$latch                                      ; angka[31]           ; yes                    ;
-; angka[2]$latch                                      ; angka[31]           ; yes                    ;
-; angka[3]$latch                                      ; angka[31]           ; yes                    ;
-; angka[4]$latch                                      ; angka[31]           ; yes                    ;
-; angka[5]$latch                                      ; angka[31]           ; yes                    ;
-; angka[6]$latch                                      ; angka[31]           ; yes                    ;
-; angka[7]$latch                                      ; angka[31]           ; yes                    ;
-; angka[8]$latch                                      ; angka[31]           ; yes                    ;
-; angka[9]$latch                                      ; angka[31]           ; yes                    ;
-; angka[10]$latch                                     ; angka[31]           ; yes                    ;
-; angka[11]$latch                                     ; angka[31]           ; yes                    ;
-; angka[12]$latch                                     ; angka[31]           ; yes                    ;
-; angka[13]$latch                                     ; angka[31]           ; yes                    ;
-; angka[14]$latch                                     ; angka[31]           ; yes                    ;
-; angka[15]$latch                                     ; angka[31]           ; yes                    ;
-; angka[16]$latch                                     ; angka[31]           ; yes                    ;
-; angka[17]$latch                                     ; angka[31]           ; yes                    ;
-; angka[18]$latch                                     ; angka[31]           ; yes                    ;
-; angka[19]$latch                                     ; angka[31]           ; yes                    ;
-; angka[20]$latch                                     ; angka[31]           ; yes                    ;
-; angka[21]$latch                                     ; angka[31]           ; yes                    ;
-; angka[22]$latch                                     ; angka[31]           ; yes                    ;
-; angka[23]$latch                                     ; angka[31]           ; yes                    ;
-; angka[24]$latch                                     ; angka[31]           ; yes                    ;
-; angka[25]$latch                                     ; angka[31]           ; yes                    ;
-; angka[26]$latch                                     ; angka[31]           ; yes                    ;
-; angka[27]$latch                                     ; angka[31]           ; yes                    ;
-; angka[28]$latch                                     ; angka[31]           ; yes                    ;
-; angka[29]$latch                                     ; angka[31]           ; yes                    ;
-; angka[30]$latch                                     ; angka[31]           ; yes                    ;
-; angka[31]$latch                                     ; angka[31]           ; yes                    ;
-; angkaTemp[30]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[31]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[32]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[33]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[34]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[35]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[36]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[37]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[38]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[39]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[40]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[41]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[42]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[43]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[44]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[45]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[46]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[47]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[48]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[49]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[50]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[51]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[52]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[53]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[54]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[55]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[56]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[57]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[58]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[59]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[60]                                       ; angka[31]           ; yes                    ;
-; angkaTemp[63]                                       ; angka[31]           ; yes                    ;
-; fsm:TOFSM|reset_Register                            ; GND                 ; yes                    ;
-; fsm:TOFSM|outFinal                                  ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|en_Register                               ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|en_Subtractor                             ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s0_207                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s5_147                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s3_171                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s1_195                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s2_183                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|statusCount                               ; fsm:TOFSM|Selector9 ; yes                    ;
-; fsm:TOFSM|nextState.s4_159                          ; fsm:TOFSM|Selector9 ; yes                    ;
-; Number of user-specified and inferred latches = 75  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+------------------------------------------+----------------------------------------+
-; Register name                            ; Reason for Removal                     ;
-+------------------------------------------+----------------------------------------+
-; subtractor:blokSubtractor|tanInv[30..31] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2    ;                                        ;
-+------------------------------------------+----------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++------------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal       ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------------+------------------------+
+; angka[0]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[1]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[2]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[3]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[4]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[5]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[6]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[7]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[8]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[9]$latch                                       ; angka[31]                 ; yes                    ;
+; angka[10]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[11]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[12]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[13]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[14]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[15]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[16]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[17]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[18]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[19]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[20]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[21]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[22]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[23]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[24]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[25]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[26]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[27]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[28]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[29]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[30]$latch                                      ; angka[31]                 ; yes                    ;
+; angka[31]$latch                                      ; angka[31]                 ; yes                    ;
+; angkaTemp[30]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[31]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[32]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[33]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[34]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[35]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[36]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[37]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[38]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[39]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[40]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[41]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[42]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[43]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[44]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[45]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[46]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[47]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[48]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[49]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[50]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[51]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[52]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[53]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[54]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[55]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[56]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[57]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[58]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[59]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[60]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp[63]                                        ; angka[31]                 ; yes                    ;
+; regis:blokOutCos|outputRegister[0]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[1]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[2]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[3]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[4]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[5]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[6]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[7]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[8]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[9]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[10]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[11]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[12]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[13]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[14]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[15]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[16]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutCos|outputRegister[17]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[0]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[1]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[2]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[3]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[4]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[5]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[6]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[7]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[8]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[9]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[10]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[11]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[12]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[13]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[14]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[15]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[16]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; regis:blokOutSin|outputRegister[17]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
+; Number of user-specified and inferred latches = 416  ;                           ;                        ;
++------------------------------------------------------+---------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -363,12 +378,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 457   ;
-; Number of registers using Synchronous Clear  ; 8     ;
-; Number of registers using Synchronous Load   ; 55    ;
-; Number of registers using Asynchronous Clear ; 171   ;
+; Total registers                              ; 107   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 107   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 450   ;
+; Number of registers using Clock Enable       ; 4     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -378,31 +393,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; regisX:blokRegisX|outputRegister[30]   ; 9       ;
+; regisX:blokRegisX|outputRegister[30]   ; 12      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|a[26]      ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|b[18]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|b[23]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|b[30]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|b[29]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|a[25]      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|tanInv[19] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|a[28]      ;
-; 5:1                ; 30 bits   ; 90 LEs        ; 90 LEs               ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|a[12]      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|tanInv[21] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|a[27]      ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |tubesTopLevel|subtractor:blokSubtractor|b[1]       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a          ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|counter:blokCounter|counter          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|angle_outTemp[30] ;
+; 4:1                ; 92 bits   ; 184 LEs       ; 184 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|x_outTemp[2]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[28]             ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[27]             ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[25]             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[22]             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[20]             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[18]             ;
+; 7:1                ; 28 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[5]              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[26]             ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[2]              ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[0]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -506,6 +522,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "subtractor:blokSubtractor"                                                                   ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; tesshifter    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tescomparison ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "fsm:TOFSM"                                                                                  ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -521,7 +547,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Nov 22 16:56:59 2023
+    Info: Processing started: Sat Nov 25 16:02:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tubesTopLevel -c tubesTopLevel
 Info: Found 2 design units, including 1 entities, in source file tubestoplevel.vhd
     Info: Found design unit 1: tubesTopLevel-tTL_arc
@@ -553,111 +579,633 @@ Info: Found 2 design units, including 1 entities, in source file regis.vhd
 Info: Found 1 design units, including 0 entities, in source file numeric_std.vhd
     Info: Found design unit 1: NUMERIC_STD
 Info: Elaborating entity "tubesTopLevel" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(112): object "resetCounter" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(132): signal "outSin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(137): signal "outCos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(129): inferring latch(es) for signal or variable "angkaTemp", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(129): inferring latch(es) for signal or variable "angka", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "angka[0]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[1]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[2]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[3]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[4]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[5]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[6]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[7]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[8]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[9]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[10]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[11]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[12]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[13]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[14]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[15]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[16]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[17]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[18]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[19]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[20]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[21]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[22]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[23]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[24]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[25]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[26]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[27]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[28]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[29]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[30]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angka[31]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[30]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[31]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[32]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[33]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[34]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[35]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[36]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[37]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[38]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[39]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[40]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[41]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[42]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[43]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[44]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[45]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[46]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[47]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[48]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[49]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[50]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[51]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[52]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[53]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[54]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[55]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[56]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[57]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[58]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[59]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[60]" at tubesTopLevel.vhd(129)
-Info (10041): Inferred latch for "angkaTemp[63]" at tubesTopLevel.vhd(129)
+Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(116): object "resetCounter" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(118): object "tesShifter" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(119): object "tesComparison" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(121): object "cekAKHIR" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(137): inferring latch(es) for signal or variable "angkaTemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(137): inferring latch(es) for signal or variable "angka", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "angka[0]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[1]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[2]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[3]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[4]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[5]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[6]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[7]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[8]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[9]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[10]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[11]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[12]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[13]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[14]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[15]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[16]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[17]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[18]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[19]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[20]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[21]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[22]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[23]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[24]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[25]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[26]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[27]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[28]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[29]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[30]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angka[31]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[30]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[31]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[32]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[33]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[34]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[35]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[36]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[37]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[38]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[39]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[40]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[41]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[42]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[43]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[44]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[45]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[46]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[47]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[48]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[49]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[50]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[51]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[52]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[53]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[54]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[55]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[56]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[57]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[58]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[59]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[60]" at tubesTopLevel.vhd(137)
+Info (10041): Inferred latch for "angkaTemp[63]" at tubesTopLevel.vhd(137)
 Info: Elaborating entity "fsm" for hierarchy "fsm:TOFSM"
-Warning (10492): VHDL Process Statement warning at fsm.vhd(59): signal "modeSin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at fsm.vhd(59): signal "modeCos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at fsm.vhd(59): signal "modeTan" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at fsm.vhd(106): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "reset_Register", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "statusResetCounter", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "statusCount", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "en_Subtractor", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "en_Register", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "outFinal", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at fsm.vhd(45): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "nextState.s5" at fsm.vhd(45)
-Info (10041): Inferred latch for "nextState.s4" at fsm.vhd(45)
-Info (10041): Inferred latch for "nextState.s3" at fsm.vhd(45)
-Info (10041): Inferred latch for "nextState.s2" at fsm.vhd(45)
-Info (10041): Inferred latch for "nextState.s1" at fsm.vhd(45)
-Info (10041): Inferred latch for "nextState.s0" at fsm.vhd(45)
-Info (10041): Inferred latch for "outFinal" at fsm.vhd(45)
-Info (10041): Inferred latch for "en_Register" at fsm.vhd(45)
-Info (10041): Inferred latch for "en_Subtractor" at fsm.vhd(45)
-Info (10041): Inferred latch for "statusCount" at fsm.vhd(45)
-Info (10041): Inferred latch for "statusResetCounter" at fsm.vhd(45)
-Info (10041): Inferred latch for "reset_Register" at fsm.vhd(45)
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhd(30): object "enFSM_internal" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at fsm.vhd(57): signal "modeSin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at fsm.vhd(57): signal "modeCos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at fsm.vhd(57): signal "modeTan" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at fsm.vhd(118): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at fsm.vhd(51): inferring latch(es) for signal or variable "nextState", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "nextState.s5" at fsm.vhd(51)
+Info (10041): Inferred latch for "nextState.s4" at fsm.vhd(51)
+Info (10041): Inferred latch for "nextState.s3" at fsm.vhd(51)
+Info (10041): Inferred latch for "nextState.s2" at fsm.vhd(51)
+Info (10041): Inferred latch for "nextState.s1" at fsm.vhd(51)
+Info (10041): Inferred latch for "nextState.s0" at fsm.vhd(51)
 Info: Elaborating entity "comparator" for hierarchy "comparator:blokKomparator"
 Warning (10631): VHDL Process Statement warning at comparator.vhd(16): inferring latch(es) for signal or variable "comparison", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "comparison" at comparator.vhd(16)
 Info: Elaborating entity "counter" for hierarchy "counter:blokCounter"
 Info: Elaborating entity "subtractor" for hierarchy "subtractor:blokSubtractor"
-Warning (10540): VHDL Signal Declaration warning at subtractor.vhd(27): used explicit default value for signal "kCount" because signal was never assigned a value
-Warning (10492): VHDL Process Statement warning at subtractor.vhd(36): signal "En_Subtractor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at subtractor.vhd(36): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(39): signal "En_Subtractor" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(40): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(44): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(45): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(47): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(49): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(50): signal "sekali" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(58): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(59): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(62): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(63): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(65): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(66): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(69): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(70): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(72): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(73): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(76): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(77): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(79): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(80): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(83): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(84): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(86): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(87): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(90): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(91): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(93): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(94): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(97): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(98): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(100): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(101): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(104): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(105): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(107): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(108): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(111): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(112): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(114): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(115): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(118): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(119): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(121): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(122): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(125): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(126): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(128): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(129): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(132): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(133): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(135): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(136): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(139): signal "y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(140): signal "x" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "kCount", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "a", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "b", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "x0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "y0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "angle0", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(37): inferring latch(es) for signal or variable "sekali", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(148): inferring latch(es) for signal or variable "tanInv", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(193): signal "x0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(194): signal "y0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(195): signal "angle0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(195): signal "tanInv" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(200): signal "angle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(200): signal "tanInv" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(205): signal "x0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(206): signal "y0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(207): signal "angle0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(207): signal "tanInv" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(212): signal "angle" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at subtractor.vhd(212): signal "tanInv" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "tesComparison", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "x_outTemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "y_outTemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "angle_outTemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "x_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "y_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "angle_out", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at subtractor.vhd(186): inferring latch(es) for signal or variable "enFSM", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "enFSM" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_out[31]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_out[31]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_out[31]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "angle_outTemp[32]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "y_outTemp[32]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[0]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[1]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[2]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[3]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[4]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[5]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[6]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[7]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[8]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[9]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[10]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[11]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[12]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[13]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[14]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[15]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[16]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[17]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[18]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[19]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[20]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[21]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[22]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[23]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[24]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[25]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[26]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[27]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[28]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[29]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[30]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "x_outTemp[32]" at subtractor.vhd(186)
+Info (10041): Inferred latch for "tesComparison" at subtractor.vhd(186)
+Info (10041): Inferred latch for "tanInv[0]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[1]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[2]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[3]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[4]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[5]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[6]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[7]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[8]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[9]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[10]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[11]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[12]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[13]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[14]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[15]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[16]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[17]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[18]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[19]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[20]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[21]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[22]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[23]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[24]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[25]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[26]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[27]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[28]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[29]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[30]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "tanInv[31]" at subtractor.vhd(148)
+Info (10041): Inferred latch for "sekali" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "angle0[31]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "y0[31]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "x0[31]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "b[31]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "a[31]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[0]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[1]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[2]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[3]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[4]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[5]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[6]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[7]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[8]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[9]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[10]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[11]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[12]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[13]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[14]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[15]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[16]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[17]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[18]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[19]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[20]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[21]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[22]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[23]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[24]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[25]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[26]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[27]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[28]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[29]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[30]" at subtractor.vhd(37)
+Info (10041): Inferred latch for "kCount[31]" at subtractor.vhd(37)
 Info: Elaborating entity "regisX" for hierarchy "regisX:blokRegisX"
 Info: Elaborating entity "regisY" for hierarchy "regisY:blokRegisY"
 Info: Elaborating entity "regisAngle" for hierarchy "regisAngle:blokRegisAngle"
 Info: Elaborating entity "regis" for hierarchy "regis:blokOutSin"
+Warning (10631): VHDL Process Statement warning at regis.vhd(18): inferring latch(es) for signal or variable "outputRegister", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "outputRegister[0]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[1]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[2]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[3]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[4]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[5]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[6]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[7]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[8]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[9]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[10]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[11]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[12]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[13]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[14]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[15]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[16]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[17]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[18]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[19]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[20]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[21]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[22]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[23]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[24]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[25]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[26]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[27]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[28]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[29]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[30]" at regis.vhd(18)
+Info (10041): Inferred latch for "outputRegister[31]" at regis.vhd(18)
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult1"
     Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
@@ -676,9 +1224,6 @@ Info: Found 1 design units, including 1 entities, in source file db/mult_45t.tdf
     Info: Found entity 1: mult_45t
 Info: Ignored 468 buffer(s)
     Info: Ignored 468 SOFT buffer(s)
-Info: Duplicate LATCH primitives merged into single LATCH primitive
-    Info: Duplicate LATCH primitive "fsm:TOFSM|nextState.s0_207" merged with LATCH primitive "fsm:TOFSM|outFinal"
-    Info: Duplicate LATCH primitive "fsm:TOFSM|nextState.s3_171" merged with LATCH primitive "fsm:TOFSM|en_Subtractor"
 Warning: Latch angkaTemp[30] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal modeSin
 Warning: Latch angkaTemp[31] has unsafe behavior
@@ -743,19 +1288,137 @@ Warning: Latch angkaTemp[60] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal modeSin
 Warning: Latch angkaTemp[63] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal modeSin
-Warning: Latch fsm:TOFSM|nextState.s4_159 has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal fsm:TOFSM|currentState.s0
+Warning: Latch subtractor:blokSubtractor|b[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[1]
+Warning: Latch subtractor:blokSubtractor|b[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[2]
+Warning: Latch subtractor:blokSubtractor|b[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[17] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[18] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[2]
+Warning: Latch subtractor:blokSubtractor|b[19] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[20] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[21] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[22] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|b[23] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[24] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[25] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[26] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[27] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[28] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|b[29] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[1]
+Warning: Latch subtractor:blokSubtractor|a[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[2]
+Warning: Latch subtractor:blokSubtractor|a[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[17] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[18] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[2]
+Warning: Latch subtractor:blokSubtractor|a[19] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[20] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[21] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[22] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[0]
+Warning: Latch subtractor:blokSubtractor|a[23] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[24] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[25] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[26] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[27] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[28] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
+Warning: Latch subtractor:blokSubtractor|a[29] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info: Implemented 1200 device resources after synthesis - the final resource count might be different
+Info: Implemented 1694 device resources after synthesis - the final resource count might be different
     Info: Implemented 37 input pins
     Info: Implemented 32 output pins
-    Info: Implemented 1115 logic cells
+    Info: Implemented 1609 logic cells
     Info: Implemented 16 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 86 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 281 warnings
     Info: Peak virtual memory: 257 megabytes
-    Info: Processing ended: Wed Nov 22 16:57:03 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Sat Nov 25 16:02:27 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

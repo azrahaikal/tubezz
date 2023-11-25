@@ -48,8 +48,9 @@ begin
 			counter <= "1101";
 		elsif (counter = "1101") then
 			counter <= "0000";
+			
 		else
-			counter <= "0001";
+			counter <= "0000";
 			
 		end if;
 		end if;

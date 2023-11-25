@@ -192,50 +192,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-regis
-# storage
-db|tubesTopLevel.(8).cnf
-db|tubesTopLevel.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-regis.vhd
-3c1899e5deea38c88d5b6e03a8165
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(inputregister)
-31 downto 0
-PARAMETER_STRING
-USR
- constraint(outputregister)
-31 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-regis:blokOutSin
-regis:blokOutCos
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 lpm_mult
 # storage
 db|tubesTopLevel.(9).cnf
@@ -1035,6 +991,84 @@ dataa0
 
 # end
 # entity
+fsm
+# storage
+db|tubesTopLevel.(1).cnf
+db|tubesTopLevel.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+fsm.vhd
+f1d931f57ffabc2b0c3efd1b47cd63c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(counter)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+fsm:TOFSM
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+counter
+# storage
+db|tubesTopLevel.(3).cnf
+db|tubesTopLevel.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+counter.vhd
+cf5acc9c39ce646338ef7c72bb249c3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(counter)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+counter:blokCounter
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 subtractor
 # storage
 db|tubesTopLevel.(4).cnf
@@ -1046,7 +1080,7 @@ ON
 # case_insensitive
 # source_file
 subtractor.vhd
-60f7bd7bdd99d3dde2ac4c576e25481
+d6c5ba7ece5bafcadac99b3c4406429
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1098,18 +1132,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-fsm
+regis
 # storage
-db|tubesTopLevel.(1).cnf
-db|tubesTopLevel.(1).cnf
+db|tubesTopLevel.(8).cnf
+db|tubesTopLevel.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-fsm.vhd
-156a43d032fe7156aa44ed1a3f66a51b
+regis.vhd
+dc55b23ed09dcd3f2315a31cc6885e9f
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1122,13 +1156,18 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # user_parameter {
- constraint(counter)
-3 downto 0
+ constraint(inputregister)
+31 downto 0
+PARAMETER_STRING
+USR
+ constraint(outputregister)
+31 downto 0
 PARAMETER_STRING
 USR
 }
 # hierarchies {
-fsm:TOFSM
+regis:blokOutSin
+regis:blokOutCos
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1148,7 +1187,7 @@ ON
 # case_insensitive
 # source_file
 tubestoplevel.vhd
-5a47c98910d494edaf2dc99af3c43bd
+fc3b359b8196261d626d5166ef3154b7
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1161,66 +1200,27 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
-regisx.vhd
-f22d54a9c2d295195f446bbd96a96dd4
-numeric_std.vhd
-f140a5b577eb2aefdf7980ef6391b42c
-regis.vhd
-3c1899e5deea38c88d5b6e03a8165
-counter.vhd
-a88c191fade174fb27457946cb856ff3
-fsm.vhd
-156a43d032fe7156aa44ed1a3f66a51b
-regisy.vhd
-737f98e5783b75eb43d15259ff3bd9
 comparator.vhd
 d61b5ce87f34488fcc9ea623c38ff626
-subtractor.vhd
-60f7bd7bdd99d3dde2ac4c576e25481
+regisy.vhd
+737f98e5783b75eb43d15259ff3bd9
+fsm.vhd
+f1d931f57ffabc2b0c3efd1b47cd63c
+counter.vhd
+cf5acc9c39ce646338ef7c72bb249c3
+numeric_std.vhd
+f140a5b577eb2aefdf7980ef6391b42c
+regisx.vhd
+f22d54a9c2d295195f446bbd96a96dd4
+regis.vhd
+dc55b23ed09dcd3f2315a31cc6885e9f
 regisangle.vhd
 405d4728b1c2d71a9558114af6b372
+subtractor.vhd
+d6c5ba7ece5bafcadac99b3c4406429
 }
 # hierarchies {
 |
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-counter
-# storage
-db|tubesTopLevel.(3).cnf
-db|tubesTopLevel.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-counter.vhd
-a88c191fade174fb27457946cb856ff3
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(counter)
-3 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-counter:blokCounter
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf

@@ -1,5 +1,5 @@
 Assembler report for tubesTopLevel
-Wed Nov 22 16:56:50 2023
+Sat Nov 25 16:02:18 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Nov 22 16:56:50 2023 ;
+; Assembler Status      ; Successful - Sat Nov 25 16:02:18 2023 ;
 ; Revision Name         ; tubesTopLevel                         ;
 ; Top-level Entity Name ; tubesTopLevel                         ;
 ; Family                ; Cyclone II                            ;
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+----------------------------------------------------------+
 ; Device         ; EP2C8Q208C7                                              ;
 ; JTAG usercode  ; 0xFFFFFFFF                                               ;
-; Checksum       ; 0x00171280                                               ;
+; Checksum       ; 0x001D63ED                                               ;
 +----------------+----------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+------------------------------------------------------+
 ; Device             ; EPCS4                                                ;
 ; JTAG usercode      ; 0x00000000                                           ;
-; Checksum           ; 0x06E18422                                           ;
+; Checksum           ; 0x06D5EC26                                           ;
 ; Compression Ratio  ; 2                                                    ;
 +--------------------+------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Nov 22 16:56:50 2023
+    Info: Processing started: Sat Nov 25 16:02:17 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 222 megabytes
-    Info: Processing ended: Wed Nov 22 16:56:50 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 223 megabytes
+    Info: Processing ended: Sat Nov 25 16:02:18 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 
