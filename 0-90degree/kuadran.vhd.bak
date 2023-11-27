@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_signed.all;
+
+entity kuadran is 
+	port(	rst : in std_logic;
+			inputSudut : in std_logic_vector(31 downto 0); -- 1 9 22
+			Sudut : out std_logic_vector(31 downto 0); -- 1 7 24
+			kuadran : out std_logic(1 downto 0) -- 1 : 00, 2: 01, 3: 10, 4: 11
+	);
+end entity;
+
+architecture kuadran_arc of kuadran is -- p
+begin
+
+constant 0degree : std_logic_vector(10 downto 0) := "00000000000";
+constant 90degree : std_logic_vector(10 downto 0) := "00010110100";
+constant 180degree : std_logic_vector(10 downto 0) := "00101101000";
+constant 270degree : std_logic_vector(10 downto 0) := "01000011100";
+constant 90degree_ : std_logic_vector(10 downto 0) := "10010110100";
+constant 180degree_ : std_logic_vector(10 downto 0) := "10101101000";
+constant 270degree_ : std_logic_vector(10 downto 0) := "11000011100";
+
+--angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
+
+process(inputSudut)
+begin
+	if (inputSudut(10) = '0') then	-- inputSudut adalah +. Tidak perlu cek > 0
+		
+		if ( ((inputSudut(10)& inputSudut) - (90degree(10)& 90degree)) <= 0degree) then		-- Kuadran 1
+			Sudut(31) <= '0';
+			Sudut(30 downto 24) <= inputSudut(7 downto 1);
+			Sudut(23 downto 0) <= "000000000000000000000000";
+			kuadran <= "00"
+		
+		elsif ( (((inputSudut(10)& inputSudut) - (90degree(10)& 90degree)) >= 0degree) and () )
+			
+		end if;
+		
+	elsif (inputSudut(10) = '1') then -- inputSudut adalah -
+		
+		if then
+		
+		end if;
+		
+	end if;
+	
+
+
+end kuadran_arc;

@@ -1,0 +1,10 @@
+
+State Machine - |tubesTopLevel|fsm:TOFSM|currentState
+Name currentState.s6 currentState.s5 currentState.s4 currentState.s3 currentState.s2 currentState.s1 currentState.s0 
+currentState.s0 0 0 0 0 0 0 0 
+currentState.s1 0 0 0 0 0 1 1 
+currentState.s2 0 0 0 0 1 0 1 
+currentState.s3 0 0 0 1 0 0 1 
+currentState.s4 0 0 1 0 0 0 1 
+currentState.s5 0 1 0 0 0 0 1 
+currentState.s6 1 0 0 0 0 0 1 
