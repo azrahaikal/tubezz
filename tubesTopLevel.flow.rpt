@@ -1,9 +1,5 @@
 Flow report for tubesTopLevel
-<<<<<<< Updated upstream
-Sat Nov 25 16:02:27 2023
-=======
-Tue Nov 28 02:40:09 2023
->>>>>>> Stashed changes
+Tue Nov 28 02:51:26 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -42,34 +38,23 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-<<<<<<< Updated upstream
-; Flow Status                        ; Successful - Sat Nov 25 16:02:27 2023        ;
-=======
-; Flow Status                        ; Successful - Tue Nov 28 02:40:09 2023        ;
->>>>>>> Stashed changes
+; Flow Status                        ; Successful - Tue Nov 28 02:51:25 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; tubesTopLevel                                ;
 ; Top-level Entity Name              ; tubesTopLevel                                ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C8Q208C7                                  ;
 ; Timing Models                      ; Final                                        ;
-<<<<<<< Updated upstream
-; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; 1,513                                        ;
-;     Total combinational functions  ; 1,513                                        ;
-;     Dedicated logic registers      ; 107                                          ;
-=======
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 1,705 / 8,256 ( 21 % )                       ;
-;     Total combinational functions  ; 1,705 / 8,256 ( 21 % )                       ;
+; Total logic elements               ; 1,642 / 8,256 ( 20 % )                       ;
+;     Total combinational functions  ; 1,621 / 8,256 ( 20 % )                       ;
 ;     Dedicated logic registers      ; 107 / 8,256 ( 1 % )                          ;
->>>>>>> Stashed changes
 ; Total registers                    ; 107                                          ;
-; Total pins                         ; 69                                           ;
+; Total pins                         ; 69 / 138 ( 50 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0                                            ;
-; Embedded Multiplier 9-bit elements ; 16                                           ;
-; Total PLLs                         ; 0                                            ;
+; Total memory bits                  ; 0 / 165,888 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 16 / 36 ( 44 % )                             ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                                ;
 +------------------------------------+----------------------------------------------+
 
 
@@ -78,11 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-<<<<<<< Updated upstream
-; Start date & time ; 11/25/2023 16:02:25 ;
-=======
-; Start date & time ; 11/28/2023 02:39:51 ;
->>>>>>> Stashed changes
+; Start date & time ; 11/28/2023 02:51:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; tubesTopLevel       ;
 +-------------------+---------------------+
@@ -93,11 +74,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-<<<<<<< Updated upstream
-; COMPILER_SIGNATURE_ID              ; 242035516409309.170090294405148 ; --            ; --          ; --             ;
-=======
-; COMPILER_SIGNATURE_ID              ; 211365437349375.170111399022448 ; --            ; --          ; --             ;
->>>>>>> Stashed changes
+; COMPILER_SIGNATURE_ID              ; 211365437349375.170111466507788 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                               ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
@@ -106,43 +83,38 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
-<<<<<<< Updated upstream
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 257 MB              ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-=======
 +-----------------------------------------------------------------------------------------------------------------------------+
 ; Flow Elapsed Time                                                                                                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 258 MB              ; 00:00:04                           ;
-; Fitter                  ; 00:00:07     ; 1.0                     ; 260 MB              ; 00:00:05                           ;
+; Analysis & Synthesis    ; 00:00:06     ; 1.0                     ; 257 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:08     ; 1.0                     ; 260 MB              ; 00:00:06                           ;
 ; Assembler               ; 00:00:01     ; 1.0                     ; 223 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 186 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:15     ; --                      ; --                  ; 00:00:11                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 192 MB              ; 00:00:02                           ;
+; Total                   ; 00:00:17     ; --                      ; --                  ; 00:00:14                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
->>>>>>> Stashed changes
 
 
-+---------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                       ;
-+----------------------+------------------+---------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-633NR7PA  ; Windows Vista ; 6.2        ; x86_64         ;
-+----------------------+------------------+---------------+------------+----------------+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; LAPTOP-SAKGHMKC  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; LAPTOP-SAKGHMKC  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; LAPTOP-SAKGHMKC  ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; LAPTOP-SAKGHMKC  ; Windows Vista ; 6.2        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off tubesTopLevel -c tubesTopLevel
+quartus_fit --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel
+quartus_asm --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel
+quartus_tan --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel --timing_analysis_only
 
 
 
