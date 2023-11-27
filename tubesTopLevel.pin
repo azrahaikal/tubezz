@@ -78,9 +78,15 @@ GND*                         : 8         :        :                   :         
 GND                          : 9         : gnd    :                   :         :           :                
 GND*                         : 10        :        :                   :         : 1         :                
 GND*                         : 11        :        :                   :         : 1         :                
+<<<<<<< Updated upstream
 angka[13]                    : 12        : output : 3.3-V LVTTL       :         : 1         : N              
 angka[15]                    : 13        : output : 3.3-V LVTTL       :         : 1         : N              
 angka[22]                    : 14        : output : 3.3-V LVTTL       :         : 1         : N              
+=======
+angka[9]                     : 12        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 13        :        :                   :         : 1         :                
+angka[17]                    : 14        : output : 3.3-V LVTTL       :         : 1         : N              
+>>>>>>> Stashed changes
 angka[11]                    : 15        : output : 3.3-V LVTTL       :         : 1         : N              
 TDO                          : 16        : output :                   :         : 1         :                
 TMS                          : 17        : input  :                   :         : 1         :                
@@ -96,16 +102,29 @@ nCONFIG                      : 26        :        :                   :         
 GND+                         : 27        :        :                   :         : 1         :                
 GND+                         : 28        :        :                   :         : 1         :                
 VCCIO1                       : 29        : power  :                   : 3.3V    : 1         :                
+<<<<<<< Updated upstream
 Sudut[5]                     : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
 Sudut[9]                     : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 32        : power  :                   : 1.2V    :           :                
 Sudut[7]                     : 33        : input  : 3.3-V LVTTL       :         : 1         : N              
 Sudut[3]                     : 34        : input  : 3.3-V LVTTL       :         : 1         : N              
 Sudut[24]                    : 35        : input  : 3.3-V LVTTL       :         : 1         : N              
+=======
+Sudut[12]                    : 30        : input  : 3.3-V LVTTL       :         : 1         : N              
+Sudut[2]                     : 31        : input  : 3.3-V LVTTL       :         : 1         : N              
+VCCINT                       : 32        : power  :                   : 1.2V    :           :                
+Sudut[14]                    : 33        : input  : 3.3-V LVTTL       :         : 1         : N              
+Sudut[8]                     : 34        : input  : 3.3-V LVTTL       :         : 1         : N              
+Sudut[6]                     : 35        : input  : 3.3-V LVTTL       :         : 1         : N              
+>>>>>>> Stashed changes
 GND                          : 36        : gnd    :                   :         :           :                
-GND*                         : 37        :        :                   :         : 1         :                
+Sudut[21]                    : 37        : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 38        : gnd    :                   :         :           :                
+<<<<<<< Updated upstream
 GND*                         : 39        :        :                   :         : 1         :                
+=======
+Sudut[27]                    : 39        : input  : 3.3-V LVTTL       :         : 1         : N              
+>>>>>>> Stashed changes
 GND*                         : 40        :        :                   :         : 1         :                
 GND*                         : 41        :        :                   :         : 1         :                
 VCCIO1                       : 42        : power  :                   : 3.3V    : 1         :                
@@ -133,6 +152,7 @@ GND*                         : 63        :        :                   :         
 angka[24]                    : 64        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 65        : gnd    :                   :         :           :                
 VCCINT                       : 66        : power  :                   : 1.2V    :           :                
+<<<<<<< Updated upstream
 GND*                         : 67        :        :                   :         : 4         :                
 GND*                         : 68        :        :                   :         : 4         :                
 GND*                         : 69        :        :                   :         : 4         :                
@@ -166,6 +186,41 @@ angka[12]                    : 96        : output : 3.3-V LVTTL       :         
 Sudut[10]                    : 97        : input  : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
 Sudut[15]                    : 99        : input  : 3.3-V LVTTL       :         : 4         : N              
+=======
+Sudut[16]                    : 67        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[24]                    : 68        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[7]                     : 69        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[25]                    : 70        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 71        : power  :                   : 3.3V    : 4         :                
+Sudut[23]                    : 72        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 73        : gnd    :                   :         :           :                
+Sudut[20]                    : 74        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[22]                    : 75        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[18]                    : 76        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[19]                    : 77        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 78        : gnd    :                   :         :           :                
+VCCINT                       : 79        : power  :                   : 1.2V    :           :                
+modeCos                      : 80        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[29]                    : 81        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[13]                    : 82        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 83        : power  :                   : 3.3V    : 4         :                
+Sudut[1]                     : 84        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 85        : gnd    :                   :         :           :                
+Sudut[26]                    : 86        : input  : 3.3-V LVTTL       :         : 4         : N              
+Sudut[5]                     : 87        : input  : 3.3-V LVTTL       :         : 4         : N              
+angka[18]                    : 88        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[5]                     : 89        : output : 3.3-V LVTTL       :         : 4         : N              
+Sudut[17]                    : 90        : input  : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 91        : power  :                   : 3.3V    : 4         :                
+angka[20]                    : 92        : output : 3.3-V LVTTL       :         : 4         : N              
+GND                          : 93        : gnd    :                   :         :           :                
+Sudut[30]                    : 94        : input  : 3.3-V LVTTL       :         : 4         : N              
+GND*                         : 95        :        :                   :         : 4         :                
+angka[3]                     : 96        : output : 3.3-V LVTTL       :         : 4         : N              
+angka[31]                    : 97        : output : 3.3-V LVTTL       :         : 4         : N              
+VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
+GND*                         : 99        :        :                   :         : 4         :                
+>>>>>>> Stashed changes
 GND                          : 100       : gnd    :                   :         :           :                
 GND*                         : 101       :        :                   :         : 4         :                
 GND*                         : 102       :        :                   :         : 4         :                
@@ -182,9 +237,15 @@ GND*                         : 112       :        :                   :         
 GND*                         : 113       :        :                   :         : 3         :                
 GND*                         : 114       :        :                   :         : 3         :                
 GND*                         : 115       :        :                   :         : 3         :                
+<<<<<<< Updated upstream
 Sudut[23]                    : 116       : input  : 3.3-V LVTTL       :         : 3         : N              
 Sudut[2]                     : 117       : input  : 3.3-V LVTTL       :         : 3         : N              
 Sudut[29]                    : 118       : input  : 3.3-V LVTTL       :         : 3         : N              
+=======
+Sudut[28]                    : 116       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 117       :        :                   :         : 3         :                
+Sudut[4]                     : 118       : input  : 3.3-V LVTTL       :         : 3         : N              
+>>>>>>> Stashed changes
 GND                          : 119       : gnd    :                   :         :           :                
 VCCINT                       : 120       : power  :                   : 1.2V    :           :                
 nSTATUS                      : 121       :        :                   :         : 3         :                
@@ -193,6 +254,7 @@ CONF_DONE                    : 123       :        :                   :         
 GND                          : 124       : gnd    :                   :         :           :                
 MSEL1                        : 125       :        :                   :         : 3         :                
 MSEL0                        : 126       :        :                   :         : 3         :                
+<<<<<<< Updated upstream
 Sudut[27]                    : 127       : input  : 3.3-V LVTTL       :         : 3         : N              
 Sudut[12]                    : 128       : input  : 3.3-V LVTTL       :         : 3         : N              
 Sudut[22]                    : 129       : input  : 3.3-V LVTTL       :         : 3         : N              
@@ -213,6 +275,28 @@ angka[26]                    : 143       : output : 3.3-V LVTTL       :         
 angka[29]                    : 144       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : 145       :        :                   :         : 3         :                
 angka[4]                     : 146       : output : 3.3-V LVTTL       :         : 3         : N              
+=======
+angka[10]                    : 127       : output : 3.3-V LVTTL       :         : 3         : N              
+Sudut[15]                    : 128       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : 129       :        :                   :         : 3         :                
+GND+                         : 130       :        :                   :         : 3         :                
+GND+                         : 131       :        :                   :         : 3         :                
+GND+                         : 132       :        :                   :         : 3         :                
+angka[26]                    : 133       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[24]                    : 134       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[22]                    : 135       : output : 3.3-V LVTTL       :         : 3         : N              
+VCCIO3                       : 136       : power  :                   : 3.3V    : 3         :                
+angka[27]                    : 137       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[6]                     : 138       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[8]                     : 139       : output : 3.3-V LVTTL       :         : 3         : N              
+GND                          : 140       : gnd    :                   :         :           :                
+angka[0]                     : 141       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[2]                     : 142       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[13]                    : 143       : output : 3.3-V LVTTL       :         : 3         : N              
+angka[14]                    : 144       : output : 3.3-V LVTTL       :         : 3         : N              
+GND*                         : 145       :        :                   :         : 3         :                
+GND*                         : 146       :        :                   :         : 3         :                
+>>>>>>> Stashed changes
 GND*                         : 147       :        :                   :         : 3         :                
 VCCIO3                       : 148       : power  :                   : 3.3V    : 3         :                
 GND*                         : 149       :        :                   :         : 3         :                
@@ -227,10 +311,11 @@ VCCA_PLL2                    : 157       : power  :                   : 1.2V    
 GNDA_PLL2                    : 158       : gnd    :                   :         :           :                
 GND                          : 159       : gnd    :                   :         :           :                
 GND*                         : 160       :        :                   :         : 2         :                
-GND*                         : 161       :        :                   :         : 2         :                
+Sudut[10]                    : 161       : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 162       :        :                   :         : 2         :                
 GND*                         : 163       :        :                   :         : 2         :                
 GND*                         : 164       :        :                   :         : 2         :                
+<<<<<<< Updated upstream
 Sudut[6]                     : 165       : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 166       : power  :                   : 3.3V    : 2         :                
 GND                          : 167       : gnd    :                   :         :           :                
@@ -262,6 +347,39 @@ angka[6]                     : 192       : output : 3.3-V LVTTL       :         
 GND*                         : 193       :        :                   :         : 2         :                
 VCCIO2                       : 194       : power  :                   : 3.3V    : 2         :                
 GND*                         : 195       :        :                   :         : 2         :                
+=======
+angka[16]                    : 165       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 166       : power  :                   : 3.3V    : 2         :                
+GND                          : 167       : gnd    :                   :         :           :                
+angka[23]                    : 168       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[4]                     : 169       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[30]                    : 170       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[15]                    : 171       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 172       : power  :                   : 3.3V    : 2         :                
+Sudut[31]                    : 173       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 174       : gnd    :                   :         :           :                
+modeTan                      : 175       : input  : 3.3-V LVTTL       :         : 2         : N              
+angka[25]                    : 176       : output : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 177       : gnd    :                   :         :           :                
+VCCINT                       : 178       : power  :                   : 1.2V    :           :                
+angka[7]                     : 179       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[12]                    : 180       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[28]                    : 181       : output : 3.3-V LVTTL       :         : 2         : N              
+Sudut[3]                     : 182       : input  : 3.3-V LVTTL       :         : 2         : N              
+VCCIO2                       : 183       : power  :                   : 3.3V    : 2         :                
+GND                          : 184       : gnd    :                   :         :           :                
+Sudut[9]                     : 185       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND                          : 186       : gnd    :                   :         :           :                
+Sudut[0]                     : 187       : input  : 3.3-V LVTTL       :         : 2         : N              
+angka[19]                    : 188       : output : 3.3-V LVTTL       :         : 2         : N              
+angka[21]                    : 189       : output : 3.3-V LVTTL       :         : 2         : N              
+VCCINT                       : 190       : power  :                   : 1.2V    :           :                
+angka[29]                    : 191       : output : 3.3-V LVTTL       :         : 2         : N              
+Sudut[11]                    : 192       : input  : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 193       :        :                   :         : 2         :                
+VCCIO2                       : 194       : power  :                   : 3.3V    : 2         :                
+angka[1]                     : 195       : output : 3.3-V LVTTL       :         : 2         : N              
+>>>>>>> Stashed changes
 GND                          : 196       : gnd    :                   :         :           :                
 GND*                         : 197       :        :                   :         : 2         :                
 GND*                         : 198       :        :                   :         : 2         :                

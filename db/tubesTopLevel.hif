@@ -1187,7 +1187,11 @@ ON
 # case_insensitive
 # source_file
 tubestoplevel.vhd
+<<<<<<< Updated upstream
 fc3b359b8196261d626d5166ef3154b7
+=======
+c8fdd71d6390ee7135edc41d2f4b1c
+>>>>>>> Stashed changes
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1200,12 +1204,31 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # include_file {
+<<<<<<< Updated upstream
 comparator.vhd
 d61b5ce87f34488fcc9ea623c38ff626
 regisy.vhd
 737f98e5783b75eb43d15259ff3bd9
 fsm.vhd
 f1d931f57ffabc2b0c3efd1b47cd63c
+=======
+fsm.vhd
+f1d931f57ffabc2b0c3efd1b47cd63c
+regisx.vhd
+f22d54a9c2d295195f446bbd96a96dd4
+numeric_std.vhd
+f140a5b577eb2aefdf7980ef6391b42c
+regisangle.vhd
+405d4728b1c2d71a9558114af6b372
+regisy.vhd
+737f98e5783b75eb43d15259ff3bd9
+regis.vhd
+dc55b23ed09dcd3f2315a31cc6885e9f
+comparator.vhd
+d61b5ce87f34488fcc9ea623c38ff626
+subtractor.vhd
+d6c5ba7ece5bafcadac99b3c4406429
+>>>>>>> Stashed changes
 counter.vhd
 cf5acc9c39ce646338ef7c72bb249c3
 numeric_std.vhd

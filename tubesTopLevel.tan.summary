@@ -5,9 +5,15 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : 9.306 ns
 From           : Sudut[1]
 To             : subtractor:blokSubtractor|x_outTemp[32]
+=======
+Actual Time    : 12.026 ns
+From           : Sudut[1]
+To             : angle_baru[29]
+>>>>>>> Stashed changes
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +21,15 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : 10.665 ns
 From           : angka[20]$latch
 To             : angka[20]
+=======
+Actual Time    : 11.998 ns
+From           : angka[11]$latch
+To             : angka[11]
+>>>>>>> Stashed changes
 From Clock     : modeSin
 To Clock       : --
 Failed Paths   : 0
@@ -25,19 +37,33 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : 0.814 ns
 From           : Sudut[21]
 To             : subtractor:blokSubtractor|angle_outTemp[20]
 From Clock     : --
 To Clock       : clk
+=======
+Actual Time    : 2.889 ns
+From           : modeSin
+To             : angka[31]$latch
+From Clock     : --
+To Clock       : modeSin
+>>>>>>> Stashed changes
 Failed Paths   : 0
 
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : 78.63 MHz ( period = 12.718 ns )
 From           : regisAngle:blokRegisAngle|outputRegister[0]
 To             : subtractor:blokSubtractor|x_outTemp[32]
+=======
+Actual Time    : 85.06 MHz ( period = 11.756 ns )
+From           : subtractor:blokSubtractor|x_out[16]
+To             : regisX:blokRegisX|outputRegister[16]
+>>>>>>> Stashed changes
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
@@ -45,9 +71,15 @@ Failed Paths   : 0
 Type           : Clock Setup: 'modeSin'
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : Restricted to 405.02 MHz ( period = 2.469 ns )
 From           : angkaTemp[30]
 To             : angka[0]$latch
+=======
+Actual Time    : 144.22 MHz ( period = 6.934 ns )
+From           : angkaTemp2[3]
+To             : angka[31]$latch
+>>>>>>> Stashed changes
 From Clock     : modeSin
 To Clock       : modeSin
 Failed Paths   : 0
@@ -55,9 +87,15 @@ Failed Paths   : 0
 Type           : Clock Setup: 'modeCos'
 Slack          : N/A
 Required Time  : None
+<<<<<<< Updated upstream
 Actual Time    : Restricted to 405.02 MHz ( period = 2.469 ns )
 From           : angkaTemp[30]
 To             : angka[0]$latch
+=======
+Actual Time    : 296.47 MHz ( period = 3.373 ns )
+From           : angkaTemp[60]
+To             : angka[30]$latch
+>>>>>>> Stashed changes
 From Clock     : modeCos
 To Clock       : modeCos
 Failed Paths   : 0
@@ -66,11 +104,19 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
+<<<<<<< Updated upstream
 From           : regisX:blokRegisX|outputRegister[22]
 To             : subtractor:blokSubtractor|b[21]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 569
+=======
+From           : regisY:blokRegisY|outputRegister[25]
+To             : subtractor:blokSubtractor|a[12]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 1566
+>>>>>>> Stashed changes
 
 Type           : Total number of failed paths
 Slack          : 
@@ -80,7 +126,11 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
+<<<<<<< Updated upstream
 Failed Paths   : 569
+=======
+Failed Paths   : 1566
+>>>>>>> Stashed changes
 
 --------------------------------------------------------------------------------------
 

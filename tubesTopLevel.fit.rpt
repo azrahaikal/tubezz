@@ -1,5 +1,9 @@
 Fitter report for tubesTopLevel
+<<<<<<< Updated upstream
 Sat Nov 25 16:02:16 2023
+=======
+Tue Nov 28 02:40:05 2023
+>>>>>>> Stashed changes
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -63,15 +67,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
+<<<<<<< Updated upstream
 ; Fitter Status                      ; Successful - Sat Nov 25 16:02:16 2023        ;
+=======
+; Fitter Status                      ; Successful - Tue Nov 28 02:40:04 2023        ;
+>>>>>>> Stashed changes
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; tubesTopLevel                                ;
 ; Top-level Entity Name              ; tubesTopLevel                                ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C8Q208C7                                  ;
 ; Timing Models                      ; Final                                        ;
+<<<<<<< Updated upstream
 ; Total logic elements               ; 1,522 / 8,256 ( 18 % )                       ;
 ;     Total combinational functions  ; 1,513 / 8,256 ( 18 % )                       ;
+=======
+; Total logic elements               ; 1,705 / 8,256 ( 21 % )                       ;
+;     Total combinational functions  ; 1,705 / 8,256 ( 21 % )                       ;
+>>>>>>> Stashed changes
 ;     Dedicated logic registers      ; 107 / 8,256 ( 1 % )                          ;
 ; Total registers                    ; 107                                          ;
 ; Total pins                         ; 69 / 138 ( 50 % )                            ;
@@ -152,8 +165,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value               ;
 +-------------------------+---------------------+
 ; Placement               ;                     ;
+<<<<<<< Updated upstream
 ;     -- Requested        ; 0 / 1715 ( 0.00 % ) ;
 ;     -- Achieved         ; 0 / 1715 ( 0.00 % ) ;
+=======
+;     -- Requested        ; 0 / 1908 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 1908 ( 0.00 % ) ;
+>>>>>>> Stashed changes
 ;                         ;                     ;
 ; Routing (by Connection) ;                     ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
@@ -175,7 +193,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
+<<<<<<< Updated upstream
 ; Top            ; 1715    ; 0                 ; N/A                     ; Source File       ;
+=======
+; Top            ; 1908    ; 0                 ; N/A                     ; Source File       ;
+>>>>>>> Stashed changes
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -185,6 +207,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin.
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------+
 ; Fitter Resource Usage Summary                                                        ;
 +---------------------------------------------+----------------------------------------+
@@ -233,6 +256,56 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; Total fan-out                               ; 5321                                   ;
 ; Average fan-out                             ; 3.09                                   ;
 +---------------------------------------------+----------------------------------------+
+=======
++-------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                 ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Total logic elements                        ; 1,705 / 8,256 ( 21 % )          ;
+;     -- Combinational with no register       ; 1598                            ;
+;     -- Register only                        ; 0                               ;
+;     -- Combinational with a register        ; 107                             ;
+;                                             ;                                 ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 494                             ;
+;     -- 3 input functions                    ; 967                             ;
+;     -- <=2 input functions                  ; 244                             ;
+;     -- Register only                        ; 0                               ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 1150                            ;
+;     -- arithmetic mode                      ; 555                             ;
+;                                             ;                                 ;
+; Total registers*                            ; 107 / 8,646 ( 1 % )             ;
+;     -- Dedicated logic registers            ; 107 / 8,256 ( 1 % )             ;
+;     -- I/O registers                        ; 0 / 390 ( 0 % )                 ;
+;                                             ;                                 ;
+; Total LABs:  partially or completely used   ; 124 / 516 ( 24 % )              ;
+; User inserted logic elements                ; 0                               ;
+; Virtual pins                                ; 0                               ;
+; I/O pins                                    ; 69 / 138 ( 50 % )               ;
+;     -- Clock pins                           ; 2 / 4 ( 50 % )                  ;
+; Global signals                              ; 8                               ;
+; M4Ks                                        ; 0 / 36 ( 0 % )                  ;
+; Total block memory bits                     ; 0 / 165,888 ( 0 % )             ;
+; Total block memory implementation bits      ; 0 / 165,888 ( 0 % )             ;
+; Embedded Multiplier 9-bit elements          ; 16 / 36 ( 44 % )                ;
+; PLLs                                        ; 0 / 2 ( 0 % )                   ;
+; Global clocks                               ; 8 / 8 ( 100 % )                 ;
+; JTAGs                                       ; 0 / 1 ( 0 % )                   ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )                   ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )                   ;
+; Average interconnect usage (total/H/V)      ; 8% / 8% / 8%                    ;
+; Peak interconnect usage (total/H/V)         ; 18% / 17% / 19%                 ;
+; Maximum fan-out node                        ; fsm:TOFSM|en_Subtractor~clkctrl ;
+; Maximum fan-out                             ; 222                             ;
+; Highest non-global fan-out signal           ; fsm:TOFSM|currentState.s0       ;
+; Highest non-global fan-out                  ; 163                             ;
+; Total fan-out                               ; 5853                            ;
+; Average fan-out                             ; 3.07                            ;
++---------------------------------------------+---------------------------------+
+>>>>>>> Stashed changes
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -242,6 +315,7 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
+<<<<<<< Updated upstream
 ; Sudut[0]  ; 76    ; 4        ; 18           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; Sudut[10] ; 97    ; 4        ; 30           ; 0            ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; Sudut[11] ; 173   ; 2        ; 25           ; 19           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
@@ -279,6 +353,45 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; modeSin   ; 137   ; 3        ; 34           ; 11           ; 0           ; 33                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; modeTan   ; 135   ; 3        ; 34           ; 11           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; rst       ; 24    ; 1        ; 0            ; 9            ; 1           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+=======
+; Sudut[0]  ; 187   ; 2        ; 14           ; 19           ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[10] ; 161   ; 2        ; 32           ; 19           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[11] ; 192   ; 2        ; 9            ; 19           ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[12] ; 30    ; 1        ; 0            ; 8            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[13] ; 82    ; 4        ; 23           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[14] ; 33    ; 1        ; 0            ; 8            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[15] ; 128   ; 3        ; 34           ; 9            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[16] ; 67    ; 4        ; 9            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[17] ; 90    ; 4        ; 28           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[18] ; 76    ; 4        ; 18           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[19] ; 77    ; 4        ; 18           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[1]  ; 84    ; 4        ; 25           ; 0            ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[20] ; 74    ; 4        ; 16           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[21] ; 37    ; 1        ; 0            ; 6            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[22] ; 75    ; 4        ; 16           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[23] ; 72    ; 4        ; 16           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[24] ; 68    ; 4        ; 12           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[25] ; 70    ; 4        ; 14           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[26] ; 86    ; 4        ; 25           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[27] ; 39    ; 1        ; 0            ; 5            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[28] ; 116   ; 3        ; 34           ; 5            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[29] ; 81    ; 4        ; 23           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[2]  ; 31    ; 1        ; 0            ; 8            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[30] ; 94    ; 4        ; 28           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[31] ; 173   ; 2        ; 25           ; 19           ; 0           ; 65                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[3]  ; 182   ; 2        ; 18           ; 19           ; 3           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[4]  ; 118   ; 3        ; 34           ; 7            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[5]  ; 87    ; 4        ; 25           ; 0            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[6]  ; 35    ; 1        ; 0            ; 7            ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[7]  ; 69    ; 4        ; 12           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[8]  ; 34    ; 1        ; 0            ; 7            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; Sudut[9]  ; 185   ; 2        ; 14           ; 19           ; 1           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; clk       ; 23    ; 1        ; 0            ; 9            ; 0           ; 4                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modeCos   ; 80    ; 4        ; 23           ; 0            ; 2           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modeSin   ; 24    ; 1        ; 0            ; 9            ; 1           ; 68                    ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; modeTan   ; 175   ; 2        ; 23           ; 19           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; rst       ; 27    ; 1        ; 0            ; 9            ; 2           ; 1                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+>>>>>>> Stashed changes
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -287,6 +400,7 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
+<<<<<<< Updated upstream
 ; angka[0]  ; 134   ; 3        ; 34           ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; angka[10] ; 141   ; 3        ; 34           ; 12           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; angka[11] ; 15    ; 1        ; 0            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
@@ -319,6 +433,40 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; angka[7]  ; 180   ; 2        ; 18           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; angka[8]  ; 182   ; 2        ; 18           ; 19           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; angka[9]  ; 142   ; 3        ; 34           ; 12           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+=======
+; angka[0]  ; 141   ; 3        ; 34           ; 12           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[10] ; 127   ; 3        ; 34           ; 9            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[11] ; 15    ; 1        ; 0            ; 14           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[12] ; 180   ; 2        ; 18           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[13] ; 143   ; 3        ; 34           ; 13           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[14] ; 144   ; 3        ; 34           ; 13           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[15] ; 171   ; 2        ; 28           ; 19           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[16] ; 165   ; 2        ; 30           ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[17] ; 14    ; 1        ; 0            ; 14           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[18] ; 88    ; 4        ; 25           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[19] ; 188   ; 2        ; 12           ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[1]  ; 195   ; 2        ; 9            ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[20] ; 92    ; 4        ; 28           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[21] ; 189   ; 2        ; 12           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[22] ; 135   ; 3        ; 34           ; 11           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[23] ; 168   ; 2        ; 28           ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[24] ; 134   ; 3        ; 34           ; 11           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[25] ; 176   ; 2        ; 23           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[26] ; 133   ; 3        ; 34           ; 11           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[27] ; 137   ; 3        ; 34           ; 11           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[28] ; 181   ; 2        ; 18           ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[29] ; 191   ; 2        ; 12           ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[2]  ; 142   ; 3        ; 34           ; 12           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[30] ; 170   ; 2        ; 28           ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[31] ; 97    ; 4        ; 30           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[3]  ; 96    ; 4        ; 30           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[4]  ; 169   ; 2        ; 28           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[5]  ; 89    ; 4        ; 28           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[6]  ; 138   ; 3        ; 34           ; 12           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[7]  ; 179   ; 2        ; 18           ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[8]  ; 139   ; 3        ; 34           ; 12           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; angka[9]  ; 12    ; 1        ; 0            ; 16           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+>>>>>>> Stashed changes
 +-----------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -327,10 +475,17 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
+<<<<<<< Updated upstream
 ; 1        ; 14 / 32 ( 44 % ) ; 3.3V          ; --           ;
 ; 2        ; 18 / 35 ( 51 % ) ; 3.3V          ; --           ;
 ; 3        ; 19 / 35 ( 54 % ) ; 3.3V          ; --           ;
 ; 4        ; 21 / 36 ( 58 % ) ; 3.3V          ; --           ;
+=======
+; 1        ; 15 / 32 ( 47 % ) ; 3.3V          ; --           ;
+; 2        ; 20 / 35 ( 57 % ) ; 3.3V          ; --           ;
+; 3        ; 15 / 35 ( 43 % ) ; 3.3V          ; --           ;
+; 4        ; 22 / 36 ( 61 % ) ; 3.3V          ; --           ;
+>>>>>>> Stashed changes
 +----------+------------------+---------------+--------------+
 
 
@@ -350,9 +505,15 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 9        ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 10       ; 7          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 11       ; 8          ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+<<<<<<< Updated upstream
 ; 12       ; 9          ; 1        ; angka[13]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 13       ; 10         ; 1        ; angka[15]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 14       ; 18         ; 1        ; angka[22]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+=======
+; 12       ; 9          ; 1        ; angka[9]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 13       ; 10         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 14       ; 18         ; 1        ; angka[17]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 15       ; 19         ; 1        ; angka[11]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 16       ; 20         ; 1        ; #TDO                                     ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 17       ; 21         ; 1        ; #TMS                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -368,16 +529,29 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 27       ; 30         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 28       ; 31         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; 29       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+<<<<<<< Updated upstream
 ; 30       ; 32         ; 1        ; Sudut[5]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 31       ; 33         ; 1        ; Sudut[9]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 32       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 33       ; 35         ; 1        ; Sudut[7]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 34       ; 36         ; 1        ; Sudut[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 35       ; 37         ; 1        ; Sudut[24]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+=======
+; 30       ; 32         ; 1        ; Sudut[12]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 31       ; 33         ; 1        ; Sudut[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 32       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 33       ; 35         ; 1        ; Sudut[14]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 34       ; 36         ; 1        ; Sudut[8]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 35       ; 37         ; 1        ; Sudut[6]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 36       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 37       ; 39         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 37       ; 39         ; 1        ; Sudut[21]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 38       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+<<<<<<< Updated upstream
 ; 39       ; 43         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+=======
+; 39       ; 43         ; 1        ; Sudut[27]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 40       ; 44         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 41       ; 45         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 42       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -405,6 +579,7 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 64       ; 61         ; 4        ; angka[24]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 65       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 66       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+<<<<<<< Updated upstream
 ; 67       ; 69         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 68       ; 70         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 69       ; 71         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -438,6 +613,41 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 97       ; 95         ; 4        ; Sudut[10]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 98       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 99       ; 96         ; 4        ; Sudut[15]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+=======
+; 67       ; 69         ; 4        ; Sudut[16]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 68       ; 70         ; 4        ; Sudut[24]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 69       ; 71         ; 4        ; Sudut[7]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 70       ; 74         ; 4        ; Sudut[25]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 71       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 72       ; 75         ; 4        ; Sudut[23]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 73       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 74       ; 76         ; 4        ; Sudut[20]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 75       ; 77         ; 4        ; Sudut[22]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 76       ; 78         ; 4        ; Sudut[18]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 77       ; 79         ; 4        ; Sudut[19]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 78       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 79       ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 80       ; 82         ; 4        ; modeCos                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 81       ; 83         ; 4        ; Sudut[29]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 82       ; 84         ; 4        ; Sudut[13]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 83       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 84       ; 85         ; 4        ; Sudut[1]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 85       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 86       ; 86         ; 4        ; Sudut[26]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 87       ; 87         ; 4        ; Sudut[5]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 88       ; 88         ; 4        ; angka[18]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 89       ; 89         ; 4        ; angka[5]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 90       ; 90         ; 4        ; Sudut[17]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 91       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 92       ; 91         ; 4        ; angka[20]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 93       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 94       ; 92         ; 4        ; Sudut[30]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 95       ; 93         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 96       ; 94         ; 4        ; angka[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 97       ; 95         ; 4        ; angka[31]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 98       ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 99       ; 96         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 100      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 101      ; 97         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 102      ; 98         ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -454,9 +664,15 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 113      ; 109        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 114      ; 110        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 115      ; 112        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+<<<<<<< Updated upstream
 ; 116      ; 113        ; 3        ; Sudut[23]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 117      ; 114        ; 3        ; Sudut[2]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 118      ; 117        ; 3        ; Sudut[29]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+=======
+; 116      ; 113        ; 3        ; Sudut[28]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 117      ; 114        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 118      ; 117        ; 3        ; Sudut[4]                                 ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 119      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 120      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; 121      ; 121        ; 3        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -465,6 +681,7 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 124      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 125      ; 123        ; 3        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; 126      ; 124        ; 3        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
+<<<<<<< Updated upstream
 ; 127      ; 125        ; 3        ; Sudut[27]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 128      ; 126        ; 3        ; Sudut[12]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 129      ; 127        ; 3        ; Sudut[22]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -485,6 +702,28 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 144      ; 142        ; 3        ; angka[29]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 145      ; 143        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 146      ; 149        ; 3        ; angka[4]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+=======
+; 127      ; 125        ; 3        ; angka[10]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 128      ; 126        ; 3        ; Sudut[15]                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 129      ; 127        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 130      ; 128        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 131      ; 129        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 132      ; 130        ; 3        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; 133      ; 131        ; 3        ; angka[26]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 134      ; 132        ; 3        ; angka[24]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 135      ; 133        ; 3        ; angka[22]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 136      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 137      ; 134        ; 3        ; angka[27]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 138      ; 135        ; 3        ; angka[6]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 139      ; 136        ; 3        ; angka[8]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 140      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 141      ; 137        ; 3        ; angka[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 142      ; 138        ; 3        ; angka[2]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 143      ; 141        ; 3        ; angka[13]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 144      ; 142        ; 3        ; angka[14]                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 145      ; 143        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 146      ; 149        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 147      ; 150        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 148      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 149      ; 151        ; 3        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -499,10 +738,11 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 158      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 159      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 160      ; 155        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 161      ; 156        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 161      ; 156        ; 2        ; Sudut[10]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 162      ; 157        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 163      ; 158        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 164      ; 159        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+<<<<<<< Updated upstream
 ; 165      ; 160        ; 2        ; Sudut[6]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 166      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 167      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -534,6 +774,39 @@ The pin-out file can be found in D:/SisDigGemink/tubesTopLevel/tubesTopLevel.pin
 ; 193      ; 186        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 194      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 195      ; 187        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+=======
+; 165      ; 160        ; 2        ; angka[16]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 166      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 167      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 168      ; 161        ; 2        ; angka[23]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 169      ; 162        ; 2        ; angka[4]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 170      ; 163        ; 2        ; angka[30]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 171      ; 164        ; 2        ; angka[15]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 172      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 173      ; 165        ; 2        ; Sudut[31]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 174      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 175      ; 168        ; 2        ; modeTan                                  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 176      ; 169        ; 2        ; angka[25]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 177      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 178      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 179      ; 173        ; 2        ; angka[7]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 180      ; 174        ; 2        ; angka[12]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 181      ; 175        ; 2        ; angka[28]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 182      ; 176        ; 2        ; Sudut[3]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 183      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 184      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 185      ; 180        ; 2        ; Sudut[9]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 186      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; 187      ; 181        ; 2        ; Sudut[0]                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 188      ; 182        ; 2        ; angka[19]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 189      ; 183        ; 2        ; angka[21]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 190      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
+; 191      ; 184        ; 2        ; angka[29]                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 192      ; 185        ; 2        ; Sudut[11]                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 193      ; 186        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 194      ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; 195      ; 187        ; 2        ; angka[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+>>>>>>> Stashed changes
 ; 196      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 197      ; 191        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 198      ; 192        ; 2        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -593,7 +866,11 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                   ; Library Name ;
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
+<<<<<<< Updated upstream
 ; |tubesTopLevel                  ; 1522 (98)   ; 107 (0)                   ; 0 (0)         ; 0           ; 0    ; 16           ; 0       ; 8         ; 69   ; 0            ; 1415 (98)    ; 9 (0)             ; 98 (0)           ; |tubesTopLevel                                        ; work         ;
+=======
+; |tubesTopLevel                  ; 1705 (290)  ; 107 (0)                   ; 0 (0)         ; 0           ; 0    ; 16           ; 0       ; 8         ; 69   ; 0            ; 1598 (290)   ; 0 (0)             ; 107 (0)          ; |tubesTopLevel                                        ; work         ;
+>>>>>>> Stashed changes
 ;    |comparator:blokKomparator|  ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 0 (0)            ; |tubesTopLevel|comparator:blokKomparator              ;              ;
 ;    |counter:blokCounter|        ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |tubesTopLevel|counter:blokCounter                    ; work         ;
 ;    |fsm:TOFSM|                  ; 9 (9)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 7 (7)            ; |tubesTopLevel|fsm:TOFSM                              ;              ;
@@ -603,10 +880,17 @@ Note: User assignments will override these defaults. The user specified values a
 ;       |mult_45t:auto_generated| ; 90 (90)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 8            ; 0       ; 4         ; 0    ; 0            ; 90 (90)      ; 0 (0)             ; 0 (0)            ; |tubesTopLevel|lpm_mult:Mult1|mult_45t:auto_generated ;              ;
 ;    |regis:blokOutCos|           ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 0 (0)            ; |tubesTopLevel|regis:blokOutCos                       ; work         ;
 ;    |regis:blokOutSin|           ; 32 (32)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 0 (0)             ; 0 (0)            ; |tubesTopLevel|regis:blokOutSin                       ; work         ;
+<<<<<<< Updated upstream
 ;    |regisAngle:blokRegisAngle|  ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 26 (26)          ; |tubesTopLevel|regisAngle:blokRegisAngle              ; work         ;
 ;    |regisX:blokRegisX|          ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |tubesTopLevel|regisX:blokRegisX                      ; work         ;
 ;    |regisY:blokRegisY|          ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 29 (29)          ; |tubesTopLevel|regisY:blokRegisY                      ; work         ;
 ;    |subtractor:blokSubtractor|  ; 1125 (1125) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1039 (1039)  ; 0 (0)             ; 86 (86)          ; |tubesTopLevel|subtractor:blokSubtractor              ; work         ;
+=======
+;    |regisAngle:blokRegisAngle|  ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |tubesTopLevel|regisAngle:blokRegisAngle              ; work         ;
+;    |regisX:blokRegisX|          ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |tubesTopLevel|regisX:blokRegisX                      ; work         ;
+;    |regisY:blokRegisY|          ; 32 (32)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 32 (32)          ; |tubesTopLevel|regisY:blokRegisY                      ; work         ;
+;    |subtractor:blokSubtractor|  ; 1125 (1125) ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1030 (1030)  ; 0 (0)             ; 95 (95)          ; |tubesTopLevel|subtractor:blokSubtractor              ; work         ;
+>>>>>>> Stashed changes
 +---------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -648,6 +932,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; angka[29] ; Output   ; --            ; --            ; --                    ; --  ;
 ; angka[30] ; Output   ; --            ; --            ; --                    ; --  ;
 ; angka[31] ; Output   ; --            ; --            ; --                    ; --  ;
+<<<<<<< Updated upstream
 ; modeSin   ; Input    ; (6) 4358 ps   ; (0) 325 ps    ; --                    ; --  ;
 ; modeCos   ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
 ; clk       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
@@ -671,10 +956,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Sudut[16] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[15] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[14] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+=======
+; modeSin   ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; Sudut[31] ; Input    ; (6) 4400 ps   ; (0) 312 ps    ; --                    ; --  ;
+; modeCos   ; Input    ; (0) 312 ps    ; (6) 4400 ps   ; --                    ; --  ;
+; clk       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; rst       ; Input    ; (0) 325 ps    ; (0) 325 ps    ; --                    ; --  ;
+; modeTan   ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[30] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[29] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[28] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[27] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[26] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[25] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[24] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[23] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[22] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[21] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[20] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[19] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[18] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[17] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[16] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[15] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[14] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+>>>>>>> Stashed changes
 ; Sudut[13] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[12] ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
 ; Sudut[11] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[10] ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+<<<<<<< Updated upstream
 ; Sudut[9]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
 ; Sudut[8]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[7]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
@@ -682,12 +993,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Sudut[5]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
 ; Sudut[4]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[3]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+=======
+; Sudut[9]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[8]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[7]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[6]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[5]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+; Sudut[4]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
+; Sudut[3]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
+>>>>>>> Stashed changes
 ; Sudut[2]  ; Input    ; (6) 4358 ps   ; (6) 4358 ps   ; --                    ; --  ;
 ; Sudut[1]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 ; Sudut[0]  ; Input    ; (6) 4400 ps   ; (6) 4400 ps   ; --                    ; --  ;
 +-----------+----------+---------------+---------------+-----------------------+-----+
 
 
+<<<<<<< Updated upstream
 +-----------------------------------------------------------------------------+
 ; Pad To Core Delay Chain Fanout                                              ;
 +-----------------------------------------------+-------------------+---------+
@@ -795,6 +1116,181 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Sudut[0]                                      ;                   ;         ;
 ;      - comparator:blokKomparator|LessThan0~1  ; 0                 ; 6       ;
 +-----------------------------------------------+-------------------+---------+
+=======
++------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                             ;
++------------------------------+-------------------+---------+
+; Source Pin / Fanout          ; Pad To Core Index ; Setting ;
++------------------------------+-------------------+---------+
+; modeSin                      ;                   ;         ;
+; Sudut[31]                    ;                   ;         ;
+;      - Add0~62               ; 0                 ; 6       ;
+;      - Add1~62               ; 0                 ; 6       ;
+;      - angka[5]~1            ; 1                 ; 0       ;
+;      - Add0~64               ; 0                 ; 6       ;
+;      - Add0~65               ; 0                 ; 6       ;
+;      - Add0~66               ; 0                 ; 6       ;
+;      - Add0~67               ; 0                 ; 6       ;
+;      - Add0~68               ; 0                 ; 6       ;
+;      - Add0~69               ; 0                 ; 6       ;
+;      - Add0~70               ; 0                 ; 6       ;
+;      - Add0~71               ; 0                 ; 6       ;
+;      - Add0~72               ; 0                 ; 6       ;
+;      - Add0~73               ; 0                 ; 6       ;
+;      - Add0~74               ; 0                 ; 6       ;
+;      - Add0~75               ; 0                 ; 6       ;
+;      - Add0~76               ; 0                 ; 6       ;
+;      - Add0~77               ; 0                 ; 6       ;
+;      - Add0~78               ; 0                 ; 6       ;
+;      - Add0~79               ; 0                 ; 6       ;
+;      - Add0~80               ; 0                 ; 6       ;
+;      - Add0~81               ; 0                 ; 6       ;
+;      - Add0~82               ; 0                 ; 6       ;
+;      - Add0~83               ; 0                 ; 6       ;
+;      - Add0~84               ; 0                 ; 6       ;
+;      - Add0~85               ; 0                 ; 6       ;
+;      - Add0~86               ; 0                 ; 6       ;
+;      - Add0~87               ; 0                 ; 6       ;
+;      - Add0~88               ; 0                 ; 6       ;
+;      - Add0~89               ; 0                 ; 6       ;
+;      - Add0~90               ; 0                 ; 6       ;
+;      - Add0~91               ; 0                 ; 6       ;
+;      - Add0~92               ; 0                 ; 6       ;
+;      - Add0~93               ; 0                 ; 6       ;
+;      - Add0~94               ; 0                 ; 6       ;
+;      - Add1~127              ; 0                 ; 6       ;
+;      - Add1~128              ; 0                 ; 6       ;
+;      - Add1~129              ; 0                 ; 6       ;
+;      - Add1~130              ; 0                 ; 6       ;
+;      - Add1~131              ; 0                 ; 6       ;
+;      - Add1~132              ; 0                 ; 6       ;
+;      - Add1~133              ; 0                 ; 6       ;
+;      - Add1~134              ; 0                 ; 6       ;
+;      - Add1~135              ; 0                 ; 6       ;
+;      - Add1~136              ; 0                 ; 6       ;
+;      - Add1~137              ; 0                 ; 6       ;
+;      - Add1~138              ; 0                 ; 6       ;
+;      - Add1~139              ; 0                 ; 6       ;
+;      - Add1~140              ; 0                 ; 6       ;
+;      - Add1~141              ; 0                 ; 6       ;
+;      - Add1~142              ; 0                 ; 6       ;
+;      - Add1~143              ; 0                 ; 6       ;
+;      - Add1~144              ; 0                 ; 6       ;
+;      - Add1~145              ; 0                 ; 6       ;
+;      - Add1~146              ; 0                 ; 6       ;
+;      - Add1~147              ; 0                 ; 6       ;
+;      - Add1~148              ; 0                 ; 6       ;
+;      - Add1~149              ; 0                 ; 6       ;
+;      - Add1~150              ; 0                 ; 6       ;
+;      - Add1~151              ; 0                 ; 6       ;
+;      - Add1~152              ; 0                 ; 6       ;
+;      - Add1~153              ; 0                 ; 6       ;
+;      - Add1~154              ; 0                 ; 6       ;
+;      - Add1~155              ; 0                 ; 6       ;
+;      - Add1~156              ; 0                 ; 6       ;
+;      - Add1~157              ; 0                 ; 6       ;
+; modeCos                      ;                   ;         ;
+;      - angka[31]~0           ; 0                 ; 0       ;
+;      - fsm:TOFSM|process_1~0 ; 1                 ; 6       ;
+; clk                          ;                   ;         ;
+; rst                          ;                   ;         ;
+; modeTan                      ;                   ;         ;
+;      - fsm:TOFSM|process_1~0 ; 0                 ; 6       ;
+; Sudut[30]                    ;                   ;         ;
+;      - Add0~60               ; 0                 ; 6       ;
+;      - Add0~65               ; 0                 ; 6       ;
+; Sudut[29]                    ;                   ;         ;
+;      - Add0~58               ; 1                 ; 6       ;
+;      - Add0~66               ; 1                 ; 6       ;
+; Sudut[28]                    ;                   ;         ;
+;      - Add0~56               ; 1                 ; 6       ;
+;      - Add0~67               ; 1                 ; 6       ;
+; Sudut[27]                    ;                   ;         ;
+;      - Add0~54               ; 1                 ; 6       ;
+;      - Add0~68               ; 1                 ; 6       ;
+; Sudut[26]                    ;                   ;         ;
+;      - Add0~52               ; 1                 ; 6       ;
+;      - Add0~69               ; 1                 ; 6       ;
+; Sudut[25]                    ;                   ;         ;
+;      - Add0~50               ; 0                 ; 6       ;
+;      - Add0~70               ; 0                 ; 6       ;
+; Sudut[24]                    ;                   ;         ;
+;      - Add0~48               ; 1                 ; 6       ;
+;      - Add0~71               ; 1                 ; 6       ;
+; Sudut[23]                    ;                   ;         ;
+;      - Add0~46               ; 1                 ; 6       ;
+;      - Add0~72               ; 1                 ; 6       ;
+; Sudut[22]                    ;                   ;         ;
+;      - Add0~44               ; 0                 ; 6       ;
+;      - Add0~73               ; 0                 ; 6       ;
+; Sudut[21]                    ;                   ;         ;
+;      - Add0~42               ; 0                 ; 6       ;
+;      - Add0~74               ; 0                 ; 6       ;
+; Sudut[20]                    ;                   ;         ;
+;      - Add0~40               ; 0                 ; 6       ;
+;      - Add0~75               ; 0                 ; 6       ;
+; Sudut[19]                    ;                   ;         ;
+;      - Add0~38               ; 0                 ; 6       ;
+;      - Add0~76               ; 0                 ; 6       ;
+; Sudut[18]                    ;                   ;         ;
+;      - Add0~36               ; 0                 ; 6       ;
+;      - Add0~77               ; 0                 ; 6       ;
+; Sudut[17]                    ;                   ;         ;
+;      - Add0~34               ; 0                 ; 6       ;
+;      - Add0~78               ; 0                 ; 6       ;
+; Sudut[16]                    ;                   ;         ;
+;      - Add0~32               ; 1                 ; 6       ;
+;      - Add0~79               ; 1                 ; 6       ;
+; Sudut[15]                    ;                   ;         ;
+;      - Add0~30               ; 0                 ; 6       ;
+;      - Add0~80               ; 0                 ; 6       ;
+; Sudut[14]                    ;                   ;         ;
+;      - Add0~28               ; 0                 ; 6       ;
+;      - Add0~81               ; 0                 ; 6       ;
+; Sudut[13]                    ;                   ;         ;
+;      - Add0~26               ; 0                 ; 6       ;
+;      - Add0~82               ; 0                 ; 6       ;
+; Sudut[12]                    ;                   ;         ;
+;      - Add0~24               ; 1                 ; 6       ;
+;      - Add0~83               ; 1                 ; 6       ;
+; Sudut[11]                    ;                   ;         ;
+;      - Add0~22               ; 0                 ; 6       ;
+;      - Add0~84               ; 0                 ; 6       ;
+; Sudut[10]                    ;                   ;         ;
+;      - Add0~20               ; 0                 ; 6       ;
+;      - Add0~85               ; 0                 ; 6       ;
+; Sudut[9]                     ;                   ;         ;
+;      - Add0~18               ; 1                 ; 6       ;
+;      - Add0~86               ; 1                 ; 6       ;
+; Sudut[8]                     ;                   ;         ;
+;      - Add0~16               ; 0                 ; 6       ;
+;      - Add0~87               ; 0                 ; 6       ;
+; Sudut[7]                     ;                   ;         ;
+;      - Add0~14               ; 0                 ; 6       ;
+;      - Add0~88               ; 0                 ; 6       ;
+; Sudut[6]                     ;                   ;         ;
+;      - Add0~12               ; 0                 ; 6       ;
+;      - Add0~89               ; 0                 ; 6       ;
+; Sudut[5]                     ;                   ;         ;
+;      - Add0~10               ; 0                 ; 6       ;
+;      - Add0~90               ; 0                 ; 6       ;
+; Sudut[4]                     ;                   ;         ;
+;      - Add0~8                ; 1                 ; 6       ;
+;      - Add0~91               ; 1                 ; 6       ;
+; Sudut[3]                     ;                   ;         ;
+;      - Add0~6                ; 0                 ; 6       ;
+;      - Add0~92               ; 0                 ; 6       ;
+; Sudut[2]                     ;                   ;         ;
+;      - Add0~4                ; 0                 ; 6       ;
+;      - Add0~93               ; 0                 ; 6       ;
+; Sudut[1]                     ;                   ;         ;
+;      - Add0~2                ; 0                 ; 6       ;
+;      - Add0~94               ; 0                 ; 6       ;
+; Sudut[0]                     ;                   ;         ;
+;      - Add0~1                ; 0                 ; 6       ;
+;      - angle_baru[0]         ; 0                 ; 6       ;
++------------------------------+-------------------+---------+
+>>>>>>> Stashed changes
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -802,6 +1298,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                              ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+<<<<<<< Updated upstream
 ; angka[31]~0                       ; LCCOMB_X33_Y10_N14 ; 64      ; Latch enable ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; clk                               ; PIN_23             ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; clk                               ; PIN_23             ; 104     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
@@ -812,6 +1309,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fsm:TOFSM|inputCount              ; LCFF_X33_Y10_N29   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; rst                               ; PIN_24             ; 11      ; Async. clear ; yes    ; Global Clock         ; GCLK1            ; --                        ;
 ; subtractor:blokSubtractor|b[0]~13 ; LCCOMB_X33_Y10_N22 ; 62      ; Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+=======
+; angka[31]~0                       ; LCCOMB_X22_Y12_N28 ; 64      ; Latch enable ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; angka[5]~1                        ; LCCOMB_X25_Y12_N6  ; 32      ; Latch enable ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; clk                               ; PIN_23             ; 4       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                               ; PIN_23             ; 104     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; fsm:TOFSM|currentState.s0         ; LCFF_X22_Y12_N17   ; 163     ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; fsm:TOFSM|currentState.s5         ; LCFF_X22_Y12_N15   ; 64      ; Latch enable ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; fsm:TOFSM|en_Subtractor           ; LCCOMB_X22_Y12_N6  ; 6       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; fsm:TOFSM|en_Subtractor           ; LCCOMB_X22_Y12_N6  ; 222     ; Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; fsm:TOFSM|inputCount              ; LCFF_X22_Y12_N21   ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; modeSin                           ; PIN_24             ; 32      ; Latch enable ; yes    ; Global Clock         ; GCLK1            ; --                        ;
+; rst                               ; PIN_27             ; 11      ; Async. clear ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; subtractor:blokSubtractor|b[0]~12 ; LCCOMB_X7_Y10_N20  ; 62      ; Latch enable ; yes    ; Global Clock         ; GCLK0            ; --                        ;
+>>>>>>> Stashed changes
 +-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -820,6 +1331,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name                              ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
+<<<<<<< Updated upstream
 ; angka[31]~0                       ; LCCOMB_X33_Y10_N14 ; 64      ; Global Clock         ; GCLK4            ; --                        ;
 ; clk                               ; PIN_23             ; 104     ; Global Clock         ; GCLK2            ; --                        ;
 ; fsm:TOFSM|currentState.s0         ; LCFF_X33_Y10_N27   ; 96      ; Global Clock         ; GCLK0            ; --                        ;
@@ -827,6 +1339,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fsm:TOFSM|en_Subtractor           ; LCCOMB_X33_Y10_N6  ; 222     ; Global Clock         ; GCLK5            ; --                        ;
 ; rst                               ; PIN_24             ; 11      ; Global Clock         ; GCLK1            ; --                        ;
 ; subtractor:blokSubtractor|b[0]~13 ; LCCOMB_X33_Y10_N22 ; 62      ; Global Clock         ; GCLK6            ; --                        ;
+=======
+; angka[31]~0                       ; LCCOMB_X22_Y12_N28 ; 64      ; Global Clock         ; GCLK7            ; --                        ;
+; angka[5]~1                        ; LCCOMB_X25_Y12_N6  ; 32      ; Global Clock         ; GCLK5            ; --                        ;
+; clk                               ; PIN_23             ; 104     ; Global Clock         ; GCLK2            ; --                        ;
+; fsm:TOFSM|currentState.s5         ; LCFF_X22_Y12_N15   ; 64      ; Global Clock         ; GCLK4            ; --                        ;
+; fsm:TOFSM|en_Subtractor           ; LCCOMB_X22_Y12_N6  ; 222     ; Global Clock         ; GCLK6            ; --                        ;
+; modeSin                           ; PIN_24             ; 32      ; Global Clock         ; GCLK1            ; --                        ;
+; rst                               ; PIN_27             ; 11      ; Global Clock         ; GCLK3            ; --                        ;
+; subtractor:blokSubtractor|b[0]~12 ; LCCOMB_X7_Y10_N20  ; 62      ; Global Clock         ; GCLK0            ; --                        ;
+>>>>>>> Stashed changes
 +-----------------------------------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -835,12 +1357,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Name                                   ; Fan-Out ;
 +----------------------------------------+---------+
+<<<<<<< Updated upstream
+=======
+; fsm:TOFSM|currentState.s0              ; 163     ;
+>>>>>>> Stashed changes
 ; comparator:blokKomparator|LessThan0~62 ; 147     ;
 ; subtractor:blokSubtractor|Equal13~0    ; 146     ;
 ; subtractor:blokSubtractor|kCount[1]    ; 107     ;
 ; subtractor:blokSubtractor|kCount[0]    ; 102     ;
 ; subtractor:blokSubtractor|kCount[2]    ; 101     ;
 ; subtractor:blokSubtractor|kCount[3]    ; 85      ;
+<<<<<<< Updated upstream
 ; fsm:TOFSM|currentState.s0              ; 67      ;
 ; subtractor:blokSubtractor|a[20]~49     ; 51      ;
 ; subtractor:blokSubtractor|a[5]~48      ; 51      ;
@@ -849,13 +1376,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regisY:blokRegisY|outputRegister[30]   ; 12      ;
 ; regisX:blokRegisX|outputRegister[30]   ; 12      ;
 ; subtractor:blokSubtractor|a[20]~119    ; 10      ;
+=======
+; modeSin                                ; 67      ;
+; Sudut[31]                              ; 65      ;
+; subtractor:blokSubtractor|b[21]~13     ; 51      ;
+; subtractor:blokSubtractor|a[7]~51      ; 51      ;
+; subtractor:blokSubtractor|a[7]~26      ; 32      ;
+; regisY:blokRegisY|outputRegister[30]   ; 12      ;
+; regisX:blokRegisX|outputRegister[30]   ; 12      ;
+; subtractor:blokSubtractor|b[21]~14     ; 10      ;
+>>>>>>> Stashed changes
 ; regisY:blokRegisY|outputRegister[29]   ; 9       ;
 ; regisX:blokRegisX|outputRegister[29]   ; 9       ;
 ; ~GND                                   ; 8       ;
 ; subtractor:blokSubtractor|b[31]        ; 8       ;
 ; subtractor:blokSubtractor|a[31]        ; 8       ;
 ; subtractor:blokSubtractor|Equal13~2    ; 8       ;
+<<<<<<< Updated upstream
 ; subtractor:blokSubtractor|b[0]~10      ; 8       ;
+=======
+; subtractor:blokSubtractor|a[1]~16      ; 8       ;
+>>>>>>> Stashed changes
 ; regisY:blokRegisY|outputRegister[28]   ; 8       ;
 ; regisX:blokRegisX|outputRegister[28]   ; 8       ;
 ; regisY:blokRegisY|outputRegister[27]   ; 7       ;
@@ -884,7 +1425,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regisX:blokRegisX|outputRegister[19]   ; 7       ;
 ; regisX:blokRegisX|outputRegister[18]   ; 7       ;
 ; regisX:blokRegisX|outputRegister[17]   ; 7       ;
+<<<<<<< Updated upstream
 ; regisX:blokRegisX|outputRegister[16]   ; 7       ;
+=======
+>>>>>>> Stashed changes
 +----------------------------------------+---------+
 
 
@@ -910,6 +1454,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 ; Name                                                ; Mode                       ; Location           ; Sign Representation ; Has Input Shift Register Chain ; Data A Input Register ; Data B Input Register ; Pipeline Register ; Output Register ;
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
+<<<<<<< Updated upstream
 ; lpm_mult:Mult0|mult_45t:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y10_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
 ;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult3 ;                            ; DSPMULT_X20_Y10_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
 ; lpm_mult:Mult0|mult_45t:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y9_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
@@ -926,6 +1471,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult7 ;                            ; DSPMULT_X20_Y8_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
 ; lpm_mult:Mult1|mult_45t:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y14_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
 ;    lpm_mult:Mult1|mult_45t:auto_generated|mac_mult7 ;                            ; DSPMULT_X20_Y14_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+=======
+; lpm_mult:Mult0|mult_45t:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y14_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult3 ;                            ; DSPMULT_X20_Y14_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult0|mult_45t:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y13_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult5 ;                            ; DSPMULT_X20_Y13_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult0|mult_45t:auto_generated|w565w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y15_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult1 ;                            ; DSPMULT_X20_Y15_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult1|mult_45t:auto_generated|mac_out4     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y10_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult1|mult_45t:auto_generated|mac_mult3 ;                            ; DSPMULT_X20_Y10_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult1|mult_45t:auto_generated|mac_out6     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y9_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult1|mult_45t:auto_generated|mac_mult5 ;                            ; DSPMULT_X20_Y9_N0  ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult1|mult_45t:auto_generated|w565w[0]     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y11_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult1|mult_45t:auto_generated|mac_mult1 ;                            ; DSPMULT_X20_Y11_N0 ; Variable            ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult0|mult_45t:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y12_N2  ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult0|mult_45t:auto_generated|mac_mult7 ;                            ; DSPMULT_X20_Y12_N0 ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+; lpm_mult:Mult1|mult_45t:auto_generated|mac_out8     ; Simple Multiplier (18-bit) ; DSPOUT_X20_Y8_N2   ;                     ; No                             ;                       ;                       ;                   ; no              ;
+;    lpm_mult:Mult1|mult_45t:auto_generated|mac_mult7 ;                            ; DSPMULT_X20_Y8_N0  ; Signed              ;                                ; no                    ; no                    ; no                ;                 ;
+>>>>>>> Stashed changes
 +-----------------------------------------------------+----------------------------+--------------------+---------------------+--------------------------------+-----------------------+-----------------------+-------------------+-----------------+
 
 
@@ -934,6 +1497,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
+<<<<<<< Updated upstream
 ; Block interconnects        ; 2,547 / 26,052 ( 10 % ) ;
 ; C16 interconnects          ; 18 / 1,156 ( 2 % )      ;
 ; C4 interconnects           ; 1,302 / 17,952 ( 7 % )  ;
@@ -942,18 +1506,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Local interconnects        ; 833 / 8,256 ( 10 % )    ;
 ; R24 interconnects          ; 26 / 1,020 ( 3 % )      ;
 ; R4 interconnects           ; 1,515 / 22,440 ( 7 % )  ;
+=======
+; Block interconnects        ; 2,767 / 26,052 ( 11 % ) ;
+; C16 interconnects          ; 29 / 1,156 ( 3 % )      ;
+; C4 interconnects           ; 1,434 / 17,952 ( 8 % )  ;
+; Direct links               ; 305 / 26,052 ( 1 % )    ;
+; Global clocks              ; 8 / 8 ( 100 % )         ;
+; Local interconnects        ; 972 / 8,256 ( 12 % )    ;
+; R24 interconnects          ; 36 / 1,020 ( 4 % )      ;
+; R4 interconnects           ; 1,816 / 22,440 ( 8 % )  ;
+>>>>>>> Stashed changes
 +----------------------------+-------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
+<<<<<<< Updated upstream
 ; Number of Logic Elements  (Average = 13.12) ; Number of LABs  (Total = 116) ;
 +---------------------------------------------+-------------------------------+
 ; 1                                           ; 5                             ;
 ; 2                                           ; 14                            ;
 ; 3                                           ; 2                             ;
 ; 4                                           ; 2                             ;
+=======
+; Number of Logic Elements  (Average = 13.75) ; Number of LABs  (Total = 124) ;
++---------------------------------------------+-------------------------------+
+; 1                                           ; 15                            ;
+; 2                                           ; 2                             ;
+; 3                                           ; 0                             ;
+; 4                                           ; 1                             ;
+>>>>>>> Stashed changes
 ; 5                                           ; 0                             ;
 ; 6                                           ; 0                             ;
 ; 7                                           ; 0                             ;
@@ -964,18 +1547,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                          ; 0                             ;
 ; 13                                          ; 0                             ;
 ; 14                                          ; 4                             ;
+<<<<<<< Updated upstream
 ; 15                                          ; 5                             ;
 ; 16                                          ; 84                            ;
+=======
+; 15                                          ; 6                             ;
+; 16                                          ; 96                            ;
+>>>>>>> Stashed changes
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
+<<<<<<< Updated upstream
 ; LAB-wide Signals  (Average = 1.09) ; Number of LABs  (Total = 116) ;
 +------------------------------------+-------------------------------+
 ; 1 Async. clear                     ; 63                            ;
 ; 1 Clock                            ; 62                            ;
+=======
+; LAB-wide Signals  (Average = 0.72) ; Number of LABs  (Total = 124) ;
++------------------------------------+-------------------------------+
+; 1 Async. clear                     ; 39                            ;
+; 1 Clock                            ; 48                            ;
+>>>>>>> Stashed changes
 ; 1 Clock enable                     ; 1                             ;
 ; 2 Clocks                           ; 1                             ;
 +------------------------------------+-------------------------------+
@@ -984,6 +1579,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
+<<<<<<< Updated upstream
 ; Number of Signals Sourced  (Average = 13.46) ; Number of LABs  (Total = 116) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 1                             ;
@@ -991,6 +1587,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 2                                            ; 8                             ;
 ; 3                                            ; 9                             ;
 ; 4                                            ; 2                             ;
+=======
+; Number of Signals Sourced  (Average = 14.05) ; Number of LABs  (Total = 124) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 1                             ;
+; 1                                            ; 17                            ;
+; 2                                            ; 3                             ;
+; 3                                            ; 0                             ;
+; 4                                            ; 0                             ;
+>>>>>>> Stashed changes
 ; 5                                            ; 0                             ;
 ; 6                                            ; 0                             ;
 ; 7                                            ; 0                             ;
@@ -1001,6 +1606,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 12                                           ; 0                             ;
 ; 13                                           ; 0                             ;
 ; 14                                           ; 5                             ;
+<<<<<<< Updated upstream
 ; 15                                           ; 5                             ;
 ; 16                                           ; 33                            ;
 ; 17                                           ; 21                            ;
@@ -1008,6 +1614,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 19                                           ; 9                             ;
 ; 20                                           ; 1                             ;
 ; 21                                           ; 0                             ;
+=======
+; 15                                           ; 10                            ;
+; 16                                           ; 42                            ;
+; 17                                           ; 16                            ;
+; 18                                           ; 16                            ;
+; 19                                           ; 6                             ;
+; 20                                           ; 4                             ;
+; 21                                           ; 2                             ;
+>>>>>>> Stashed changes
 ; 22                                           ; 0                             ;
 ; 23                                           ; 1                             ;
 +----------------------------------------------+-------------------------------+
@@ -1016,6 +1631,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +-------------------------------------------------+-------------------------------+
+<<<<<<< Updated upstream
 ; Number of Signals Sourced Out  (Average = 7.85) ; Number of LABs  (Total = 116) ;
 +-------------------------------------------------+-------------------------------+
 ; 0                                               ; 1                             ;
@@ -1035,12 +1651,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 14                                              ; 6                             ;
 ; 15                                              ; 3                             ;
 ; 16                                              ; 19                            ;
+=======
+; Number of Signals Sourced Out  (Average = 8.56) ; Number of LABs  (Total = 124) ;
++-------------------------------------------------+-------------------------------+
+; 0                                               ; 1                             ;
+; 1                                               ; 18                            ;
+; 2                                               ; 2                             ;
+; 3                                               ; 0                             ;
+; 4                                               ; 2                             ;
+; 5                                               ; 9                             ;
+; 6                                               ; 10                            ;
+; 7                                               ; 16                            ;
+; 8                                               ; 11                            ;
+; 9                                               ; 7                             ;
+; 10                                              ; 6                             ;
+; 11                                              ; 5                             ;
+; 12                                              ; 3                             ;
+; 13                                              ; 5                             ;
+; 14                                              ; 5                             ;
+; 15                                              ; 7                             ;
+; 16                                              ; 17                            ;
+>>>>>>> Stashed changes
 +-------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
+<<<<<<< Updated upstream
 ; Number of Distinct Inputs  (Average = 19.43) ; Number of LABs  (Total = 116) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
@@ -1050,11 +1688,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4                                            ; 11                            ;
 ; 5                                            ; 1                             ;
 ; 6                                            ; 1                             ;
+=======
+; Number of Distinct Inputs  (Average = 19.27) ; Number of LABs  (Total = 124) ;
++----------------------------------------------+-------------------------------+
+; 0                                            ; 0                             ;
+; 1                                            ; 1                             ;
+; 2                                            ; 13                            ;
+; 3                                            ; 2                             ;
+; 4                                            ; 1                             ;
+; 5                                            ; 1                             ;
+; 6                                            ; 0                             ;
+>>>>>>> Stashed changes
 ; 7                                            ; 0                             ;
 ; 8                                            ; 0                             ;
 ; 9                                            ; 0                             ;
 ; 10                                           ; 0                             ;
 ; 11                                           ; 0                             ;
+<<<<<<< Updated upstream
 ; 12                                           ; 0                             ;
 ; 13                                           ; 1                             ;
 ; 14                                           ; 5                             ;
@@ -1074,6 +1724,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 28                                           ; 9                             ;
 ; 29                                           ; 1                             ;
 ; 30                                           ; 2                             ;
+=======
+; 12                                           ; 1                             ;
+; 13                                           ; 3                             ;
+; 14                                           ; 0                             ;
+; 15                                           ; 10                            ;
+; 16                                           ; 6                             ;
+; 17                                           ; 8                             ;
+; 18                                           ; 9                             ;
+; 19                                           ; 5                             ;
+; 20                                           ; 0                             ;
+; 21                                           ; 3                             ;
+; 22                                           ; 12                            ;
+; 23                                           ; 4                             ;
+; 24                                           ; 6                             ;
+; 25                                           ; 6                             ;
+; 26                                           ; 4                             ;
+; 27                                           ; 4                             ;
+; 28                                           ; 11                            ;
+; 29                                           ; 1                             ;
+; 30                                           ; 0                             ;
+>>>>>>> Stashed changes
 ; 31                                           ; 0                             ;
 ; 32                                           ; 1                             ;
 ; 33                                           ; 11                            ;
@@ -1114,7 +1785,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
+<<<<<<< Updated upstream
 ; clk             ; clk                  ; 2.25              ;
+=======
+; clk             ; clk                  ; 3.762             ;
+>>>>>>> Stashed changes
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
@@ -1126,7 +1801,11 @@ This will disable optimization of problematic paths and expose them for further 
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sat Nov 25 16:02:14 2023
+=======
+    Info: Processing started: Tue Nov 28 02:39:57 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel
 Info: Selected device EP2C8Q208C7 for design "tubesTopLevel"
 Info: Low junction temperature is 0 degrees C
@@ -1173,6 +1852,10 @@ Critical Warning: No exact pin location assignment(s) for 69 pins of 69 total pi
     Info: Pin angka[30] not assigned to an exact location on the device
     Info: Pin angka[31] not assigned to an exact location on the device
     Info: Pin modeSin not assigned to an exact location on the device
+<<<<<<< Updated upstream
+=======
+    Info: Pin Sudut[31] not assigned to an exact location on the device
+>>>>>>> Stashed changes
     Info: Pin modeCos not assigned to an exact location on the device
     Info: Pin clk not assigned to an exact location on the device
     Info: Pin rst not assigned to an exact location on the device
@@ -1217,6 +1900,23 @@ Info: Automatically promoted node clk (placed in PIN 23 (CLK0, LVDSCLK0p, Input)
         Info: Destination node fsm:TOFSM|currentState.s5
         Info: Destination node fsm:TOFSM|currentState.s1
         Info: Destination node fsm:TOFSM|currentState.s2
+<<<<<<< Updated upstream
+=======
+Info: Automatically promoted node modeSin (placed in PIN 24 (CLK1, LVDSCLK0n, Input))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node Add1~62
+        Info: Destination node angka[31]~0
+        Info: Destination node angka[5]~1
+        Info: Destination node angkaTemp[30]~0
+        Info: Destination node angkaTemp[31]~1
+        Info: Destination node angkaTemp[32]~2
+        Info: Destination node angkaTemp[33]~3
+        Info: Destination node angkaTemp[34]~4
+        Info: Destination node angkaTemp[35]~5
+        Info: Destination node angkaTemp[36]~6
+        Info: Non-global destination nodes limited to 10 nodes
+>>>>>>> Stashed changes
 Info: Automatically promoted node fsm:TOFSM|en_Subtractor 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
     Info: Following destination nodes may be non-global or may not use global or regional clocks
@@ -1236,6 +1936,7 @@ Info: Automatically promoted node fsm:TOFSM|currentState.s5
         Info: Destination node fsm:TOFSM|Selector8~0
 Info: Automatically promoted node subtractor:blokSubtractor|b[0]~13 
     Info: Automatically promoted destinations to use location or clock signal Global Clock
+<<<<<<< Updated upstream
 Info: Automatically promoted node rst (placed in PIN 24 (CLK1, LVDSCLK0n, Input))
     Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G1
 Info: Automatically promoted node fsm:TOFSM|currentState.s0 
@@ -1252,6 +1953,12 @@ Info: Automatically promoted node fsm:TOFSM|currentState.s0
         Info: Destination node regis:blokOutSin|outputRegister[5]
         Info: Destination node regis:blokOutSin|outputRegister[6]
         Info: Non-global destination nodes limited to 10 nodes
+=======
+Info: Automatically promoted node angka[5]~1 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+Info: Automatically promoted node rst (placed in PIN 27 (CLK2, LVDSCLK1p, Input))
+    Info: Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+>>>>>>> Stashed changes
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -1275,6 +1982,7 @@ Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
+<<<<<<< Updated upstream
 Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Estimated most critical path is register to register delay of 7.568 ns
     Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X17_Y6; Fanout = 7; REG Node = 'subtractor:blokSubtractor|a[8]'
@@ -1312,6 +2020,49 @@ Info: Fitter routing operations beginning
 Info: Average interconnect usage is 6% of the available device resources
     Info: Peak interconnect usage is 14% of the available device resources in the region that extends from location X11_Y0 to location X22_Y9
 Info: Fitter routing operations ending: elapsed time is 00:00:00
+=======
+Info: Fitter placement operations ending: elapsed time is 00:00:01
+Info: Estimated most critical path is register to register delay of 7.219 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X9_Y13; Fanout = 6; REG Node = 'subtractor:blokSubtractor|b[0]'
+    Info: 2: + IC(0.709 ns) + CELL(0.517 ns) = 1.226 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~1'
+    Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.306 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~3'
+    Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.386 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~5'
+    Info: 5: + IC(0.000 ns) + CELL(0.080 ns) = 1.466 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~7'
+    Info: 6: + IC(0.000 ns) + CELL(0.080 ns) = 1.546 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~9'
+    Info: 7: + IC(0.000 ns) + CELL(0.080 ns) = 1.626 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~11'
+    Info: 8: + IC(0.000 ns) + CELL(0.080 ns) = 1.706 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~13'
+    Info: 9: + IC(0.000 ns) + CELL(0.080 ns) = 1.786 ns; Loc. = LAB_X8_Y13; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~15'
+    Info: 10: + IC(0.098 ns) + CELL(0.080 ns) = 1.964 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~17'
+    Info: 11: + IC(0.000 ns) + CELL(0.080 ns) = 2.044 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~19'
+    Info: 12: + IC(0.000 ns) + CELL(0.080 ns) = 2.124 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~21'
+    Info: 13: + IC(0.000 ns) + CELL(0.080 ns) = 2.204 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~23'
+    Info: 14: + IC(0.000 ns) + CELL(0.080 ns) = 2.284 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~25'
+    Info: 15: + IC(0.000 ns) + CELL(0.080 ns) = 2.364 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~27'
+    Info: 16: + IC(0.000 ns) + CELL(0.080 ns) = 2.444 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~29'
+    Info: 17: + IC(0.000 ns) + CELL(0.080 ns) = 2.524 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~31'
+    Info: 18: + IC(0.000 ns) + CELL(0.080 ns) = 2.604 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~33'
+    Info: 19: + IC(0.000 ns) + CELL(0.080 ns) = 2.684 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~35'
+    Info: 20: + IC(0.000 ns) + CELL(0.080 ns) = 2.764 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~37'
+    Info: 21: + IC(0.000 ns) + CELL(0.080 ns) = 2.844 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~39'
+    Info: 22: + IC(0.000 ns) + CELL(0.080 ns) = 2.924 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~41'
+    Info: 23: + IC(0.000 ns) + CELL(0.080 ns) = 3.004 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~43'
+    Info: 24: + IC(0.000 ns) + CELL(0.080 ns) = 3.084 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~45'
+    Info: 25: + IC(0.000 ns) + CELL(0.080 ns) = 3.164 ns; Loc. = LAB_X8_Y12; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~47'
+    Info: 26: + IC(0.098 ns) + CELL(0.080 ns) = 3.342 ns; Loc. = LAB_X8_Y11; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~49'
+    Info: 27: + IC(0.000 ns) + CELL(0.080 ns) = 3.422 ns; Loc. = LAB_X8_Y11; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~51'
+    Info: 28: + IC(0.000 ns) + CELL(0.080 ns) = 3.502 ns; Loc. = LAB_X8_Y11; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~53'
+    Info: 29: + IC(0.000 ns) + CELL(0.080 ns) = 3.582 ns; Loc. = LAB_X8_Y11; Fanout = 2; COMB Node = 'subtractor:blokSubtractor|Add7~55'
+    Info: 30: + IC(0.000 ns) + CELL(0.458 ns) = 4.040 ns; Loc. = LAB_X8_Y11; Fanout = 1; COMB Node = 'subtractor:blokSubtractor|Add7~56'
+    Info: 31: + IC(0.732 ns) + CELL(0.521 ns) = 5.293 ns; Loc. = LAB_X8_Y10; Fanout = 1; COMB Node = 'subtractor:blokSubtractor|y_outTemp[28]~56'
+    Info: 32: + IC(0.354 ns) + CELL(0.319 ns) = 5.966 ns; Loc. = LAB_X8_Y10; Fanout = 1; COMB Node = 'subtractor:blokSubtractor|y_outTemp[28]~57'
+    Info: 33: + IC(0.732 ns) + CELL(0.521 ns) = 7.219 ns; Loc. = LAB_X7_Y11; Fanout = 1; REG Node = 'subtractor:blokSubtractor|y_outTemp[28]'
+    Info: Total cell delay = 4.496 ns ( 62.28 % )
+    Info: Total interconnect delay = 2.723 ns ( 37.72 % )
+Info: Fitter routing operations beginning
+Info: Average interconnect usage is 7% of the available device resources
+    Info: Peak interconnect usage is 16% of the available device resources in the region that extends from location X11_Y10 to location X22_Y19
+Info: Fitter routing operations ending: elapsed time is 00:00:02
+>>>>>>> Stashed changes
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
     Info: Optimizations that may affect the design's timing were skipped
@@ -1352,9 +2103,16 @@ Warning: Found 32 output pins without output pin load capacitance assignment
 Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
+<<<<<<< Updated upstream
     Info: Peak virtual memory: 268 megabytes
     Info: Processing ended: Sat Nov 25 16:02:17 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
+=======
+    Info: Peak virtual memory: 270 megabytes
+    Info: Processing ended: Tue Nov 28 02:40:05 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:05
+>>>>>>> Stashed changes
 
 

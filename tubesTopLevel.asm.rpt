@@ -1,5 +1,9 @@
 Assembler report for tubesTopLevel
+<<<<<<< Updated upstream
 Sat Nov 25 16:02:18 2023
+=======
+Tue Nov 28 02:40:07 2023
+>>>>>>> Stashed changes
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +42,11 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
+<<<<<<< Updated upstream
 ; Assembler Status      ; Successful - Sat Nov 25 16:02:18 2023 ;
+=======
+; Assembler Status      ; Successful - Tue Nov 28 02:40:07 2023 ;
+>>>>>>> Stashed changes
 ; Revision Name         ; tubesTopLevel                         ;
 ; Top-level Entity Name ; tubesTopLevel                         ;
 ; Family                ; Cyclone II                            ;
@@ -88,6 +96,7 @@ applicable agreement for further details.
 +-------------------------------------------------+
 
 
+<<<<<<< Updated upstream
 +---------------------------------------------------------------------------+
 ; Assembler Device Options: D:/SisDigGemink/tubesTopLevel/tubesTopLevel.sof ;
 +----------------+----------------------------------------------------------+
@@ -109,6 +118,29 @@ applicable agreement for further details.
 ; Checksum           ; 0x06D5EC26                                           ;
 ; Compression Ratio  ; 2                                                    ;
 +--------------------+------------------------------------------------------+
+=======
++-----------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Asus/Documents/GitHub/tubezz/tubesTopLevel.sof ;
++----------------+------------------------------------------------------------------+
+; Option         ; Setting                                                          ;
++----------------+------------------------------------------------------------------+
+; Device         ; EP2C8Q208C7                                                      ;
+; JTAG usercode  ; 0xFFFFFFFF                                                       ;
+; Checksum       ; 0x001F43C9                                                       ;
++----------------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Asus/Documents/GitHub/tubezz/tubesTopLevel.pof ;
++--------------------+--------------------------------------------------------------+
+; Option             ; Setting                                                      ;
++--------------------+--------------------------------------------------------------+
+; Device             ; EPCS4                                                        ;
+; JTAG usercode      ; 0x00000000                                                   ;
+; Checksum           ; 0x06D23183                                                   ;
+; Compression Ratio  ; 2                                                            ;
++--------------------+--------------------------------------------------------------+
+>>>>>>> Stashed changes
 
 
 +--------------------+
@@ -117,13 +149,21 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sat Nov 25 16:02:17 2023
+=======
+    Info: Processing started: Tue Nov 28 02:40:06 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off tubesTopLevel -c tubesTopLevel
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 223 megabytes
+<<<<<<< Updated upstream
     Info: Processing ended: Sat Nov 25 16:02:18 2023
+=======
+    Info: Processing ended: Tue Nov 28 02:40:07 2023
+>>>>>>> Stashed changes
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

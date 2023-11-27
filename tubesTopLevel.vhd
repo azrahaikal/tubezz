@@ -119,7 +119,12 @@ signal tesShifter : std_logic;
 signal tesComparison : std_logic;
 signal enFSM : std_logic := '1';
 signal cekAKHIR : std_logic;
+<<<<<<< Updated upstream
 
+=======
+signal angle_baru : std_logic_vector(31 downto 0);
+signal angkaTemp2 : std_logic_vector(31 downto 0);
+>>>>>>> Stashed changes
 begin
 
 	-- FSM
@@ -143,6 +148,18 @@ begin
 		angka(30) <= angkaTemp(60);
 		angka(29 downto 0) <= angkaTemp(59 downto 30);
 		cekAKHIR <= '1';
+<<<<<<< Updated upstream
+=======
+		elsif sudut<0 then	
+		angle_baru<=not(sudut)+1;
+		angkaTemp <= outSin * k;		-- 1.1.30 * 1.1.30 = 1.3.60. (not sure, cek lagi konfigurasi fixed-pointnya (?)) : 63 sign, 62 61 60 integer	
+		angkaTemp2(31) <= angkaTemp(63);		-- karena output sin cos cuman -1 sampe 1, maka 1.1.30
+		angkaTemp2(30) <= angkaTemp(60);
+		angkaTemp2(29 downto 0) <= angkaTemp(59 downto 30);
+		angka<=not(angkaTemp2)+1;
+		cekAKHIR <= '1';
+		end if;
+>>>>>>> Stashed changes
 	elsif(modeCos = '1') then
 		angkaTemp <= outCos * k;
 		angka(31) <=  angkaTemp(63);

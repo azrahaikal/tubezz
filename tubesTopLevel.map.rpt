@@ -1,5 +1,9 @@
 Analysis & Synthesis report for tubesTopLevel
+<<<<<<< Updated upstream
 Sat Nov 25 16:02:27 2023
+=======
+Tue Nov 28 02:39:56 2023
+>>>>>>> Stashed changes
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -50,13 +54,22 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status        ; Successful - Sat Nov 25 16:02:27 2023        ;
+=======
+; Analysis & Synthesis Status        ; Successful - Tue Nov 28 02:39:56 2023        ;
+>>>>>>> Stashed changes
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; tubesTopLevel                                ;
 ; Top-level Entity Name              ; tubesTopLevel                                ;
 ; Family                             ; Cyclone II                                   ;
+<<<<<<< Updated upstream
 ; Total logic elements               ; 1,513                                        ;
 ;     Total combinational functions  ; 1,513                                        ;
+=======
+; Total logic elements               ; 1,705                                        ;
+;     Total combinational functions  ; 1,705                                        ;
+>>>>>>> Stashed changes
 ;     Dedicated logic registers      ; 107                                          ;
 ; Total registers                    ; 107                                          ;
 ; Total pins                         ; 69                                           ;
@@ -182,6 +195,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
+<<<<<<< Updated upstream
 ; Estimated Total logic elements              ; 1,513                   ;
 ;                                             ;                         ;
 ; Total combinational functions               ; 1513                    ;
@@ -193,6 +207,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Logic elements by mode                      ;                         ;
 ;     -- normal mode                          ; 1020                    ;
 ;     -- arithmetic mode                      ; 493                     ;
+=======
+; Estimated Total logic elements              ; 1,705                   ;
+;                                             ;                         ;
+; Total combinational functions               ; 1705                    ;
+; Logic element usage by number of LUT inputs ;                         ;
+;     -- 4 input functions                    ; 494                     ;
+;     -- 3 input functions                    ; 967                     ;
+;     -- <=2 input functions                  ; 244                     ;
+;                                             ;                         ;
+; Logic elements by mode                      ;                         ;
+;     -- normal mode                          ; 1150                    ;
+;     -- arithmetic mode                      ; 555                     ;
+>>>>>>> Stashed changes
 ;                                             ;                         ;
 ; Total registers                             ; 107                     ;
 ;     -- Dedicated logic registers            ; 107                     ;
@@ -202,8 +229,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 16                      ;
 ; Maximum fan-out node                        ; fsm:TOFSM|en_Subtractor ;
 ; Maximum fan-out                             ; 227                     ;
+<<<<<<< Updated upstream
 ; Total fan-out                               ; 5305                    ;
 ; Average fan-out                             ; 3.11                    ;
+=======
+; Total fan-out                               ; 5845                    ;
+; Average fan-out                             ; 3.08                    ;
+>>>>>>> Stashed changes
 +---------------------------------------------+-------------------------+
 
 
@@ -212,8 +244,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+--------------+
+<<<<<<< Updated upstream
 ; |tubesTopLevel                  ; 1513 (98)         ; 107 (0)      ; 0           ; 16           ; 0       ; 8         ; 69   ; 0            ; |tubesTopLevel                                        ; work         ;
 ;    |comparator:blokKomparator|  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|comparator:blokKomparator              ; work         ;
+=======
+; |tubesTopLevel                  ; 1705 (290)        ; 107 (0)      ; 0           ; 16           ; 0       ; 8         ; 69   ; 0            ; |tubesTopLevel                                        ; work         ;
+;    |comparator:blokKomparator|  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|comparator:blokKomparator              ;              ;
+>>>>>>> Stashed changes
 ;    |counter:blokCounter|        ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|counter:blokCounter                    ; work         ;
 ;    |fsm:TOFSM|                  ; 9 (9)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tubesTopLevel|fsm:TOFSM                              ;              ;
 ;    |lpm_mult:Mult0|             ; 90 (0)            ; 0 (0)        ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |tubesTopLevel|lpm_mult:Mult0                         ;              ;
@@ -300,42 +337,75 @@ Encoding Type:  One-Hot
 ; angka[29]$latch                                      ; angka[31]                 ; yes                    ;
 ; angka[30]$latch                                      ; angka[31]                 ; yes                    ;
 ; angka[31]$latch                                      ; angka[31]                 ; yes                    ;
+; angkaTemp2[0]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[30]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[1]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[31]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[2]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[32]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[3]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[33]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[4]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[34]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[5]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[35]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[6]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[36]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[7]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[37]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[8]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[38]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[9]                                        ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[39]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[10]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[40]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[11]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[41]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[12]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[42]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[13]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[43]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[14]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[44]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[15]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[45]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[16]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[46]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[17]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[47]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[18]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[48]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[19]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[49]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[20]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[50]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[21]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[51]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[22]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[52]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[23]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[53]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[24]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[54]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[25]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[55]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[26]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[56]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[27]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[57]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[28]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[58]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[29]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[59]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[30]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[60]                                        ; angka[31]                 ; yes                    ;
+; angkaTemp2[31]                                       ; angkaTemp2[21]            ; yes                    ;
 ; angkaTemp[63]                                        ; angka[31]                 ; yes                    ;
 ; regis:blokOutCos|outputRegister[0]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutCos|outputRegister[1]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutCos|outputRegister[2]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutCos|outputRegister[3]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
+<<<<<<< Updated upstream
 ; regis:blokOutCos|outputRegister[4]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutCos|outputRegister[5]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutCos|outputRegister[6]                   ; fsm:TOFSM|currentState.s5 ; yes                    ;
@@ -369,6 +439,9 @@ Encoding Type:  One-Hot
 ; regis:blokOutSin|outputRegister[16]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; regis:blokOutSin|outputRegister[17]                  ; fsm:TOFSM|currentState.s5 ; yes                    ;
 ; Number of user-specified and inferred latches = 416  ;                           ;                        ;
+=======
+; Number of user-specified and inferred latches = 480  ;                           ;                        ;
+>>>>>>> Stashed changes
 +------------------------------------------------------+---------------------------+------------------------+
 Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -403,21 +476,31 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|angle_outTemp[30] ;
-; 4:1                ; 92 bits   ; 184 LEs       ; 184 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|x_outTemp[2]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[28]             ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|angle_outTemp[32] ;
+; 4:1                ; 92 bits   ; 184 LEs       ; 184 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|x_outTemp[12]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[28]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |tubesTopLevel|angka[5]                                    ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[27]             ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[25]             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[27]             ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[23]             ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[22]             ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |tubesTopLevel|subtractor:blokSubtractor|tanInv            ;
+<<<<<<< Updated upstream
 ; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[20]             ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[18]             ;
 ; 7:1                ; 28 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[5]              ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[26]             ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[2]              ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[0]              ;
+=======
+; 6:1                ; 6 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[21]             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|b[18]             ;
+; 7:1                ; 28 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[7]              ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[26]             ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[3]              ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |tubesTopLevel|subtractor:blokSubtractor|a[1]              ;
+>>>>>>> Stashed changes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
@@ -547,7 +630,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Sat Nov 25 16:02:24 2023
+=======
+    Info: Processing started: Tue Nov 28 02:39:50 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tubesTopLevel -c tubesTopLevel
 Info: Found 2 design units, including 1 entities, in source file tubestoplevel.vhd
     Info: Found design unit 1: tubesTopLevel-tTL_arc
@@ -583,6 +670,7 @@ Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(116): object "
 Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(118): object "tesShifter" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(119): object "tesComparison" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at tubesTopLevel.vhd(121): object "cekAKHIR" assigned a value but never read
+<<<<<<< Updated upstream
 Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(137): inferring latch(es) for signal or variable "angkaTemp", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(137): inferring latch(es) for signal or variable "angka", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "angka[0]" at tubesTopLevel.vhd(137)
@@ -649,6 +737,145 @@ Info (10041): Inferred latch for "angkaTemp[58]" at tubesTopLevel.vhd(137)
 Info (10041): Inferred latch for "angkaTemp[59]" at tubesTopLevel.vhd(137)
 Info (10041): Inferred latch for "angkaTemp[60]" at tubesTopLevel.vhd(137)
 Info (10041): Inferred latch for "angkaTemp[63]" at tubesTopLevel.vhd(137)
+=======
+Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(141): signal "Sudut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(142): signal "Sudut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(149): signal "Sudut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(150): signal "Sudut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at tubesTopLevel.vhd(155): signal "angkaTemp2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(138): inferring latch(es) for signal or variable "angle_baru", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(138): inferring latch(es) for signal or variable "angkaTemp", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(138): inferring latch(es) for signal or variable "angka", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at tubesTopLevel.vhd(138): inferring latch(es) for signal or variable "angkaTemp2", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "angkaTemp2[0]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[1]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[2]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[3]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[4]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[5]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[6]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[7]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[8]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[9]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[10]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[11]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[12]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[13]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[14]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[15]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[16]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[17]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[18]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[19]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[20]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[21]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[22]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[23]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[24]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[25]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[26]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[27]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[28]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[29]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[30]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp2[31]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[0]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[1]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[2]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[3]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[4]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[5]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[6]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[7]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[8]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[9]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[10]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[11]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[12]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[13]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[14]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[15]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[16]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[17]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[18]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[19]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[20]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[21]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[22]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[23]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[24]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[25]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[26]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[27]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[28]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[29]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[30]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angka[31]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[30]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[31]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[32]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[33]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[34]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[35]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[36]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[37]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[38]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[39]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[40]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[41]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[42]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[43]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[44]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[45]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[46]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[47]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[48]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[49]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[50]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[51]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[52]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[53]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[54]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[55]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[56]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[57]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[58]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[59]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[60]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angkaTemp[63]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[0]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[1]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[2]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[3]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[4]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[5]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[6]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[7]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[8]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[9]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[10]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[11]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[12]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[13]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[14]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[15]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[16]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[17]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[18]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[19]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[20]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[21]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[22]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[23]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[24]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[25]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[26]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[27]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[28]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[29]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[30]" at tubesTopLevel.vhd(138)
+Info (10041): Inferred latch for "angle_baru[31]" at tubesTopLevel.vhd(138)
+>>>>>>> Stashed changes
 Info: Elaborating entity "fsm" for hierarchy "fsm:TOFSM"
 Warning (10036): Verilog HDL or VHDL warning at fsm.vhd(30): object "enFSM_internal" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at fsm.vhd(57): signal "modeSin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1224,6 +1451,73 @@ Info: Found 1 design units, including 1 entities, in source file db/mult_45t.tdf
     Info: Found entity 1: mult_45t
 Info: Ignored 468 buffer(s)
     Info: Ignored 468 SOFT buffer(s)
+<<<<<<< Updated upstream
+=======
+Warning: Latch angka[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[4]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[6]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[7]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[8]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[9]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[10]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[11]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[12]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[13]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[14]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[15]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[16]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[17]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[18]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[19]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[20]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[21]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[22]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[23]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[24]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[25]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[26]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[27]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[28]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[29]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[30]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+Warning: Latch angka[31]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal modeSin
+>>>>>>> Stashed changes
 Warning: Latch angkaTemp[30] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal modeSin
 Warning: Latch angkaTemp[31] has unsafe behavior
@@ -1410,6 +1704,7 @@ Warning: Latch subtractor:blokSubtractor|a[29] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal subtractor:blokSubtractor|kCount[3]
 Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+<<<<<<< Updated upstream
 Info: Implemented 1694 device resources after synthesis - the final resource count might be different
     Info: Implemented 37 input pins
     Info: Implemented 32 output pins
@@ -1420,5 +1715,17 @@ Info: Quartus II Analysis & Synthesis was successful. 0 errors, 281 warnings
     Info: Processing ended: Sat Nov 25 16:02:27 2023
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
+=======
+Info: Implemented 1886 device resources after synthesis - the final resource count might be different
+    Info: Implemented 37 input pins
+    Info: Implemented 32 output pins
+    Info: Implemented 1801 logic cells
+    Info: Implemented 16 DSP elements
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 352 warnings
+    Info: Peak virtual memory: 258 megabytes
+    Info: Processing ended: Tue Nov 28 02:39:56 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
+>>>>>>> Stashed changes
 
 
