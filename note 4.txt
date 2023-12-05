@@ -1,0 +1,86 @@
+library ieee;
+use ieee.std_logic_1164.all;
+--use ieee.std_logic_arith.all;
+use ieee.std_logic_signed.all;
+--use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+use std.STANDARD.BOOLEAN.all;
+use ieee.std_logic_1164.STD_LOGIC_VECTOR.all ;
+
+entity tan is
+	port(	outSin, outCos : in std_logic_vector(31 downto 0);
+			counter	 : in std_logic_vector(3 downto 0);
+			--IG : out std_logic_vector(31 downto 0); -- 1 1 30
+			clk  : in std_logic;
+			tan22 : out std_logic_vector(31 downto 0)
+	);
+
+end entity;
+
+architecture tan_arc of tan is
+	
+	signal IG_in : std_logic_vector(31 downto 0);
+	type states is (x1,x2,x3,x4,x5,x6);
+	signal nState , cState : states;
+	signal hasil1 , hasil2 , hasil3 , hasil4, hasil5 , hasil6 : std_logic_vector (31 downto 0);
+	signal hasil1new , hasil2new , hasil3new , hasil4new , hasil5new , hasil6new : std_logic_vector (63 downto 0);	
+	
+	begin
+	process(clk)
+	begin
+	if (clk'event and clk='1') then
+		cState<=nState;
+		if outCos >= 0.5 then
+			IG_in <=0.5;
+		else 
+			IG_in <= -0.5;
+	end if;
+	end if;
+	end process;
+	
+	process
+	begin
+	case cState is
+		when x1=>
+			hasil1new <= IG * (2 - (IG*outCos));
+			nState<=x2;
+			hasil1new(31) <= hasil1(63) ;
+			hasil1new(30) <= hasil1(44) ;
+			hasil1new(29 downto 0) <= hasil1(43 downto 0) ;
+		when x2=>
+			hasil2new <= hasil1new * (2 - (hasil1*outCos));
+			nState<=x3;
+			hasil2new(31) <= hasil2(63) ;
+			hasil2new(30) <= hasil2(44) ;
+			hasil2new(29 downto 0) <= hasil2(43 downto 0);
+		when x3=>
+			hasil3new <= hasil2new * (2 - (hasil2*outCos));
+			nState<=x4;
+			hasil3new(31) <= hasil3(63) ;
+			hasil3new(30) <= hasil3(44) ; 
+			hasil3new(29 downto 0) <= hasil3(43 downto 0);
+		when x4=>
+			hasil4new <= hasil3new * (2 - (hasil3*outCos));
+			nState<=x5;
+			hasil4new(31) <= hasil4(63) ;
+			hasil4new(30) <= hasil4(44) ;
+			hasil4new(29 downto 0) <= hasil4(43 downto 0) ;
+		when x5=>
+			hasil5new <= hasil4new * (2 - (hasil4*outCos));
+			nState<=x6;
+			hasil5new(31) <= hasil5(63) ;
+			hasil5new(30) <= hasil5(44) ;
+			hasil5new(29 downto 0) <= hasil5(43 downto 0);
+		when x6=>
+			hasil5new <= hasil5new * (2 - (hasil5*outCos));
+			nState<=x1;
+			hasil6new(31) <= hasil6(63) ;
+			hasil6new(30) <= hasil6(44) ;
+			hasil6new(29 downto 0) <= hasil6(43 downto 0);
+	end case;
+	end process;
+	
+	tan22 <= outsin * hasil6;
+	
+	
+end tan_arc;

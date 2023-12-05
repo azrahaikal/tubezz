@@ -17,6 +17,8 @@ entity subtractor is
 			tesComparison : out std_logic;
 			enFSM : out std_logic;
 			En_Subtractor : in std_logic;
+			hasilAkar : in std_logic_vector(31 downto 0);
+			Sudut : in std_logic_vector(31 downto 0); --ini buat arc
 			modeSin, modeCos, modeTan, modeArcSin, modeArcCos : in std_logic
 	);
 end subtractor;
@@ -59,15 +61,15 @@ architecture subtractor_arc of subtractor is
 			elsif modeArcSin = '1' then
 				a <= "00000000000000000000000000000000";		-- d*y*(2^-i)
 				b <= "01000000000000000000000000000000";		-- d*x*(2^-i)
-				x0 <= akar(1-inputUSer^2);
-				y0 <= INPUT USER;
+				x0 <= hasilAkar;
+				y0 <= Sudut;
 				angle0 <= "00000000000000000000000000000000";
-				sekali <= '0';				-- LUPA AKARNYAAA
+				sekali <= '0';				
 			elsif modeArcCos = '1' then
 				a <= "00000000000000000000000000000000";
 				b <= "01000000000000000000000000000000";
-				x0 <= INPUT USER;
-				y0 <= akar(1-inputUser^2);
+				x0 <= Sudut;
+				y0 <= hasilAkar;
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';
 			end if;

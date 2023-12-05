@@ -7,7 +7,8 @@ entity kuadran is
 	port(	rst : in std_logic;
 			inputSudut : in std_logic_vector(31 downto 0); -- 1 9 22
 			kuadranOut : out integer;
-			Sudut : out std_logic_vector(31 downto 0)  -- 1 7 24
+			modeSin, modeCos, modeTan, modeArcSin, modeArcCos : in std_logic;
+			Sudut : out std_logic_vector(31 downto 0)  -- 1 7 24 sin cos tan, 1 1 30 untuk ARC
 		);
 end entity;
 
@@ -50,6 +51,7 @@ notInputSudut <= not(inputSudut) + "00000000000000000000000000000001";
 process(inputSudut, yAtas, SudutTemp, degree0p, degree90p, degree180p, degree270p, degree360p, degree90p2, degree180p2, degree270p2,
 degree90n, degree180n, degree270n, inputSudut2, xKiri, yBawah, sudutNegatif, notInputSudut, SudutTemp2)
 begin
+if (modeSin = '1' or modeCos = '1' or modeTan = '1') then
 	if (inputSudut(31) = '0') then
 		if yAtas <= degree0p and inputSudut2 >= degree0p then
 			kuadranOut <= 1;
@@ -139,5 +141,12 @@ begin
 		end if;
 	
 	end if;
+elsif modeArcSin = '1' or modeArcCos = '1' then
+	Sudut(31) <= inputSudut(31);
+	Sudut(30) <= inputSudut(22);
+	Sudut(29 downto 8) <= inputSudut(21 downto 0);
+	Sudut(8 downto 0) <= "000000000";
+
+end if; 
 end process;
 end kuadran_arc;
