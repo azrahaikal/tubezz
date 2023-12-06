@@ -30,127 +30,128 @@ architecture subtractor_arc of subtractor is
 	
 	signal x_outTemp, y_outTemp: std_logic_vector(32 downto 0);
 	signal angle_outTemp: std_logic_vector(32 downto 0);
-	signal kCount : integer := to_integer(unsigned(counter));
+	--signal kCount : integer := to_integer(unsigned(counter));
 	signal tanInv: std_logic_vector(31 downto 0) ; --:= tan_inv(counter);
 	signal x0, y0, angle0: std_logic_vector(31 downto 0);
 	signal sekali : std_logic := '1';
 	
 	
 	begin
-	process(kCount, clk)
+	process(clk)
 	begin
+	--if clk = '1' then
 	if (En_Subtractor = '1') then
-	kCount <= to_integer(unsigned(counter));
+	--kCount <= to_integer(unsigned(counter));
 	tesShifter <= '1';
 
-		if kCount = 1 then
+		if to_integer(unsigned(counter)) = 1 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30) <= '0';
 			a(29 downto 0) <= y(30 downto 1);
 			b(30) <= '0';
 			b(29 downto 0) <= x(30 downto 1);
-		elsif kCount = 0 and sekali = '1' then
+		elsif to_integer(unsigned(counter)) = 0 and sekali = '1' then
 			if modeSin = '1' or modeCos = '1' or modeTan = '1' then
-				a <= "00000000000000000000000000000000";
-				b <= "01000000000000000000000000000000";
+				a <= "00000000000000000000000000000000";		-- d*y*(2^-i)
+				b <= "01000000000000000000000000000000";		-- d*x*(2^-i)
 				x0 <= "01000000000000000000000000000000";
 				y0 <= "00000000000000000000000000000000";
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';
 			elsif modeArcSin = '1' then
-				a <= "00000000000000000000000000000000";		-- d*y*(2^-i)
-				b <= "01000000000000000000000000000000";		-- d*x*(2^-i)
-				x0 <= hasilAkar;
-				y0 <= Sudut;
+				a <= "00000000001000000000000000000000";--Sudut;										-- d*y*(2^-i)
+				b <= "00000000001100111101000001111100";--hasilAkar;									-- d*x*(2^-i)
+				x0 <= "00000000001100111101000001111100";--hasilAkar;
+				y0 <= "00000000001000000000000000000000";--Sudut;
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';				
 			elsif modeArcCos = '1' then
-				a <= "00000000000000000000000000000000";
-				b <= "01000000000000000000000000000000";
+				a <= hasilAkar;
+				b <= Sudut;
 				x0 <= Sudut;
 				y0 <= hasilAkar;
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';
 			end if;
-		elsif kCount = 2 then
+		elsif to_integer(unsigned(counter)) = 2 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 29) <= "00";
 			b(30 downto 29) <= "00";
 			a(28 downto 0) <= y(30 downto 2);
 			b(28 downto 0) <= x(30 downto 2);
-		elsif kCount = 3 then
+		elsif to_integer(unsigned(counter)) = 3 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 28) <= "000";
 			b(30 downto 28) <= "000";
 			a(27 downto 0) <= y(30 downto 3);
 			b(27 downto 0) <= x(30 downto 3);
-		elsif kCount = 4 then
+		elsif to_integer(unsigned(counter)) = 4 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 27) <= "0000";
 			b(30 downto 27) <= "0000";
 			a(26 downto 0) <= y(30 downto 4);
 			b(26 downto 0) <= x(30 downto 4);
-		elsif kCount = 5 then
+		elsif to_integer(unsigned(counter)) = 5 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 26) <= "00000";
 			b(30 downto 26) <= "00000";
 			a(25 downto 0) <= y(30 downto 5);
 			b(25 downto 0) <= x(30 downto 5);
-		elsif kCount = 6 then
+		elsif to_integer(unsigned(counter)) = 6 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 25) <= "000000";
 			b(30 downto 25) <= "000000";
 			a(24 downto 0) <= y(30 downto 6);
 			b(24 downto 0) <= x(30 downto 6);
-		elsif kCount = 7 then
+		elsif to_integer(unsigned(counter)) = 7 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 24) <= "0000000";
 			b(30 downto 24) <= "0000000";
 			a(23 downto 0) <= y(30 downto 7);
 			b(23 downto 0) <= x(30 downto 7);
-		elsif kCount = 8 then
+		elsif to_integer(unsigned(counter)) = 8 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 23) <= "00000000";
 			b(30 downto 23) <= "00000000";
 			a(22 downto 0) <= y(30 downto 8);
 			b(22 downto 0) <= x(30 downto 8);
-		elsif kCount = 9 then
+		elsif to_integer(unsigned(counter)) = 9 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 22) <= "000000000";
 			b(30 downto 22) <= "000000000";
 			a(21 downto 0) <= y(30 downto 9);
 			b(21 downto 0) <= x(30 downto 9);
-		elsif kCount = 10 then
+		elsif to_integer(unsigned(counter)) = 10 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 21) <= "0000000000";
 			b(30 downto 21) <= "0000000000";
 			a(20 downto 0) <= y(30 downto 10);
 			b(20 downto 0) <= x(30 downto 10);
-		elsif kCount = 11 then
+		elsif to_integer(unsigned(counter)) = 11 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 20) <= "00000000000";
 			b(30 downto 20) <= "00000000000";
 			a(19 downto 0) <= y(30 downto 11);
 			b(19 downto 0) <= x(30 downto 11);
-		elsif kCount = 12 then
+		elsif to_integer(unsigned(counter)) = 12 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 19) <= "000000000000";
 			b(30 downto 19) <= "000000000000";
 			a(18 downto 0) <= y(30 downto 12);
 			b(18 downto 0) <= x(30 downto 12);
-		elsif kCount = 13 then
+		elsif to_integer(unsigned(counter)) = 13 then
 			a(31) <= y(31);
 			b(31) <= x(31);
 			a(30 downto 18) <= "0000000000000";
@@ -159,76 +160,112 @@ architecture subtractor_arc of subtractor is
 			b(17 downto 0) <= x(30 downto 13);			
 				
 		end if;
-		else
+	else
 			tesShifter <= '0';
-		end if;
-		end process;
+	end if;
+	--end if;
+	end process;
 		
-		process(kCount, En_Subtractor)
+		process(En_Subtractor)
 		begin
+		--if clk = '1' then
 		if (En_Subtractor = '1') then
 		
-		if (kCount = 0) then
+		if (to_integer(unsigned(counter)) = 0) then
 			tanInv <= "00101101000000000000000000000000";
-		elsif (kCount = 1) then
+		elsif (to_integer(unsigned(counter)) = 1) then
 			tanInv <= "00011010100100001010001111010111";
-		elsif (kCount = 2) then
+		elsif (to_integer(unsigned(counter)) = 2) then
 			tanInv <= "00001110000010010011011101001011";
-		elsif (kCount = 3) then
+		elsif (to_integer(unsigned(counter)) = 3) then
 			tanInv <= "00000111001000000000000000000000";
-		elsif (kCount = 4) then
+		elsif (to_integer(unsigned(counter)) = 4) then
 			tanInv <= "00000011100100110111010010111100";
-		elsif (kCount = 5) then
+		elsif (to_integer(unsigned(counter)) = 5) then
 			tanInv <= "00000001110010100011110101110000";
-		elsif (kCount = 6) then
+		elsif (to_integer(unsigned(counter)) = 6) then
 			tanInv <= "00000000111001010001111010111000";
-		elsif (kCount = 7) then
+		elsif (to_integer(unsigned(counter)) = 7) then
 			tanInv <= "00000000011100101011000000100000";
-		elsif (kCount = 8) then
+		elsif (to_integer(unsigned(counter)) = 8) then
 			tanInv <= "00000000001110010101100000010000";
-		elsif (kCount = 9) then
+		elsif (to_integer(unsigned(counter)) = 9) then
 			tanInv <= "00000000000111001010110000001000";
-		elsif (kCount = 10) then
+		elsif (to_integer(unsigned(counter)) = 10) then
 			tanInv <= "00000000000011100101011000000100";
-		elsif (kCount = 11) then
+		elsif (to_integer(unsigned(counter)) = 11) then
 			tanInv <= "00000000000001110010101100000010";
-		elsif (kCount = 12) then
+		elsif (to_integer(unsigned(counter)) = 12) then
 			tanInv <= "00000000000000111001010110000001";
-		elsif (kCount = 13) then
+		elsif (to_integer(unsigned(counter)) = 13) then
 			tanInv <= "00000000000000011100101011000000";
 		else
 			tanInv <= "00000000000000000000000000000000";
 		end if;		
 		end if;
+		--end if;
 		end process;
 		
-		process(a, b, x, y, comparison, x_outTemp, y_outTemp, angle_outTemp, kCount, En_Subtractor)
+		process(a, b, x, y, comparison, x_outTemp, y_outTemp, angle_outTemp, En_Subtractor)
 		begin
+		--if clk = '1' then
 		if En_Subtractor = '1' then
+		
+		
 		-- a dan b sudah dibuat. Berati tinggal x = x +- a, y = y +- b, dan angle = angle +- tan_inv
 			if comparison = '0' then	-- angel < Sudut
 					tesComparison <= '1';
-					if kCount = 0 then
-						x_outTemp <= ((x0(31)& x0) - (a(31)& a));
-						y_outTemp <= ((y0(31)& y0) + (b(31)& b));
-						angle_outTemp <= ((angle0(31)& angle0) + (tanInv(31)& tanInv));
+					
+					if modeSin = '1' or modeCos = '1' or modeTan = '1' then
+						if to_integer(unsigned(counter)) = 0 then
+							x_outTemp <= ((x0(31)& x0) - (a(31)& a));
+							y_outTemp <= ((y0(31)& y0) + (b(31)& b));
+							angle_outTemp <= ((angle0(31)& angle0) + (tanInv(31)& tanInv));
+							
+						else
+							x_outTemp <= ((x(31)& x) - (a(31)& a));
+							y_outTemp <= ((y(31)& y) + (b(31)& b));
+							angle_outTemp <= ((angle(31)& angle) + (tanInv(31)& tanInv));
+						end if;
 						
-					else
-						x_outTemp <= ((x(31)& x) - (a(31)& a));
-						y_outTemp <= ((y(31)& y) + (b(31)& b));
-						angle_outTemp <= ((angle(31)& angle) + (tanInv(31)& tanInv));
+					elsif modeArcSin = '1' or modeArcCos = '1' then
+						if to_integer(unsigned(counter)) = 0 then
+							x_outTemp <= ((x0(31)& x0) - (a(31)& a));
+							y_outTemp <= ((y0(31)& y0) + (b(31)& b));
+							angle_outTemp <= ((angle0(31)& angle0) - (tanInv(31)& tanInv));
+							
+						else
+							x_outTemp <= ((x(31)& x) - (a(31)& a));
+							y_outTemp <= ((y(31)& y) + (b(31)& b));
+							angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
+						end if;
 					end if;
 			elsif comparison = '1' then -- angle >= Sudut				
 					tesComparison <= '1';
-					if kCount = 0 then
-						x_outTemp <= ((x0(31)& x0) + (a(31)& a));
-						y_outTemp <= ((y0(31)& y0) - (b(31)& b));
-						angle_outTemp <= ((angle0(31)& angle0) - (tanInv(31)& tanInv));
+					
+					if modeSin = '1' or modeCos = '1' or modeTan = '1' then
+						if to_integer(unsigned(counter)) = 0 then
+							x_outTemp <= ((x0(31)& x0) + (a(31)& a));
+							y_outTemp <= ((y0(31)& y0) - (b(31)& b));
+							angle_outTemp <= ((angle0(31)& angle0) - (tanInv(31)& tanInv));
+							
+						else
+							x_outTemp <= ((x(31)& x) + (a(31)& a));
+							y_outTemp <= ((y(31)& y) - (b(31)& b));
+							angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
+						end if;
 						
-					else
-						x_outTemp <= ((x(31)& x) + (a(31)& a));
-						y_outTemp <= ((y(31)& y) - (b(31)& b));
-						angle_outTemp <= ((angle(31)& angle) - (tanInv(31)& tanInv));
+					elsif modeArcSin = '1' or modeArcCos = '1' then
+						if to_integer(unsigned(counter)) = 0 then
+							x_outTemp <= ((x0(31)& x0) + (a(31)& a));
+							y_outTemp <= ((y0(31)& y0) - (b(31)& b));
+							angle_outTemp <= ((angle0(31)& angle0) + (tanInv(31)& tanInv));
+							
+						else
+							x_outTemp <= ((x(31)& x) + (a(31)& a));
+							y_outTemp <= ((y(31)& y) - (b(31)& b));
+							angle_outTemp <= ((angle(31)& angle) + (tanInv(31)& tanInv));
+						end if;
 					end if;
 			end if;
 		
@@ -246,12 +283,12 @@ architecture subtractor_arc of subtractor is
 		angle_out(30 downto 24) <= angle_outTemp(30 downto 24);
 		angle_out(23 downto 0) <= angle_outTemp(23 downto 0);
 		
-		enFSM <= '1';
-		
+		enFSM <= '1';		
 	else
 		tesComparison <= '0';
 	 
 	end if;
+	--end if;
 	end process;
 	
 

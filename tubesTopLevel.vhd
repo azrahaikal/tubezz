@@ -33,7 +33,7 @@ component fsm is
 			en_Subtractor: out std_logic;
 			en_Register: out std_logic;
 			reset_Register: out std_logic;
-			modeSin, modeCos, modeTan : in std_logic;
+			modeSin, modeCos, modeTan, modeArcSin, modeArcCos : in std_logic;
 			enFSM : in std_logic;
 			outFinal: out std_logic
 	);
@@ -42,7 +42,7 @@ end component;
 component comparator is
 	port(	rst, clk: in std_logic;
 			Sudut : in std_logic_vector(31 downto 0);
-			angle : in std_logic_vector(31 downto 0);
+			angle, xIn, yIn : in std_logic_vector(31 downto 0);
 			modeSin, modeCos, modeTan, modeArcSin, modeArcCos : in std_logic;
 			comparison : out std_logic					-- 0: angle < Sudut. 1: angle >= Sudut
 	);  -- ganti
@@ -80,7 +80,10 @@ component regisX is
 			Enable_Reg : in std_logic;
 			inputRegister : in std_logic_vector(31 downto 0);
 			reset_Reg : in std_logic;
-			outputRegister : out std_logic_vector(31 downto 0)      
+			outputRegister : out std_logic_vector(31 downto 0);
+			modeArcSin, modeArcCos : in std_logic;
+			hasilAkar : in std_logic_vector(31 downto 0);
+			inputUser : in std_logic_vector(31 downto 0)    
 	);
 end component;
 
@@ -89,7 +92,10 @@ component regisY is
 			Enable_Reg : in std_logic;
 			inputRegister : in std_logic_vector(31 downto 0);
 			reset_Reg : in std_logic;
-			outputRegister : out std_logic_vector(31 downto 0)     
+			outputRegister : out std_logic_vector(31 downto 0);
+			modeArcSin, modeArcCos : in std_logic;
+			hasilAkar : in std_logic_vector(31 downto 0);
+			inputUser : in std_logic_vector(31 downto 0)    
 	);
 end component;
 
@@ -140,7 +146,7 @@ signal cekWilbert : std_logic;
 signal Sudut : std_logic_vector(31 downto 0); -- Sudut adalah 1 7 24, inputSudut adalah 1 9 22 (yang diinput user)
 signal kuadranOut : integer;
 signal angkaTemp2: std_logic_vector(63 downto 0);
-signal counterInternal : std_logic_vector(4 downto 0) := "00000";
+signal counterInternal : std_logic_vector(3 downto 0) := "0000";
 signal hasilAkar : std_logic_vector(31 downto 0) ; 
 signal tesPersamaan : integer; 
 
@@ -148,13 +154,13 @@ begin
 	blokKuadran : kuadran port map(rst, inputSudut, kuadranOut, modeSin, modeCos, modeTan, modeArcSin, modeArcCos, Sudut);
 	blokAkar : akar port map(inputSudut, hasilAkar, tesPersamaan) ;
 	-- FSM
-	TOFSM : fsm port map(rst, clk, inputCount, resetCounter, counter2, comparison, En_Subtractor, En_Reg, reset_Register, modeSin, modeCos, modeTan, enFSM, outFinal);
+	TOFSM : fsm port map(rst, clk, inputCount, resetCounter, counter2, comparison, En_Subtractor, En_Reg, reset_Register, modeSin, modeCos, modeTan, modeArcSin, modeArcCos, enFSM, outFinal);
 	-- Datapath
-	blokKomparator : comparator port map(rst, clk, Sudut, angle, modeSin, modeCos, modeTan, modeArcSin, modeArcCos, comparison);  -- Sudut di sini adalah 1 7 24
+	blokKomparator : comparator port map(rst, clk, Sudut, angle, x, y, modeSin, modeCos, modeTan, modeArcSin, modeArcCos, comparison);  -- Sudut di sini adalah 1 7 24
 	blokCounter : counter port map(rst, clk, inputCount, counter2);
 	blokSubtractor : subtractor port map(x, y, comparison, angle, counter2, x_out, y_out, angle_out, clk, tesShifter, tesComparison, enFSM, En_Subtractor, hasilAkar, Sudut, modeSin,modeCos,modeTan,modeArcSin,modeArcCos);
-	blokRegisX : regisX port map(clk, En_Reg, x_out, reset_Register, x);
-	blokRegisY : regisY port map(clk, En_Reg, y_out, reset_Register, y);
+	blokRegisX : regisX port map(clk, En_Reg, x_out, reset_Register, x, modeArcSin, modeArcCos, hasilAkar, inputSudut);
+	blokRegisY : regisY port map(clk, En_Reg, y_out, reset_Register, y, modeArcSin, modeArcCos, hasilAkar, inputSudut);
 	blokRegisAngle : regisAngle port map(clk, En_Reg, angle_out, reset_Register, angle);
 	blokOutSin : regis port map(clk, outFinal, x, reset_Register, outSin);
 	blokOutCos : regis port map(clk, outFinal, y, reset_Register, outCos);
@@ -164,7 +170,7 @@ begin
 	
 	if outFinal = '1' then
 		if clk'EVENT and clk = '1' then
-			counterInternal <= counterInternal + "01";
+			counterInternal <= counterInternal + "0001";
 		end if;
 	end if;
 	

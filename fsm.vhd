@@ -13,7 +13,7 @@ entity fsm is
 			en_Subtractor: out std_logic;
 			en_Register: out std_logic;
 			reset_Register: out std_logic;
-			modeSin, modeCos, modeTan : in std_logic;
+			modeSin, modeCos, modeTan, modeArcSin, modeArcCos : in std_logic;
 			enFSM : in std_logic;
 			outFinal: out std_logic
 	);
@@ -54,7 +54,7 @@ begin
 	case currentState is
 	
 		when s0 =>
-			if (modeSin = '1' or modeCos = '1' or modeTan = '1') then  -- inisialisasi
+			if (modeSin = '1' or modeCos = '1' or modeTan = '1' or modeArcSin = '1' or modeArcCos = '1') then  -- inisialisasi
 				reset_Register <= '1';
 				statusResetCounter <= '0';
 				statusCount <= '1';
@@ -68,7 +68,7 @@ begin
 				statusResetCounter <= '0';
 				statusCount <= '1';
 				en_Subtractor <= '0';
-				en_Register <= '0';
+				en_Register <= '1';
 				outFinal <= '0';
 				enFSM_internal <= '1';
 				nextState <= s0;
