@@ -60,10 +60,10 @@ architecture subtractor_arc of subtractor is
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';
 			elsif modeArcSin = '1' then
-				a <= "00000000001000000000000000000000";--Sudut;										-- d*y*(2^-i)
-				b <= "00000000001100111101000001111100";--hasilAkar;									-- d*x*(2^-i)
-				x0 <= "00000000001100111101000001111100";--hasilAkar;
-				y0 <= "00000000001000000000000000000000";--Sudut;
+				a <= Sudut;										-- d*y*(2^-i)
+				b <= hasilAkar;									-- d*x*(2^-i)
+				x0 <= hasilAkar;
+				y0 <= Sudut;
 				angle0 <= "00000000000000000000000000000000";
 				sekali <= '0';				
 			elsif modeArcCos = '1' then
